@@ -137,10 +137,9 @@ function updateMap(json)
 				testData.data.push({lat: cs.lat, lng: cs.lng, count: count});
 			}
 			else {
-				//count = min(count, 10);
 				spread_radius = cs.approx_radius / 2.0 * count / (count + 20);
 				count_factor = 1
-				count = Math.min(count, 1000);
+				//count = Math.min(count, 1000);
 				//if (count > 100000000) {
 				//	count_factor = max_count_factor;
 				//	count = Math.round(count/max_count_factor);

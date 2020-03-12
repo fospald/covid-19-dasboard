@@ -99,9 +99,12 @@ for k in ["Confirmed"]:
 
             if date in rec[ts_key]:
                 rec[ts_key][date] += 1
+            elif "last_date" in rec:
+                rec[ts_key][date] = rec[ts_key][rec["last_date"]] + 1
             else:
                 rec[ts_key][date] = 1
 
+            rec["last_date"] = date
             data[key] = rec
 
     data['Germany/']['is_group'] = True
