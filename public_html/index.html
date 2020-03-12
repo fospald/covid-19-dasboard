@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>COVID-19 spread animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link rel="stylesheet" href="assets/css/commons.css" />
+  <link rel="stylesheet" href="assets/css/example-commons.css" />
+  <link rel="stylesheet" href="assets/third-party/prism/prism.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <style>
+
+  #custom-handle {
+    width: 5em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+
+    #map-canvas {
+	    width: 100%;
+	 height: 100%;
+}
+    html, body {
+        height: 100%;
+        margin: 0px;
+	overflow: hidden;
+    }
+
+	#playbutton {
+		float: left;
+	}
+	#dateslider {
+		margin-left: 4em;
+		margin-right: 6em;
+	}
+    .demo-wrapper {
+	    height: 90%;
+    }
+    #controlWrap {
+	    position: absolute;
+	    left: 0;
+		bottom 0;
+		width: 100%;
+	    padding: 1em;
+    }
+
+    .symbol {display:inline !important; float:right;}
+  </style>
+</head>
+<body>
+
+    <div class="demo-wrapper">
+      <div class="heatmap" id="map-canvas">
+      </div>
+    </div>
+
+<div id="controlWrap">
+	<button id="playbutton">Play</button>
+	<div id="dateslider">
+		  <div id="custom-handle" class="ui-slider-handle"></div>
+	</div>
+</div>
+
+<script src="assets/js/heatmap.min.js"></script>
+<script src="assets/js/leaflet-heatmap.js"></script>
+<script>
+
+
+function randn_bm() {
+	var u = 0, v = 0;
+	while(u === 0) u = Math.random(); //Converting [0,1) to (0,1)
+	while(v === 0) v = Math.random();
+	return Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
+}
+
+var rnd = [];
+
+for (var i = 0; i < 100000; i++) {
+	rnd.push(randn_bm());
+}
+
+var sec_per_day = 60*60*24;
+
+var heatmapLayer = null;
+
+function updateMap(json)
+{
+	max_count_factor = 4;
+
+	var testData = {
+		max: max_count_factor,
+		data: []
+	};
+
+	date_key = $( "#dateslider" ).slider("value") * sec_per_day;
+
+
+	var t = new Date(1970, 0, 1); // Epoch
+	t.setSeconds(date_key);
+	$("#custom-handle").text("" + (t.getMonth()+1) + "/" + t.getDate() + "/" + t.getFullYear());
+
+	for (var key in json.cases) {
+		if (json.cases.hasOwnProperty(key)) {
+			cs = json.cases[key];
+
+			// ignore grouped data
+			if (cs.hasOwnProperty("is_group")) continue;
+
+			series = cs.timeseries_confirmed;
+			min_key = date_key;
+			if (!series.hasOwnProperty(date_key.toString())) {
+				// find closest date
+				min_key = 0;
+				for (var key in series) {
+					key = parseInt(key);
+					if (key < date_key && key > min_key) {
+						min_key = key;
+					}
+				}
+				if (!series.hasOwnProperty(min_key.toString())) {
+					continue;
+				}
+			}
+			count = series[min_key.toString()];
+
+			if (0) {
+				testData.data.push({lat: cs.lat, lng: cs.lng, count: count});
+			}
+			else {
+				//count = min(count, 10);
+				spread_radius = cs.approx_radius / 3.0 * count / (count + 20);
+				count_factor = 1
+				count = Math.min(count, 1000);
+				//if (count > 100000000) {
+				//	count_factor = max_count_factor;
+				//	count = Math.round(count/max_count_factor);
+				//}
+				for (var i = 0; i < count; i++) {
+					r = (i == 0) ? 0.0 : spread_radius;
+					dx = 0.5*r*rnd[Math.ceil(i*434 + (cs.lat + 4545)*1000) % rnd.length];
+					dy = r*rnd[Math.ceil(i*123 + (cs.lng + 1243)*1000) % rnd.length]
+					testData.data.push({lat: cs.lat + dx, lng: cs.lng + dy, count: count_factor});
+				}
+			}
+		}
+	}
+
+
+	if (!heatmapLayer)
+	{
+		var baseLayer = L.tileLayer(
+			'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+				maxZoom: 18
+			}
+		);
+
+		var cfg = {
+			// radius should be small ONLY if scaleRadius is true (or small radius is intended)
+			"radius": 10,
+			"maxOpacity": .5,
+			// scales the radius based on map zoom
+			"scaleRadius": false,
+			// if set to false the heatmap uses the global maximum for colorization
+			// if activated: uses the data maximum within the current map boundaries
+			//   (there will always be a red spot with useLocalExtremas true)
+			"useLocalExtrema": false,
+			// which field name in your data represents the latitude - default "lat"
+			latField: 'lat',
+			// which field name in your data represents the longitude - default "lng"
+			lngField: 'lng',
+			// which field name in your data represents the data value - default "value"
+			valueField: 'count'
+		};
+
+
+		heatmapLayer = new HeatmapOverlay(cfg);
+
+		var map = new L.Map('map-canvas', {
+			center: new L.LatLng(30.0, 0.0),
+			zoom: 2,
+			layers: [baseLayer, heatmapLayer]
+		});
+	}
+
+
+	heatmapLayer.setData(testData);
+}
+
+function playNext()
+{
+	v = $( "#dateslider" ).slider('value')
+	vmin = $( "#dateslider" ).slider( "option", "min")
+	vmax = $( "#dateslider" ).slider( "option", "max")
+
+	if (v < vmax) v = v + 1;
+	else v = vmin;
+
+	$( "#dateslider" ).slider('value', v);
+
+	if (v < vmax) setTimeout(playNext, 200);
+}
+
+$.getJSON("data.json", function(json) {
+
+	$( "#playbutton" ).click( function( event ) {
+		setTimeout(playNext, 1);
+	} );
+
+
+	$( "#dateslider" ).slider({
+		min: json.min_date / sec_per_day,
+		max: json.max_date / sec_per_day,
+		value: json.max_date / sec_per_day,
+		change: function( event, ui ) { updateMap(json); },
+		slide: function( event, ui ) { updateMap(json); }
+	});
+
+	updateMap(json);
+});
+
+</script>
+
+<script src="assets/third-party/prism/prism.js"></script>
+
+</body>
+</html>
+
+
