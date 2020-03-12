@@ -14,7 +14,7 @@ data = {}
 for k in ["Confirmed", "Recovered", "Deaths"]:
     ts_key = 'timeseries_' + k.lower()
 
-    fn = "data/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-" + k + ".csv"
+    fn = "COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-" + k + ".csv"
     with open(fn) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
@@ -72,8 +72,7 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
 # add german province data
 for k in ["Confirmed"]:
     ts_key = 'timeseries_' + k.lower()
-
-    fn = "data/COVID-19-Germany/germany_with_source.csv"
+    fn = "COVID-19-Germany/germany_with_source.csv"
     with open(fn) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
@@ -104,6 +103,8 @@ for k in ["Confirmed"]:
                 rec[ts_key][date] = 1
 
             data[key] = rec
+
+    data['Germany/']['is_group'] = True
 
 # calculate distance to earest neighbour
 
