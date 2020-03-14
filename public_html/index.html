@@ -7,6 +7,7 @@
 
 	<link rel="stylesheet" href="assets/css/commons.css" />
 	<link rel="stylesheet" href="assets/css/example-commons.css" />
+	<link rel="stylesheet" href="assets/css/leaflet-geojson-selector.css" />
 	<link rel="stylesheet" href="assets/third-party/prism/prism.css" />
 	<link rel="stylesheet" href="assets/third-party/leaflet/0.7.7/leaflet.css" />
 	<link rel="stylesheet" href="assets/third-party/jquery/ui/1.12.1/themes/base/jquery-ui.css">
@@ -17,6 +18,7 @@
 	<script src="assets/js/leaflet-heatmap.js"></script>
 	<script src="assets/third-party/chartjs/dist/2.9.3/Chart.min.js"></script>
 	<script src="assets/third-party/chartjs/dist/2.9.3/utils.js"></script>
+	<script src="assets/js/leaflet-geojson-selector.js"></script>
 
 	<style>
 
@@ -150,6 +152,9 @@
 		margin-left: 0.3em;
 		font-size: 1.5em;
 	}
+	.geojson-list {
+		visibility: hidden;
+	}
 	.ui-tabs-anchor {
 		font-weight: bold;
 		font-size: 150%;
@@ -211,18 +216,17 @@
 		display: none;
 	}
 	#country-label {
-		font-size: 150%;
-		margin: 1em;
+		font-size: 125%;
+		margin-top: 1em;
 		text-align: center;
 		font-weight: bold;
 	}
 	#state-label {
 		font-size: 100%;
-		margin: 1em;
+		margin: 0.5em;
 		text-align: center;
 		font-weight: bold;
 	}
-
 	#stats-table {
 		border-collapse: collapse;
 		font-size: 100%;
@@ -230,6 +234,8 @@
 	}
 	#stats-table td {
 		padding: 0.5em;
+		padding-bottom: 0;
+		padding-top: 0;
 	}
 	#stats-table th {
 		text-align: right;
@@ -729,13 +735,78 @@ function updateMap(json)
 		};
 
 
-		heatmapLayer = new HeatmapOverlay(cfg);
+$.getJSON('world-countries.json', function(gjson) {
 
-		var map = new L.Map('map-canvas', {
-			center: new L.LatLng(30.0, 0.0),
-			zoom: 2,
-			layers: [baseLayer, heatmapLayer]
-		});
+	var geoLayer = L.geoJson(gjson);
+	heatmapLayer = new HeatmapOverlay(cfg);
+
+
+	geoList = new L.Control.GeoJSONSelector(geoLayer, {
+		zoomToLayer: true,
+		listDisabled: true,
+		activeListFromLayer: false,
+		activeLayerFromList: false,
+		listOnlyVisibleLayers: false,
+                style: {
+                        color:'#000',
+                        fillColor:'#08f',
+                        fillOpacity: 0.0,
+                        opacity: 0.5,
+                        weight: 1
+                },
+                activeClass: 'active',                  //css class name for active list items
+                activeStyle: {                                  //style for Active GeoJSON feature
+                        color:'#00f',
+                        fillColor:'#fc0',
+                        fillOpacity: 0.0,
+                        opacity: 1,
+                        weight: 3
+                },
+                selectClass: 'selected',
+                selectStyle: {
+                        color:'#00f',
+                        fillColor:'#f80',
+                        fillOpacity: 0.0,
+                        opacity: 1,
+                        weight: 3
+                }
+
+	});
+
+	geoList.on('selector:change', function(e) {
+		country = e.layers[0].feature.properties["name"];
+		$("#region-list").val(country + "/").change();
+	});
+	
+	var map = new L.Map('map-canvas', {
+		center: new L.LatLng(30.0, 0.0),
+		zoom: 2,
+		layers: [baseLayer, heatmapLayer, geoLayer, geoList]
+	});
+
+	map.addControl(function() {
+		var c = new L.Control({position:'bottomright'});
+		c.onAdd = function(map) {
+				return L.DomUtil.create('pre','selection');
+			};
+		return c;
+	}());
+
+	$("#region-list").change(function() {
+		for (var i = 0; i < geoList._items.length; i++) {
+			item = geoList._items[i];
+			if (item.layer.feature.properties["name"] + "/" == this.value) {
+				geoList._moveTo(item.layer);
+				geoList._selectItem(item, true);
+				geoList._selectLayer(item.layer, true);
+				break;
+			}
+		}
+	});
+
+	heatmapLayer.setData(testData);
+});
+
 
 /*
 		$( window ).resize(function() {
@@ -747,9 +818,9 @@ function updateMap(json)
   */
 
 	}
-
-
+	else {
 	heatmapLayer.setData(testData);
+	}
 }
 
 var playing = 0;
@@ -822,13 +893,25 @@ $.getJSON("data.json", function(json) {
 
 	function updateStats()
 	{
-		$("#country-label").text($("#region-list option:selected").text());
-		$("#state-label").text($("#state-list option:selected").text());
+		country = $("#region-list option:selected").text();
+
+		if (country == "") {
+			$("#country-label").text("N/A");
+			$("#state-label").text("N/A");
+		}
+		else {
+			$("#country-label").text(country);
+			$("#state-label").text($("#state-list option:selected").text());
+		}
 
 		date_key = $( "#dateslider" ).slider("value") * sec_per_day;
 		var t = new Date(1970, 0, 1); // Epoch
 		t.setSeconds(date_key);
 		$("#stats-date").text("" + (t.getMonth()+1) + "/" + t.getDate() + "/" + t.getFullYear());
+
+		if (country == "") {
+			date_key = -1;
+		}
 
 		key = slist.val();
 		
