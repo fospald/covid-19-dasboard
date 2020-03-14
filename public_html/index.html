@@ -52,26 +52,24 @@
 
 	#playbutton {
 		float: left;
+		margin-top: -0.4em;
 	}
 	#dateslider {
-		margin-left: 4em;
-		margin-right: 6em;
+		margin-left: 4.5em;
+		margin-right: 4.5em;
 	}
-	.demo-wrapper {
+	.map-wrapper {
 		height: auto;
 		width: auto;
 		position: absolute;
-		top: 6.5em;
-		bottom: 1em;
-		right: 1em;
-		left: 1em;
+		top: 5em;
+		bottom: 0.5em;
+		right: 0.5em;
+		left: 0.5em;
 	}
 	#controlWrap {
-		position: absolute;
-		left: 0;
-			bottom 0;
 		width: 100%;
-		padding: 1em;
+		margin-top: 0.3em;
 	}
 
 	.symbol {display:inline !important; float:right;}
@@ -99,20 +97,26 @@
 		border-top: none;
 		border-top-right-radius: 0;
 		border-top-left-radius: 0;
+
+		border: none;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0;
 	}
 	#region {
 		margin-left: 0.5em;
-		width: 15em;
+		width: 11em;
 		float: left;
 	}
 	#stats {
 		margin-right: 0.5em;
-		width: 20em;
+		width: 14em;
 		float: right;
 	}
 	#center {
-		margin-left: 16em;
-		margin-right: 21em;
+		margin-left: 12em;
+		margin-right: 15em;
 	}
 	#page {
 		min-height: 100%;
@@ -121,7 +125,7 @@
 		height: auto;
 		width: 100%;
 		position: absolute;
-		top: 4.5em;
+		top: 3.8em;
 		bottom: 3em;
 	}
 	#footer {
@@ -132,7 +136,7 @@
 		padding: 0.5em;
 	}
 	#header {
-		height: 4em;
+		height: 3.2em;
 	}
 	#region-header, #stats-header {
 		height: 2.3em;
@@ -171,7 +175,7 @@
 	}
 	#region-list {
 		height: auto;
-		width: 14.2em;
+		width: 10.2em;
 		position: absolute;
 		top: 3em;
 		bottom: 14.5em;
@@ -180,7 +184,7 @@
 	}
 	#state-list {
 		height: 14em;
-		width: 14.2em;
+		width: 10.2em;
 		position: absolute;
 		bottom: 0.3em;
 		left: 1em;
@@ -196,10 +200,15 @@
 	}
 	.ui-tabs-panel {
 		padding: 0.5em !important;
+	/*
 		margin-left: 0.2em !important;
 		margin-right: 0.2em !important;
 		margin-bottom: 0.2em !important;
 		margin-top: 0.0em !important;
+	*/
+	}
+	.ui-checkboxradio-icon {
+		display: none;
 	}
 	#country-label {
 		font-size: 150%;
@@ -216,7 +225,7 @@
 
 	#stats-table {
 		border-collapse: collapse;
-		font-size: 150%;
+		font-size: 100%;
 		margin: 1em;
 	}
 	#stats-table td {
@@ -290,7 +299,7 @@
 						</div>
 
 
-						<div class="demo-wrapper">
+						<div class="map-wrapper">
 							<div class="heatmap" id="map-canvas">
 							</div>
 						</div>
@@ -308,35 +317,35 @@
 
 						<div class="controlgroup">
 							<label for="plot-time">Plot over date for selected region</label>
-							<input type="radio" name="plot_varx" id="plot-time" checked="1" />
+							<input type="radio" name="plot_varx" value="time" id="plot-time" checked="1" />
 							<label for="plot-country">Plot over countries</label>
-							<input type="radio" name="plot_varx" id="plot-country" />
+							<input type="radio" name="plot_varx" value="country" id="plot-country" />
 							<label for="plot-states">Plot over states of selected country</label>
-							<input type="radio" name="plot_varx" id="plot-states" />
+							<input type="radio" name="plot_varx" value="states" id="plot-states" disabled/>
 						</div>
 
 						<br/>
 
 						<div class="controlgroup">
-							<label for="plot-confirmed">Confirmed</label>
-							<input type="radio" name="plot_data" id="plot-confirmed" checked="1" />
+							<label for="plot-cases">Cases</label>
+							<input type="radio" name="plot_data" value="cases" id="plot-cases" checked="1" />
 							<label for="plot-mortality">Mortality</label>
-							<input type="radio" name="plot_data" id="plot-mortality">
+							<input type="radio" name="plot_data" value="mortality" id="plot-mortality" disabled>
 						</div>
 
 
 						<div class="controlgroup">
 							<label for="plot-cummultative">Cummultative</label>
-							<input type="radio" name="plot_type" id="plot-cummultative" checked="1" />
+							<input type="radio" name="plot_type" value="cummultative" id="plot-cummultative" checked="1" />
 							<label for="plot-increase">Daily increase</label>
-							<input type="radio" name="plot_type" id="plot-increase" />
+							<input type="radio" name="plot_type" value="increase" id="plot-increase" />
 						</div>
 
 						<div class="controlgroup">
 							<label for="plot-linear">Linear</label>
-							<input type="radio" name="plot_scale" id="plot-linear" checked="1" />
+							<input type="radio" name="plot_scale" value="linear" id="plot-linear" checked="1" />
 							<label for="plot-log">Logarithmic</label>
-							<input type="radio" name="plot_scale" id="plot-log">
+							<input type="radio" name="plot_scale" value="logarithmic" id="plot-log">
 						</div>
 
 
@@ -370,7 +379,7 @@
 
 
 $( function() {
-	$( "#tabs" ).tabs();
+	$( "#tabs" ).tabs({ disabled: [ 2 ] });
 	//$("ul").removeClass("ui-widget-header");
 	// $("#tabs").removeClass("ui-widget-header");
 	// ui-tabs ui-corner-all ui-widget ui-widget-content
@@ -379,84 +388,220 @@ $( function() {
 
 } );
 
+var chart = null;
 
-var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+function updatePlot(json)
+{
 
-var config = {
-	type: 'line',
-	data: {
-		labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-		datasets: [{
-			label: 'My First dataset',
-			backgroundColor: window.chartColors.red,
-			borderColor: window.chartColors.red,
-			data: [
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor()
-			],
-			fill: false,
-		}, {
-			label: 'My Second dataset',
-			fill: false,
-			backgroundColor: window.chartColors.blue,
-			borderColor: window.chartColors.blue,
-			data: [
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor()
-			],
-		}]
-	},
-	options: {
-		responsive: true,
-		maintainAspectRatio: false,
-		title: {
-			display: false,
-			text: 'Mortality'
-		},
-		tooltips: {
-			mode: 'index',
-			intersect: false,
-		},
-		hover: {
-			mode: 'nearest',
-			intersect: true
-		},
-		legend: {
-			position: 'bottom'
-		},
-		scales: {
-			xAxes: [{
-				display: true,
-				scaleLabel: {
-					display: true,
-					labelString: 'Month'
-				}
-			}],
-			yAxes: [{
-				display: true,
-				scaleLabel: {
-					display: true,
-					labelString: 'Value'
-				}
-			}]
+	var plot_data = $('input[name=plot_data]:checked').val();
+	var plot_scale = $('input[name=plot_scale]:checked').val();
+	var plot_varx = $('input[name=plot_varx]:checked').val();
+	var plot_type = $('input[name=plot_type]:checked').val();
+
+	var slist = $("#state-list");
+	var datasets = [];
+	var x = [];
+	var show_x_label = false;
+
+	var date_key = $( "#dateslider" ).slider("value") * sec_per_day;
+
+	if (plot_varx == "time")
+	{
+		key = slist.val();
+
+		if (key == "") {
+			cs = json.global_case;
 		}
-	}
-};
+		else {
+			cs = json.cases[key];
+		}
 
-window.onload = function() {
+
+		function add_dataset(data, label, color)
+		{
+			x = Object.keys(data);
+			x.sort();
+			
+			var y = [];
+			for (var i = 0; i < x.length; i++) {
+				y.push(data[x[i]]);
+
+				var t = new Date(1970, 0, 1); // Epoch
+				t.setSeconds(x[i]);
+				x[i] = (t.getMonth()+1) + "/" + t.getDate() + "/" + t.getFullYear();
+			}
+
+
+			if (plot_type == "increase") {
+				y_last = y[0];
+				for (var i = 1; i < x.length; i++) {
+					yi = y[i];
+					y[i] = yi - y_last;
+					y_last = yi;
+				}
+				x.shift();
+				y.shift();
+			}
+
+			dataset = {
+				label: label,
+				backgroundColor: color,
+				borderColor: color,
+				data: y,
+				fill: false,
+      				//lineTension: 0
+			};
+
+			datasets.push(dataset);
+		}
+
+
+		if (cs.hasOwnProperty("timeseries_confirmed")) {
+			add_dataset(cs.timeseries_confirmed, "Confirmed", window.chartColors.red);
+		}
+
+		if (cs.hasOwnProperty("timeseries_recovered")) {
+			add_dataset(cs.timeseries_recovered, "Recovered", window.chartColors.green);
+		}
+
+		if (cs.hasOwnProperty("timeseries_active")) {
+			add_dataset(cs.timeseries_active, "Active", window.chartColors.orange);
+		}
+
+		if (cs.hasOwnProperty("timeseries_deaths")) {
+			add_dataset(cs.timeseries_deaths, "Deaths", window.chartColors.black);
+		}
+
+		type = "line";
+	}
+	else if (plot_varx == "country")
+	{
+		var keys = json.sorted_cases_keys;
+
+		function add_dataset(series_key, label, color)
+		{
+			var y = [];
+      			
+      			new_keys = [];
+
+			keys.forEach(function(key) {
+				if (json.cases.hasOwnProperty(key)) {
+					cs = json.cases[key];
+					if (cs.province == "") {
+						if (cs.hasOwnProperty(series_key)) {
+							if (cs[series_key].hasOwnProperty(date_key)) {
+								x.push(cs.country);
+								y.push(cs[series_key][date_key]);
+      								new_keys.push(key);
+							}
+						}
+					}
+				}
+			});
+
+      			keys = new_keys;
+
+      			if (series_key == "timeseries_confirmed")
+      			{
+				sample_data = [ ];
+				for (var i = 0; i < x.length; i++) {
+					sample_data.push({name: x[i], value: y[i], key: keys[i]});
+				}
+
+				function custom_compare (a,b) {
+					return a.value - b.value;
+				}
+
+				sample_data.sort(custom_compare).reverse();
+
+				for (var i = 0; i < x.length; i++) {
+					x[i] = sample_data[i].name;
+					y[i] = sample_data[i].value;
+					keys[i] = sample_data[i].key;
+				}
+			}
+
+      			dim = 20;
+      			keys = keys.slice(0, dim);
+      			x = x.slice(0, dim);
+      			y = y.slice(0, dim);
+
+			dataset = {
+				label: label,
+				backgroundColor: color,
+				borderColor: color,
+				data: y,
+				fill: false,
+      				//lineTension: 0
+			};
+
+			datasets.push(dataset);
+
+		}
+
+		add_dataset("timeseries_confirmed", "Confirmed", window.chartColors.red);
+		add_dataset("timeseries_recovered", "Recovered", window.chartColors.green);
+		add_dataset("timeseries_active", "Active", window.chartColors.orange);
+		add_dataset("timeseries_deaths", "Deaths", window.chartColors.black);
+
+		type = "bar";
+	}
+	else if (plot_varx == "states")
+	{
+	}
+
+
+
+	var config = {
+		type: type,
+		data: {
+			labels: x,
+			datasets: datasets,
+		},
+		options: {
+			responsive: true,
+			maintainAspectRatio: false,
+			title: {
+				display: false,
+				text: ''
+			},
+			tooltips: {
+				mode: 'index',
+				intersect: false,
+			},
+			hover: {
+				mode: 'nearest',
+				intersect: true
+			},
+			legend: {
+				position: 'bottom'
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					scaleLabel: {
+						display: show_x_label,
+						labelString: 'Date'
+					}
+				}],
+				yAxes: [{
+					display: true,
+					type: plot_scale,
+					scaleLabel: {
+						display: true,
+						labelString: 'Value'
+					}
+				}]
+			}
+		}
+	};
+
 	var ctx = document.getElementById('canvas').getContext('2d');
-	window.myLine = new Chart(ctx, config);
-};
+
+	if (chart) { chart.destroy(); }
+
+	chart = new Chart(ctx, config);
+}
 
 
 function randn_bm() {
@@ -607,6 +752,14 @@ function updateMap(json)
 	heatmapLayer.setData(testData);
 }
 
+var playing = 0;
+
+function playStop()
+{
+	playing = 0;
+	$( "#playbutton" ).text("Play");
+}
+
 function playNext()
 {
 	v = $( "#dateslider" ).slider('value')
@@ -618,12 +771,16 @@ function playNext()
 
 	$( "#dateslider" ).slider('value', v);
 
-	if (v < vmax) setTimeout(playNext, 200);
+	if (v < vmax && playing) setTimeout(playNext, 200);
+	else playStop();
 }
 
 $.getJSON("data.json", function(json) {
 
 	$( "#playbutton" ).click( function( event ) {
+																	  if (playing) { playStop(); return; }
+		playing = 1;
+		$( "#playbutton" ).text("Stop");
 		setTimeout(playNext, 1);
 	} );
 
@@ -633,7 +790,7 @@ $.getJSON("data.json", function(json) {
 	json.sorted_cases_keys.forEach(function(key){
 		if (json.cases.hasOwnProperty(key)) {
 			cs = json.cases[key];
-																		  if (cs.province == "") {
+			  if (cs.province == "") {
 				var item = $("<option/>").text(cs.country).val(key);
 				list.append(item);
 			}
@@ -731,11 +888,13 @@ $.getJSON("data.json", function(json) {
 	list.change(function() {
 		updateStates(this.value);
 		updateStats();
+		updatePlot(json);
 	});
 	list.val("")
 
 	slist.change(function() {
 		updateStats();
+		updatePlot(json);
 	});
 
 	function updateDate()
@@ -752,6 +911,19 @@ $.getJSON("data.json", function(json) {
 		slide: function( event, ui ) { updateDate(); }
 	});
 
+	$('input[type=radio][name=plot_scale]').change(function() {
+		updatePlot(json);
+	});
+	$('input[type=radio][name=plot_data]').change(function() {
+		updatePlot(json);
+	});
+	$('input[type=radio][name=plot_varx]').change(function() {
+		updatePlot(json);
+	});
+	$('input[type=radio][name=plot_type]').change(function() {
+		updatePlot(json);
+	});
+
 	$('input[type=radio][name=map_data]').change(function() {
 		updateMap(json);
 	});
@@ -759,6 +931,7 @@ $.getJSON("data.json", function(json) {
 	updateStates("");
 	updateStats();
 	updateMap(json);
+	updatePlot(json);
 });
 
 </script>
