@@ -1,40 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>COVID-19 spread animation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow" />
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <link rel="stylesheet" href="assets/css/commons.css" />
-  <link rel="stylesheet" href="assets/css/example-commons.css" />
-  <link rel="stylesheet" href="assets/third-party/prism/prism.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
-    <style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Covid-19 dashboard</title>
 
-  #custom-handle {
-    width: 5em;
-    height: 1.6em;
-    top: 50%;
-    margin-top: -.8em;
-    text-align: center;
-    line-height: 1.6em;
-  }
+	<link rel="stylesheet" href="assets/css/commons.css" />
+	<link rel="stylesheet" href="assets/css/example-commons.css" />
+	<link rel="stylesheet" href="assets/third-party/prism/prism.css" />
+	<link rel="stylesheet" href="assets/third-party/leaflet/0.7.7/leaflet.css" />
+	<link rel="stylesheet" href="assets/third-party/jquery/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="assets/third-party/jquery/jquery-1.12.4.js"></script>
+	<script src="assets/third-party/jquery/ui/1.12.1/jquery-ui.js"></script>
+	<script src="assets/third-party/leaflet/0.7.7/leaflet.js"></script>
+	<script src="assets/js/heatmap.min.js"></script>
+	<script src="assets/js/leaflet-heatmap.js"></script>
+	<script src="assets/third-party/chartjs/dist/2.9.3/Chart.min.js"></script>
+	<script src="assets/third-party/chartjs/dist/2.9.3/utils.js"></script>
 
-    #map-canvas {
-	    width: 100%;
-	 height: 100%;
-}
-    html, body {
-        height: 100%;
-        margin: 0px;
-	overflow: hidden;
-    }
+	<style>
+
+	canvas{
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		width: 100%;
+		height: 100%;
+	}
+	#plotcanvas {
+		height: auto;
+		width: auto;
+		position: absolute;
+		top: 6.5em;
+		bottom: 1em;
+		right: 1em;
+		left: 1em;
+	}
+
+
+	#custom-handle {
+		width: 5em;
+		height: 1.6em;
+		top: 50%;
+		margin-top: -.8em;
+		text-align: center;
+		line-height: 1.6em;
+	}
+
+	#map-canvas {
+	}
 
 	#playbutton {
 		float: left;
@@ -43,37 +57,406 @@
 		margin-left: 4em;
 		margin-right: 6em;
 	}
-    .demo-wrapper {
-	    height: 90%;
-    }
-    #controlWrap {
-	    position: absolute;
-	    left: 0;
-		bottom 0;
+	.demo-wrapper {
+		height: auto;
+		width: auto;
+		position: absolute;
+		top: 6.5em;
+		bottom: 1em;
+		right: 1em;
+		left: 1em;
+	}
+	#controlWrap {
+		position: absolute;
+		left: 0;
+			bottom 0;
 		width: 100%;
-	    padding: 1em;
-    }
+		padding: 1em;
+	}
 
-    .symbol {display:inline !important; float:right;}
-  </style>
+	.symbol {display:inline !important; float:right;}
+
+
+	body, html, #main {
+		height: 100%;
+		margin: 0px;
+		overflow: hidden;
+	}
+	#region, #stats, #center {
+		height: 100%;
+	}
+	#tabs {
+		height: 100%;
+	}
+	#tab-map, #tab-charts, #tab-data {
+		height: auto;
+		width: auto;
+		position: absolute;
+		top: 2.4em;
+		bottom: 0.2em;
+		right: 0.1em;
+		left: 0.1em;
+		border-top: none;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+	}
+	#region {
+		margin-left: 0.5em;
+		width: 15em;
+		float: left;
+	}
+	#stats {
+		margin-right: 0.5em;
+		width: 20em;
+		float: right;
+	}
+	#center {
+		margin-left: 16em;
+		margin-right: 21em;
+	}
+	#page {
+		min-height: 100%;
+	}
+	#content {
+		height: auto;
+		width: 100%;
+		position: absolute;
+		top: 4.5em;
+		bottom: 3em;
+	}
+	#footer {
+		height: 1.2em;
+		width: 100%;
+		position: absolute;
+		bottom: 0em;
+		padding: 0.5em;
+	}
+	#header {
+		height: 4em;
+	}
+	#region-header, #stats-header {
+		height: 2.3em;
+	}
+	h1 {
+		margin: 0.4em;
+		font-size: 2em;
+	}
+	h2 {
+		margin: 0.2em;
+		margin-left: 0.3em;
+		font-size: 1.5em;
+	}
+	.ui-tabs-anchor {
+		font-weight: bold;
+		font-size: 150%;
+	}
+	.ui-tabs, .ui-tabs-nav, .ui-tabs-anchor {
+		padding: 0em !important;
+		margin: 0em;
+	}
+	.ui-tabs-anchor {
+		padding-right: 0.5em !important;
+		padding-left: 0.5em !important;
+	}
+
+	.ui-tabs-tab {
+		margin-top: 0.3em !important;
+		margin-right: 0.3em !important;
+		margin-left: 0.3em !important;
+	}
+
+	.ui-tabs-nav {
+		height: 2.3em;
+		border-radius: 0px !important;
+	}
+	#region-list {
+		height: auto;
+		width: 14.2em;
+		position: absolute;
+		top: 3em;
+		bottom: 14.5em;
+		left: 1em;
+		right: 0.3em;
+	}
+	#state-list {
+		height: 14em;
+		width: 14.2em;
+		position: absolute;
+		bottom: 0.3em;
+		left: 1em;
+		right: 0.3em;
+	}
+	.controlgroup {
+		margin: 0;
+		margin-bottom: 0.5em;
+		margin-right: 1em;
+	}
+	.ui-tabs {
+		padding: 0;
+	}
+	.ui-tabs-panel {
+		padding: 0.5em !important;
+		margin-left: 0.2em !important;
+		margin-right: 0.2em !important;
+		margin-bottom: 0.2em !important;
+		margin-top: 0.0em !important;
+	}
+	#country-label {
+		font-size: 150%;
+		margin: 1em;
+		text-align: center;
+		font-weight: bold;
+	}
+	#state-label {
+		font-size: 100%;
+		margin: 1em;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	#stats-table {
+		border-collapse: collapse;
+		font-size: 150%;
+		margin: 1em;
+	}
+	#stats-table td {
+		padding: 0.5em;
+	}
+	#stats-table th {
+		text-align: right;
+	}
+	</style>
 </head>
 <body>
+	<div id="page">
 
-    <div class="demo-wrapper">
-      <div class="heatmap" id="map-canvas">
-      </div>
-    </div>
+		<div id="header" class="ui-corner-all ui-widget ui-widget-header">
+			<h1>Covid-19 dashboard</h1>
+		</div>
 
-<div id="controlWrap">
-	<button id="playbutton">Play</button>
-	<div id="dateslider">
-		  <div id="custom-handle" class="ui-slider-handle"></div>
+		<div id="content">
+
+			<div id="region" class="ui-corner-all ui-widget ui-widget-content">
+				<div id="region-header" class="ui-widget-header">
+					<h2>Region</h2>
+				</div>
+
+				<select id="region-list" size="1000">
+					<option value="" selected>World</option>
+				</select>
+
+				<select id="state-list" size="1000">
+				</select>
+
+			</div>
+
+			<div id="stats" class="ui-corner-all ui-widget ui-widget-content">
+				<div id="stats-header" class="ui-widget-header">
+					<h2>Region stats</h2>
+				</div>
+
+				<div id="country-label">Germany</div>
+				<div id="state-label">Saxony</div>
+
+				<table id="stats-table">
+					<tr><th>Date:</th><td id="stats-date">3/11/2020<td></tr>
+					<tr><th>Confirmed:</th><td id="stats-confirmed">10<td></tr>
+					<tr><th>Recovered:</th><td id="stats-recovered">10<td></tr>
+					<tr><th>Active:</th><td id="stats-active">10<td></tr>
+					<tr><th>Deaths:</th><td id="stats-deaths">10<td></tr>
+					<tr><th>Mortality:</th><td id="stats-mortality">10%<td></tr>
+				</table>
+			</div>
+
+			<div id="center">
+				<div id="tabs">
+					<ul>
+						<li><a href="#tab-map">World map</a></li>
+						<li><a href="#tab-charts">Charts</a></li>
+						<li><a href="#tab-data">Data</a></li>
+					</ul>
+					<div id="tab-map" class="ui-corner-all ui-widget ui-widget-content">
+
+
+						<div class="controlgroup">
+							<label for="map-confirmed">Confirmed</label>
+							<input type="radio" name="map_data" value="confirmed" id="map-confirmed" checked="1" />
+							<label for="map-deaths">Deaths</label>
+							<input type="radio" name="map_data" value="deaths" id="map-deaths" />
+							<label for="map-recovered">Recovered</label>
+							<input type="radio" name="map_data" value="recovered" id="map-recovered" />
+							<label for="map-active">Active</label>
+							<input type="radio" name="map_data" value="active" id="map-active" />
+						</div>
+
+
+						<div class="demo-wrapper">
+							<div class="heatmap" id="map-canvas">
+							</div>
+						</div>
+
+						<div id="controlWrap">
+							<button id="playbutton">Play</button>
+							<div id="dateslider">
+								<div id="custom-handle" class="ui-slider-handle"></div>
+							</div>
+						</div>
+
+
+					</div>
+					<div id="tab-charts" class="ui-corner-all ui-widget ui-widget-content">
+
+						<div class="controlgroup">
+							<label for="plot-time">Plot over date for selected region</label>
+							<input type="radio" name="plot_varx" id="plot-time" checked="1" />
+							<label for="plot-country">Plot over countries</label>
+							<input type="radio" name="plot_varx" id="plot-country" />
+							<label for="plot-states">Plot over states of selected country</label>
+							<input type="radio" name="plot_varx" id="plot-states" />
+						</div>
+
+						<br/>
+
+						<div class="controlgroup">
+							<label for="plot-confirmed">Confirmed</label>
+							<input type="radio" name="plot_data" id="plot-confirmed" checked="1" />
+							<label for="plot-mortality">Mortality</label>
+							<input type="radio" name="plot_data" id="plot-mortality">
+						</div>
+
+
+						<div class="controlgroup">
+							<label for="plot-cummultative">Cummultative</label>
+							<input type="radio" name="plot_type" id="plot-cummultative" checked="1" />
+							<label for="plot-increase">Daily increase</label>
+							<input type="radio" name="plot_type" id="plot-increase" />
+						</div>
+
+						<div class="controlgroup">
+							<label for="plot-linear">Linear</label>
+							<input type="radio" name="plot_scale" id="plot-linear" checked="1" />
+							<label for="plot-log">Logarithmic</label>
+							<input type="radio" name="plot_scale" id="plot-log">
+						</div>
+
+
+
+						<div id="plotcanvas">
+							<canvas id="canvas" maintainAspectRatio="false"></canvas>
+						</div>
+
+
+					</div>
+
+					<div id="tab-data" class="ui-corner-all ui-widget ui-widget-content">
+						data here
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div id="footer" class="ui-corner-all ui-widget ui-widget-header">
+			Developed by <a href="https://www.researchgate.net/profile/Felix_Ospald">Felix Ospald</a> using <a href="https://jquery.com/">JQuery</a>, <a href="https://jqueryui.com">JQuery UI</a>, <a href="https://leafletjs.com/">Leaflet</a>, <a href="https://www.chartjs.org">ChartJS</a>; 
+			Source: <a href="https://github.com/fospald/covid-19-dashboard">Git-repository</a>; 
+			Data by: <a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>;
+			<a href="https://github.com/iceweasel1/COVID-19-Germany">iceweasel1</a>
+		</div>
+
 	</div>
-</div>
 
-<script src="assets/js/heatmap.min.js"></script>
-<script src="assets/js/leaflet-heatmap.js"></script>
+
 <script>
+
+
+$( function() {
+	$( "#tabs" ).tabs();
+	//$("ul").removeClass("ui-widget-header");
+	// $("#tabs").removeClass("ui-widget-header");
+	// ui-tabs ui-corner-all ui-widget ui-widget-content
+
+	$( ".controlgroup" ).controlgroup();
+
+} );
+
+
+var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+var config = {
+	type: 'line',
+	data: {
+		labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+		datasets: [{
+			label: 'My First dataset',
+			backgroundColor: window.chartColors.red,
+			borderColor: window.chartColors.red,
+			data: [
+				randomScalingFactor(),
+				randomScalingFactor(),
+				randomScalingFactor(),
+				randomScalingFactor(),
+				randomScalingFactor(),
+				randomScalingFactor(),
+				randomScalingFactor()
+			],
+			fill: false,
+		}, {
+			label: 'My Second dataset',
+			fill: false,
+			backgroundColor: window.chartColors.blue,
+			borderColor: window.chartColors.blue,
+			data: [
+				randomScalingFactor(),
+				randomScalingFactor(),
+				randomScalingFactor(),
+				randomScalingFactor(),
+				randomScalingFactor(),
+				randomScalingFactor(),
+				randomScalingFactor()
+			],
+		}]
+	},
+	options: {
+		responsive: true,
+		maintainAspectRatio: false,
+		title: {
+			display: false,
+			text: 'Mortality'
+		},
+		tooltips: {
+			mode: 'index',
+			intersect: false,
+		},
+		hover: {
+			mode: 'nearest',
+			intersect: true
+		},
+		legend: {
+			position: 'bottom'
+		},
+		scales: {
+			xAxes: [{
+				display: true,
+				scaleLabel: {
+					display: true,
+					labelString: 'Month'
+				}
+			}],
+			yAxes: [{
+				display: true,
+				scaleLabel: {
+					display: true,
+					labelString: 'Value'
+				}
+			}]
+		}
+	}
+};
+
+window.onload = function() {
+	var ctx = document.getElementById('canvas').getContext('2d');
+	window.myLine = new Chart(ctx, config);
+};
 
 
 function randn_bm() {
@@ -95,6 +478,7 @@ var heatmapLayer = null;
 
 function updateMap(json)
 {
+	series_name = $('input[name=map_data]:checked').val();
 	max_count_factor = 4;
 
 	var testData = {
@@ -115,8 +499,25 @@ function updateMap(json)
 
 			// ignore grouped data
 			if (cs.hasOwnProperty("is_group")) continue;
+			if (cs.hasOwnProperty("is_group_" + series_name)) continue;
 
-			series = cs.timeseries_confirmed;
+      			if (series_name == "confirmed" && cs.hasOwnProperty("timeseries_confirmed")) {
+				series = cs.timeseries_confirmed;
+      			}
+      			else if (series_name == "active" && cs.hasOwnProperty("timeseries_active")) {
+				series = cs.timeseries_active;
+      			}
+      			else if (series_name == "deaths" && cs.hasOwnProperty("timeseries_deaths")) {
+				series = cs.timeseries_deaths;
+      			}
+      			else if (series_name == "recovered" && cs.hasOwnProperty("timeseries_recovered")) {
+				series = cs.timeseries_recovered;
+      			}
+      			else {
+      				// no data
+      				series = {};
+      			}
+
 			min_key = date_key;
 			if (!series.hasOwnProperty(date_key.toString())) {
 				// find closest date
@@ -190,6 +591,16 @@ function updateMap(json)
 			zoom: 2,
 			layers: [baseLayer, heatmapLayer]
 		});
+
+/*
+		$( window ).resize(function() {
+			setTimeout(function() {
+				map.invalidateSize();
+				heatmapLayer._update();
+			}, 10);
+		});
+  */
+
 	}
 
 
@@ -216,15 +627,137 @@ $.getJSON("data.json", function(json) {
 		setTimeout(playNext, 1);
 	} );
 
+	var list = $("#region-list");
+	var slist = $("#state-list");
+
+	json.sorted_cases_keys.forEach(function(key){
+		if (json.cases.hasOwnProperty(key)) {
+			cs = json.cases[key];
+																		  if (cs.province == "") {
+				var item = $("<option/>").text(cs.country).val(key);
+				list.append(item);
+			}
+		}
+	});
+
+	function updateStates(country_key)
+	{
+		slist.empty();
+		var item = $("<option/>").text("All").val(country_key);
+		slist.append(item);
+
+		json.sorted_cases_keys.forEach(function(key){
+			if (json.cases.hasOwnProperty(key)) {
+				cs = json.cases[key];
+				if (cs.province != "" && cs.country + "/" == country_key) {
+					var item = $("<option/>").text(cs.province).val(key);
+					slist.append(item);
+				}
+			}
+		});
+
+		slist.val(country_key)
+	}
+
+	function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+	function updateStats()
+	{
+		$("#country-label").text($("#region-list option:selected").text());
+		$("#state-label").text($("#state-list option:selected").text());
+
+		date_key = $( "#dateslider" ).slider("value") * sec_per_day;
+		var t = new Date(1970, 0, 1); // Epoch
+		t.setSeconds(date_key);
+		$("#stats-date").text("" + (t.getMonth()+1) + "/" + t.getDate() + "/" + t.getFullYear());
+
+		key = slist.val();
+		
+		if (key == "") {
+			cs = json.global_case;
+		}
+		else {
+			cs = json.cases[key];
+		}
+
+      		if (cs.hasOwnProperty("timeseries_confirmed") && cs.timeseries_confirmed.hasOwnProperty(date_key)) {
+			confirmed = cs.timeseries_confirmed[date_key];
+			$("#stats-confirmed").text(numberWithCommas(cs.timeseries_confirmed[date_key]));
+		}
+		else {
+			confirmed = null;
+			$("#stats-confirmed").text("n/a");
+		}
+
+      		if (cs.hasOwnProperty("timeseries_recovered") && cs.timeseries_recovered.hasOwnProperty(date_key)) {
+			recovered = cs.timeseries_recovered[date_key];
+			$("#stats-recovered").text(numberWithCommas(cs.timeseries_recovered[date_key]));
+		}
+		else {
+			recovered = null;
+			$("#stats-recovered").text("n/a");
+		}
+
+      		if (cs.hasOwnProperty("timeseries_deaths") && cs.timeseries_deaths.hasOwnProperty(date_key)) {
+			deaths = cs.timeseries_deaths[date_key];
+			$("#stats-deaths").text(numberWithCommas(cs.timeseries_deaths[date_key]));
+		}
+		else {
+			deaths = null;
+			$("#stats-deaths").text("n/a");
+		}
+
+      		if (cs.hasOwnProperty("timeseries_active") && cs.timeseries_active.hasOwnProperty(date_key)) {
+			active = cs.timeseries_active[date_key];
+			$("#stats-active").text(numberWithCommas(cs.timeseries_active[date_key]));
+		}
+		else {
+			active = null;
+			$("#stats-active").text("n/a");
+		}
+
+      		if (deaths != null && confirmed) {
+			mortality = Math.round(deaths/confirmed*1000)/10;
+			$("#stats-mortality").text(mortality.toString() + "%");
+		}
+		else {
+			mortality = null;
+			$("#stats-mortality").text("n/a");
+		}
+	}
+
+	list.change(function() {
+		updateStates(this.value);
+		updateStats();
+	});
+	list.val("")
+
+	slist.change(function() {
+		updateStats();
+	});
+
+	function updateDate()
+	{
+		updateMap(json);
+		updateStats();
+	}
 
 	$( "#dateslider" ).slider({
 		min: json.min_date / sec_per_day,
 		max: json.max_date / sec_per_day,
 		value: json.max_date / sec_per_day,
-		change: function( event, ui ) { updateMap(json); },
-		slide: function( event, ui ) { updateMap(json); }
+		change: function( event, ui ) { updateDate(); },
+		slide: function( event, ui ) { updateDate(); }
 	});
 
+	$('input[type=radio][name=map_data]').change(function() {
+		updateMap(json);
+	});
+
+	updateStates("");
+	updateStats();
 	updateMap(json);
 });
 

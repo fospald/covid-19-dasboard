@@ -41,6 +41,8 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
 
             timeseries = {}
             for i in range(4,len(row)):
+                if row[i] == "":
+                    break
                 timeseries[header[i]] = int(row[i])
 
             rec[ts_key] = timeseries
@@ -149,7 +151,36 @@ for k in ["Confirmed"]:
             data[key] = rec
 
 
-    data['Germany/']['is_group'] = True
+    data['Germany/']['is_group_confirmed'] = True
+
+
+def comp_active(cs):
+    # compute active cases
+        timeseries_active = {}
+        if not "timeseries_confirmed" in cs:
+            return None
+        if not "timeseries_deaths" in cs:
+            return None
+        if not "timeseries_recovered" in cs:
+            return None
+        for date, confirmed in cs["timeseries_confirmed"].items():
+            if not date in cs["timeseries_deaths"]:
+                continue
+            if not date in cs["timeseries_recovered"]:
+                continue
+            timeseries_active[date] = cs["timeseries_confirmed"][date] - cs["timeseries_deaths"][date] - cs["timeseries_recovered"][date]
+        return timeseries_active
+
+
+keys = list(data.keys())
+for key in keys:
+    timeseries_active = comp_active(data[key])
+    if timeseries_active:
+        data[key]["timeseries_active"] = timeseries_active
+
+timeseries_active = comp_active(global_case)
+if timeseries_active:
+    global_case["timeseries_active"] = timeseries_active
 
 # calculate distance to earest neighbour
 
@@ -170,6 +201,20 @@ for k1 in data.keys():
 
     min_date = min(min_date, min(data[k1]['timeseries_confirmed'].keys()))
     max_date = max(max_date, max(data[k1]['timeseries_confirmed'].keys()))
+
+
+# complete missing dates
+for k in data.keys():
+    for ts in ["Confirmed", "Recovered", "Deaths", "Active"]:
+        ts_key = 'timeseries_' + ts.lower()
+        last_val = None
+        if not ts_key in data[k]:
+            continue
+        for date in range(min_date, max_date + 24*60*60, 24*60*60):
+            if date in data[k][ts_key]:
+                last_val = data[k][ts_key][date]
+            elif not last_val is None:
+                data[k][ts_key][date] = last_val
 
 
 def cmpfunc(x, y):
