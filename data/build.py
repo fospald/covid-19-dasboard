@@ -5,11 +5,13 @@ import datetime
 import time
 import copy
 import json
+from functools import cmp_to_key
 
 
 ref_time = datetime.datetime(1970,1,1)
 
 data = {}
+global_case = {}
 
 for k in ["Confirmed", "Recovered", "Deaths"]:
     ts_key = 'timeseries_' + k.lower()
@@ -48,7 +50,7 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
     keys = list(data.keys())
     for key in keys:
         if data[key]['province'].strip() != "":
-            group_key = row[1] + '/'
+            group_key = data[key]['country'] + '/'
             if group_key in data:
                 new_group_data = data[group_key]
                 add_timeseries = copy.deepcopy(data[key][ts_key])
@@ -68,6 +70,19 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
             data[group_key] = new_group_data
 
 
+    # global group
+    keys = list(data.keys())
+    for key in keys:
+        if not "is_group" in data[key]:
+                add_timeseries = copy.deepcopy(data[key][ts_key])
+                if ts_key in global_case:
+                    for k,v in add_timeseries.items():
+                        if k in global_case[ts_key]:
+                            global_case[ts_key][k] += v
+                        else:
+                            global_case[ts_key][k] = v
+                else:
+                    global_case[ts_key] = add_timeseries
 
 # add german province data
 for k in ["Confirmed"]:
@@ -88,12 +103,15 @@ for k in ["Confirmed"]:
             date = int((datetime.datetime.strptime(row[1], '%m/%d/%Y') - ref_time).total_seconds())
             country = "Germany"
 
-            key = country + '/' + row[2] + '/' + row[3]
+            
+            key = country + '/' + row[2] + '/' + row[3] # with district
+
             if key in data:
                 rec = data[key]
             else:
                 try:
-                    rec = {'id': key, 'province': row[2], 'district': row[3], 'country': country, 'lat': float(row[4]), 'lng': float(row[5]), ts_key: {}, 'timeseries_deaths': {}, 'timeseries_recovered': {}}
+                    ts = {}
+                    rec = {'id': key, 'province': row[3] + ", " + row[2], 'state': row[2], 'district': row[3], 'country': country, 'lat': float(row[4]), 'lng': float(row[5]), ts_key: ts}
                 except:
                     continue
 
@@ -106,6 +124,30 @@ for k in ["Confirmed"]:
 
             rec["last_date"] = date
             data[key] = rec
+
+
+            # add province grouped items
+
+            key = country + '/' + row[2] + '/'
+
+            if key in data:
+                rec = data[key]
+            else:
+                try:
+                    rec = {'id': key, 'province': row[2], 'country': country, 'lat': float(row[4]), 'lng': float(row[5]), ts_key: {}, 'is_group': True}
+                except:
+                    continue
+
+            if date in rec[ts_key]:
+                rec[ts_key][date] += 1
+            elif "last_date" in rec:
+                rec[ts_key][date] = rec[ts_key][rec["last_date"]] + 1
+            else:
+                rec[ts_key][date] = 1
+
+            rec["last_date"] = date
+            data[key] = rec
+
 
     data['Germany/']['is_group'] = True
 
@@ -130,8 +172,18 @@ for k1 in data.keys():
     max_date = max(max_date, max(data[k1]['timeseries_confirmed'].keys()))
 
 
+def cmpfunc(x, y):
+    if x["country"] == y["country"]:
+        return 1 if x["province"] > y["province"] else -1
+    return 1 if x["country"] > y["country"] else -1
+
+sdata = data.values()
+sdata.sort(key=cmp_to_key(cmpfunc))
+
 export_data = {
         'cases': data,
+        'global_case': global_case,
+        'sorted_cases_keys': [c['id'] for c in sdata],
         'min_date': min_date,
         'max_date': max_date
 }
