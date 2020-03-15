@@ -208,9 +208,13 @@
 
 	#region-list {
 		height: auto;
-		top: 3em;
+		top: 4.9em;
 		bottom: 14.5em;
 	}
+	#regionorder {
+		margin:0.4em;
+	}
+
 	#state-list {
 		height: 14em;
 		bottom: 0.3em;
@@ -276,8 +280,23 @@
 						<h2>Region</h2>
 					</div>
 
+					<div class="controlgroup" id="regionorder">
+
+						<label for="sort-name" title="Order by name">N</label>
+						<input type="radio" name="sort" value="name" id="sort-name" autocomplete="off" />
+
+						<label for="sort-confirmed" title="Order by confirmed cases">C</label>
+						<input type="radio" name="sort" value="confirmed" id="sort-confirmed" autocomplete="off" />
+						<label for="sort-deaths" title="Order by deaths">D</label>
+						<input type="radio" name="sort" value="deaths" id="sort-deaths" autocomplete="off" />
+						<label for="sort-recovered" title="Order by recovered cases">R</label>
+						<input type="radio" name="sort" value="recovered" id="sort-recovered" autocomplete="off" />
+						<label for="sort-active" title="Order by active cases">A</label>
+						<input type="radio" name="sort" value="active" id="sort-active" autocomplete="off" />
+					</div>
+
+
 					<select id="region-list" size="1000">
-						<option value="" selected>World</option>
 					</select>
 
 					<select id="state-list" size="1000">
@@ -311,22 +330,6 @@
 							<li><a href="#tab-data">Data</a></li>
 						</ul>
 						<div id="tab-map" class="ui-corner-all ui-widget ui-widget-content">
-
-
-							<div class="controlgroup">
-
-								<label for="sort-name" title="Order by name">N</label>
-								<input type="radio" name="sort" value="name" id="sort-name" autocomplete="off" />
-
-								<label for="sort-confirmed" title="Order by confirmed cases">C</label>
-								<input type="radio" name="sort" value="confirmed" id="sort-confirmed" autocomplete="off" />
-								<label for="sort-deaths" title="Order by deaths">D</label>
-								<input type="radio" name="sort" value="deaths" id="sort-deaths" autocomplete="off" />
-								<label for="sort-recovered" title="Order by recovered cases">R</label>
-								<input type="radio" name="sort" value="recovered" id="sort-recovered" autocomplete="off" />
-								<label for="sort-active" title="Order by active cases">A</label>
-								<input type="radio" name="sort" value="active" id="sort-active" autocomplete="off" />
-							</div>
 
 
 							<div class="controlgroup">
@@ -421,6 +424,24 @@
 
 var chart = null;
 
+	function getOrderedKeys(json)
+	{
+		var key = $('input[name=sort]:checked').val();
+
+		if (key == "confirmed") {
+			return json.keys_by_confirmed;
+		} else if (key == "deaths") {
+			return json.keys_by_deaths;
+		} else if (key == "active") {
+			return json.keys_by_active;
+		} else if (key == "recovered") {
+			return json.keys_by_recovered;
+		}
+
+		return json.keys_by_name;
+	}
+
+
 function updatePlot(json)
 {
 
@@ -441,12 +462,10 @@ function updatePlot(json)
 		key = slist.val();
 
 		if (key == "" || key == null) {
-			cs = json.global_case;
+			key = "World";
 		}
-		else {
-			cs = json.cases[key];
-		}
-
+		
+		cs = json.cases[key];
 
 		function add_dataset(data, label, color)
 		{
@@ -507,7 +526,7 @@ function updatePlot(json)
 	}
 	else if (plot_varx == "country")
 	{
-		var keys = json.sorted_cases_keys;
+		var keys = getOrderedKeys(json);
 
 		function add_dataset(series_key, label, color)
 		{
@@ -951,15 +970,27 @@ $.getJSON("data.json", function(json) {
 	var list = $("#region-list");
 	var slist = $("#state-list");
 
-	json.sorted_cases_keys.forEach(function(key){
-		if (json.cases.hasOwnProperty(key)) {
-			cs = json.cases[key];
-			if (cs.province == "") {
-				var item = $("<option/>").text(cs.country).val(key);
-				list.append(item);
+	function updateCountries(selection)
+	{
+		list.empty();
+		
+		keys = getOrderedKeys(json);
+		keys.forEach(function(key){
+			if (json.cases.hasOwnProperty(key)) {
+				cs = json.cases[key];
+				if (cs.province == "") {
+					var item = $("<option/>").text(cs.country).val(key);
+					list.append(item);
+				}
 			}
+		});
+
+		if (selection == "" || selection == null) {
+			selection = "World/";
 		}
-	});
+
+		list.val(selection);
+	}
 
 	function updateStates(country_key, selection)
 	{
@@ -967,7 +998,8 @@ $.getJSON("data.json", function(json) {
 		var item = $("<option/>").text("All").val(country_key);
 		slist.append(item);
 
-		json.sorted_cases_keys.forEach(function(key){
+		keys = getOrderedKeys(json);
+		keys.forEach(function(key){
 			if (json.cases.hasOwnProperty(key)) {
 				cs = json.cases[key];
 				if (cs.province != "" && cs.country + "/" == country_key) {
@@ -1013,11 +1045,10 @@ $.getJSON("data.json", function(json) {
 		key = slist.val();
 
 		if (key == "" || key == null) {
-			cs = json.global_case;
+			key = "World";
 		}
-		else {
-			cs = json.cases[key];
-		}
+
+		cs = json.cases[key];
 
 		if (cs.hasOwnProperty("timeseries_confirmed") && cs.timeseries_confirmed.hasOwnProperty(date_key)) {
 			confirmed = cs.timeseries_confirmed[date_key];
@@ -1124,6 +1155,13 @@ $.getJSON("data.json", function(json) {
 		store("map_data", this.value);
 	});
 
+	$("input[type=radio][name=sort][value=" + load("sort", "confirmed") + "]").attr('checked','checked').button("refresh");
+	$('input[type=radio][name=sort]').change(function() {
+		updateCountries(list.val());
+		store("sort", this.value);
+	});
+
+	updateCountries(load("country", "World/"));
 	updateStates(list.val(), load("state", list.val()));
 	updateStats();
 	updateMap(json);
