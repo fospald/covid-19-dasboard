@@ -1,39 +1,40 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="cache-control" content="max-age=0" />
-	<meta http-equiv="cache-control" content="no-cache" />
-	<meta http-equiv="expires" content="0" />
-	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 
-	<title>Covid-19 dashboard</title>
+		<title>Covid-19 dashboard</title>
 
-	<link rel="stylesheet" href="assets/css/commons.css" />
-	<link rel="stylesheet" href="assets/css/example-commons.css" />
-	<link rel="stylesheet" href="assets/css/leaflet-geojson-selector.css" />
-	<link rel="stylesheet" href="assets/third-party/prism/prism.css" />
-	<link rel="stylesheet" href="assets/third-party/leaflet/0.7.7/leaflet.css" />
-	<link rel="stylesheet" href="assets/third-party/jquery/ui/1.12.1/themes/base/jquery-ui.css">
-	<script src="assets/third-party/jquery/jquery-1.12.4.js"></script>
-	<script src="assets/third-party/jquery/ui/1.12.1/jquery-ui.js"></script>
-	<script src="assets/third-party/leaflet/0.7.7/leaflet.js"></script>
-	<script src="assets/js/heatmap.min.js"></script>
-	<script src="assets/js/leaflet-heatmap.js"></script>
-	<script src="assets/third-party/chartjs/dist/2.9.3/Chart.min.js"></script>
-	<script src="assets/third-party/chartjs/dist/2.9.3/utils.js"></script>
-	<script src="assets/js/leaflet-geojson-selector.js"></script>
+		<link rel="stylesheet" href="assets/css/commons.css" />
+		<link rel="stylesheet" href="assets/css/example-commons.css" />
+		<link rel="stylesheet" href="assets/css/leaflet-geojson-selector.css" />
+		<link rel="stylesheet" href="assets/third-party/prism/prism.css" />
+		<link rel="stylesheet" href="assets/third-party/leaflet/0.7.7/leaflet.css" />
+		<link rel="stylesheet" href="assets/third-party/jquery/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="assets/third-party/jquery/jquery-1.12.4.js"></script>
+		<script src="assets/third-party/jquery/ui/1.12.1/jquery-ui.js"></script>
+		<script src="assets/third-party/leaflet/0.7.7/leaflet.js"></script>
+		<script src="assets/js/heatmap.min.js"></script>
+		<script src="assets/js/leaflet-heatmap.js"></script>
+		<script src="assets/third-party/chartjs/dist/2.9.3/Chart.min.js"></script>
+		<script src="assets/third-party/chartjs/dist/2.9.3/utils.js"></script>
+		<script src="assets/js/leaflet-geojson-selector.js"></script>
 
-	<style>
+		<style>
 
-	canvas{
+	canvas {
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		width: 100%;
 		height: 100%;
 	}
+
 	#plotcanvas {
 		height: auto;
 		width: auto;
@@ -43,7 +44,6 @@
 		right: 1em;
 		left: 1em;
 	}
-
 
 	#custom-handle {
 		width: 5em;
@@ -79,20 +79,25 @@
 		margin-top: 0.3em;
 	}
 
-	.symbol {display:inline !important; float:right;}
-
+	.symbol {
+		display:inline !important;
+		float:right;
+	}
 
 	body, html, #main {
 		height: 100%;
 		margin: 0px;
 		overflow: hidden;
 	}
+
 	#region, #stats, #center {
 		height: 100%;
 	}
+
 	#tabs {
 		height: 100%;
 	}
+
 	#tab-map, #tab-charts, #tab-data {
 		height: auto;
 		width: auto;
@@ -210,12 +215,12 @@
 	}
 	.ui-tabs-panel {
 		padding: 0.5em !important;
-	/*
-		margin-left: 0.2em !important;
-		margin-right: 0.2em !important;
-		margin-bottom: 0.2em !important;
-		margin-top: 0.0em !important;
-	*/
+		/*
+		   margin-left: 0.2em !important;
+		   margin-right: 0.2em !important;
+		   margin-bottom: 0.2em !important;
+		   margin-top: 0.0em !important;
+		 */
 	}
 	.ui-checkboxradio-icon {
 		display: none;
@@ -245,159 +250,148 @@
 	#stats-table th {
 		text-align: right;
 	}
-	</style>
-</head>
-<body>
-	<div id="page">
+		</style>
+	</head>
+	<body>
+		<div id="page">
 
-		<div id="header" class="ui-corner-all ui-widget ui-widget-header">
-			<h1>Covid-19 dashboard</h1>
-		</div>
-
-		<div id="content">
-
-			<div id="region" class="ui-corner-all ui-widget ui-widget-content">
-				<div id="region-header" class="ui-widget-header">
-					<h2>Region</h2>
-				</div>
-
-				<select id="region-list" size="1000">
-					<option value="" selected>World</option>
-				</select>
-
-				<select id="state-list" size="1000">
-				</select>
-
+			<div id="header" class="ui-corner-all ui-widget ui-widget-header">
+				<h1>Covid-19 dashboard</h1>
 			</div>
 
-			<div id="stats" class="ui-corner-all ui-widget ui-widget-content">
-				<div id="stats-header" class="ui-widget-header">
-					<h2>Region stats</h2>
+			<div id="content">
+
+				<div id="region" class="ui-corner-all ui-widget ui-widget-content">
+					<div id="region-header" class="ui-widget-header">
+						<h2>Region</h2>
+					</div>
+
+					<select id="region-list" size="1000">
+						<option value="" selected>World</option>
+					</select>
+
+					<select id="state-list" size="1000">
+					</select>
+
 				</div>
 
-				<div id="country-label">Germany</div>
-				<div id="state-label">Saxony</div>
+				<div id="stats" class="ui-corner-all ui-widget ui-widget-content">
+					<div id="stats-header" class="ui-widget-header">
+						<h2>Region stats</h2>
+					</div>
 
-				<table id="stats-table">
-					<tr><th>Date:</th><td id="stats-date">3/11/2020<td></tr>
-					<tr><th>Confirmed:</th><td id="stats-confirmed">10<td></tr>
-					<tr><th>Recovered:</th><td id="stats-recovered">10<td></tr>
-					<tr><th>Active:</th><td id="stats-active">10<td></tr>
-					<tr><th>Deaths:</th><td id="stats-deaths">10<td></tr>
-					<tr><th>Mortality:</th><td id="stats-mortality">10%<td></tr>
-				</table>
-			</div>
+					<div id="country-label">Germany</div>
+					<div id="state-label">Saxony</div>
 
-			<div id="center">
-				<div id="tabs">
-					<ul>
-						<li><a href="#tab-map">World map</a></li>
-						<li><a href="#tab-charts">Charts</a></li>
-						<li><a href="#tab-data">Data</a></li>
-					</ul>
-					<div id="tab-map" class="ui-corner-all ui-widget ui-widget-content">
+					<table id="stats-table">
+						<tr><th>Date:</th><td id="stats-date">3/11/2020<td></tr>
+						<tr><th>Confirmed:</th><td id="stats-confirmed">10<td></tr>
+						<tr><th>Recovered:</th><td id="stats-recovered">10<td></tr>
+						<tr><th>Active:</th><td id="stats-active">10<td></tr>
+						<tr><th>Deaths:</th><td id="stats-deaths">10<td></tr>
+						<tr><th>Mortality:</th><td id="stats-mortality">10%<td></tr>
+					</table>
+				</div>
 
-
-						<div class="controlgroup">
-							<label for="map-confirmed">Confirmed</label>
-							<input type="radio" name="map_data" value="confirmed" id="map-confirmed" checked="1" />
-							<label for="map-deaths">Deaths</label>
-							<input type="radio" name="map_data" value="deaths" id="map-deaths" />
-							<label for="map-recovered">Recovered</label>
-							<input type="radio" name="map_data" value="recovered" id="map-recovered" />
-							<label for="map-active">Active</label>
-							<input type="radio" name="map_data" value="active" id="map-active" />
-						</div>
+				<div id="center">
+					<div id="tabs">
+						<ul>
+							<li><a href="#tab-map">World map</a></li>
+							<li><a href="#tab-charts">Charts</a></li>
+							<li><a href="#tab-data">Data</a></li>
+						</ul>
+						<div id="tab-map" class="ui-corner-all ui-widget ui-widget-content">
 
 
-						<div class="map-wrapper">
-							<div class="heatmap" id="map-canvas">
+							<div class="controlgroup">
+								<label for="map-confirmed">Confirmed</label>
+								<input type="radio" name="map_data" value="confirmed" id="map-confirmed" autocomplete="off" />
+								<label for="map-deaths">Deaths</label>
+								<input type="radio" name="map_data" value="deaths" id="map-deaths" autocomplete="off" />
+								<label for="map-recovered">Recovered</label>
+								<input type="radio" name="map_data" value="recovered" id="map-recovered" autocomplete="off" />
+								<label for="map-active">Active</label>
+								<input type="radio" name="map_data" value="active" id="map-active" autocomplete="off" />
 							</div>
-						</div>
 
-						<div id="controlWrap">
-							<button id="playbutton">Play</button>
-							<div id="dateslider">
-								<div id="custom-handle" class="ui-slider-handle"></div>
+
+							<div class="map-wrapper">
+								<div class="heatmap" id="map-canvas">
+								</div>
 							</div>
+
+							<div id="controlWrap">
+								<button id="playbutton">Play</button>
+								<div id="dateslider">
+									<div id="custom-handle" class="ui-slider-handle"></div>
+								</div>
+							</div>
+
+
+						</div>
+						<div id="tab-charts" class="ui-corner-all ui-widget ui-widget-content">
+
+							<div class="controlgroup">
+								<label for="plot-time">Plot over date for selected region</label>
+								<input type="radio" name="plot_varx" value="time" id="plot-time" autocomplete="off" />
+								<label for="plot-country">Plot over countries</label>
+								<input type="radio" name="plot_varx" value="country" id="plot-country" autocomplete="off" />
+								<label for="plot-states">Plot over states of selected country</label>
+								<input type="radio" name="plot_varx" value="states" id="plot-states" autocomplete="off" disabled/>
+							</div>
+
+							<br/>
+
+							<div class="controlgroup">
+								<label for="plot-cases">Cases</label>
+								<input type="radio" name="plot_data" value="cases" id="plot-cases" autocomplete="off" />
+								<label for="plot-mortality">Mortality</label>
+								<input type="radio" name="plot_data" value="mortality" id="plot-mortality" autocomplete="off" disabled>
+							</div>
+
+
+							<div class="controlgroup">
+								<label for="plot-cummultative">Cummultative</label>
+								<input type="radio" name="plot_type" value="cummultative" id="plot-cummultative" autocomplete="off" />
+								<label for="plot-increase">Daily increase</label>
+								<input type="radio" name="plot_type" value="increase" id="plot-increase" autocomplete="off" />
+							</div>
+
+							<div class="controlgroup">
+								<label for="plot-linear">Linear</label>
+								<input type="radio" name="plot_scale" value="linear" id="plot-linear" autocomplete="off" />
+								<label for="plot-log">Logarithmic</label>
+								<input type="radio" name="plot_scale" value="logarithmic" id="plot-log" autocomplete="off" />
+							</div>
+
+
+
+							<div id="plotcanvas">
+								<canvas id="canvas" maintainAspectRatio="false"></canvas>
+							</div>
+
+
 						</div>
 
+						<div id="tab-data" class="ui-corner-all ui-widget ui-widget-content">
+							data here
+						</div>
 
 					</div>
-					<div id="tab-charts" class="ui-corner-all ui-widget ui-widget-content">
-
-						<div class="controlgroup">
-							<label for="plot-time">Plot over date for selected region</label>
-							<input type="radio" name="plot_varx" value="time" id="plot-time" checked="1" />
-							<label for="plot-country">Plot over countries</label>
-							<input type="radio" name="plot_varx" value="country" id="plot-country" />
-							<label for="plot-states">Plot over states of selected country</label>
-							<input type="radio" name="plot_varx" value="states" id="plot-states" disabled/>
-						</div>
-
-						<br/>
-
-						<div class="controlgroup">
-							<label for="plot-cases">Cases</label>
-							<input type="radio" name="plot_data" value="cases" id="plot-cases" checked="1" />
-							<label for="plot-mortality">Mortality</label>
-							<input type="radio" name="plot_data" value="mortality" id="plot-mortality" disabled>
-						</div>
-
-
-						<div class="controlgroup">
-							<label for="plot-cummultative">Cummultative</label>
-							<input type="radio" name="plot_type" value="cummultative" id="plot-cummultative" checked="1" />
-							<label for="plot-increase">Daily increase</label>
-							<input type="radio" name="plot_type" value="increase" id="plot-increase" />
-						</div>
-
-						<div class="controlgroup">
-							<label for="plot-linear">Linear</label>
-							<input type="radio" name="plot_scale" value="linear" id="plot-linear" checked="1" />
-							<label for="plot-log">Logarithmic</label>
-							<input type="radio" name="plot_scale" value="logarithmic" id="plot-log">
-						</div>
-
-
-
-						<div id="plotcanvas">
-							<canvas id="canvas" maintainAspectRatio="false"></canvas>
-						</div>
-
-
-					</div>
-
-					<div id="tab-data" class="ui-corner-all ui-widget ui-widget-content">
-						data here
-					</div>
-
 				</div>
 			</div>
+
+			<div id="footer" class="ui-corner-all ui-widget ui-widget-header">
+				Developed by <a href="https://www.researchgate.net/profile/Felix_Ospald">Felix Ospald</a> using <a href="https://jquery.com/">JQuery</a>, <a href="https://jqueryui.com">JQuery UI</a>, <a href="https://leafletjs.com/">Leaflet</a>, <a href="https://www.chartjs.org">ChartJS</a>; 
+				Source: <a href="https://github.com/fospald/covid-19-dashboard">Git-repository</a>; 
+				Data by: <a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>;
+				<a href="https://github.com/iceweasel1/COVID-19-Germany">iceweasel1</a>
+			</div>
+
 		</div>
 
-		<div id="footer" class="ui-corner-all ui-widget ui-widget-header">
-			Developed by <a href="https://www.researchgate.net/profile/Felix_Ospald">Felix Ospald</a> using <a href="https://jquery.com/">JQuery</a>, <a href="https://jqueryui.com">JQuery UI</a>, <a href="https://leafletjs.com/">Leaflet</a>, <a href="https://www.chartjs.org">ChartJS</a>; 
-			Source: <a href="https://github.com/fospald/covid-19-dashboard">Git-repository</a>; 
-			Data by: <a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>;
-			<a href="https://github.com/iceweasel1/COVID-19-Germany">iceweasel1</a>
-		</div>
 
-	</div>
-
-
-<script>
-
-
-$( function() {
-	$( "#tabs" ).tabs({ disabled: [ 2 ] });
-	//$("ul").removeClass("ui-widget-header");
-	// $("#tabs").removeClass("ui-widget-header");
-	// ui-tabs ui-corner-all ui-widget ui-widget-content
-
-	$( ".controlgroup" ).controlgroup();
-
-} );
+		<script>
 
 var chart = null;
 
@@ -420,7 +414,7 @@ function updatePlot(json)
 	{
 		key = slist.val();
 
-		if (key == "") {
+		if (key == "" || key == null) {
 			cs = json.global_case;
 		}
 		else {
@@ -432,7 +426,7 @@ function updatePlot(json)
 		{
 			x = Object.keys(data);
 			x.sort();
-			
+
 			var y = [];
 			for (var i = 0; i < x.length; i++) {
 				y.push(data[x[i]]);
@@ -460,7 +454,7 @@ function updatePlot(json)
 				borderColor: color,
 				data: y,
 				fill: false,
-      				//lineTension: 0
+				//lineTension: 0
 			};
 
 			datasets.push(dataset);
@@ -492,8 +486,8 @@ function updatePlot(json)
 		function add_dataset(series_key, label, color)
 		{
 			var y = [];
-      			
-      			new_keys = [];
+
+			new_keys = [];
 
 			keys.forEach(function(key) {
 				if (json.cases.hasOwnProperty(key)) {
@@ -503,17 +497,17 @@ function updatePlot(json)
 							if (cs[series_key].hasOwnProperty(date_key)) {
 								x.push(cs.country);
 								y.push(cs[series_key][date_key]);
-      								new_keys.push(key);
+								new_keys.push(key);
 							}
 						}
 					}
 				}
 			});
 
-      			keys = new_keys;
+			keys = new_keys;
 
-      			if (series_key == "timeseries_confirmed")
-      			{
+			if (series_key == "timeseries_confirmed")
+			{
 				sample_data = [ ];
 				for (var i = 0; i < x.length; i++) {
 					sample_data.push({name: x[i], value: y[i], key: keys[i]});
@@ -532,10 +526,10 @@ function updatePlot(json)
 				}
 			}
 
-      			dim = 20;
-      			keys = keys.slice(0, dim);
-      			x = x.slice(0, dim);
-      			y = y.slice(0, dim);
+			dim = 20;
+			keys = keys.slice(0, dim);
+			x = x.slice(0, dim);
+			y = y.slice(0, dim);
 
 			dataset = {
 				label: label,
@@ -543,7 +537,7 @@ function updatePlot(json)
 				borderColor: color,
 				data: y,
 				fill: false,
-      				//lineTension: 0
+				//lineTension: 0
 			};
 
 			datasets.push(dataset);
@@ -578,7 +572,8 @@ function updatePlot(json)
 			},
 			tooltips: {
 				mode: 'index',
-				intersect: false,
+       				position: 'nearest',
+				intersect: false
 			},
 			hover: {
 				mode: 'nearest',
@@ -657,22 +652,22 @@ function updateMap(json)
 			if (cs.hasOwnProperty("is_group")) continue;
 			if (cs.hasOwnProperty("is_group_" + series_name)) continue;
 
-      			if (series_name == "confirmed" && cs.hasOwnProperty("timeseries_confirmed")) {
+			if (series_name == "confirmed" && cs.hasOwnProperty("timeseries_confirmed")) {
 				series = cs.timeseries_confirmed;
-      			}
-      			else if (series_name == "active" && cs.hasOwnProperty("timeseries_active")) {
+			}
+			else if (series_name == "active" && cs.hasOwnProperty("timeseries_active")) {
 				series = cs.timeseries_active;
-      			}
-      			else if (series_name == "deaths" && cs.hasOwnProperty("timeseries_deaths")) {
+			}
+			else if (series_name == "deaths" && cs.hasOwnProperty("timeseries_deaths")) {
 				series = cs.timeseries_deaths;
-      			}
-      			else if (series_name == "recovered" && cs.hasOwnProperty("timeseries_recovered")) {
+			}
+			else if (series_name == "recovered" && cs.hasOwnProperty("timeseries_recovered")) {
 				series = cs.timeseries_recovered;
-      			}
-      			else {
-      				// no data
-      				series = {};
-      			}
+			}
+			else {
+				// no data
+				series = {};
+			}
 
 			min_key = date_key;
 			if (!series.hasOwnProperty(date_key.toString())) {
@@ -740,95 +735,109 @@ function updateMap(json)
 		};
 
 
-$.getJSON('world-countries.json', function(gjson) {
+		$.getJSON('world-countries.json', function(gjson) {
 
-	var geoLayer = L.geoJson(gjson);
-	heatmapLayer = new HeatmapOverlay(cfg);
+			var geoLayer = L.geoJson(gjson);
+			heatmapLayer = new HeatmapOverlay(cfg);
 
+			geoList = new L.Control.GeoJSONSelector(geoLayer, {
+				zoomToLayer: true,
+				listDisabled: true,
+				activeListFromLayer: false,
+				activeLayerFromList: false,
+				listOnlyVisibleLayers: false,
+				style: {
+					color:'#000',
+					fillColor:'#08f',
+					fillOpacity: 0.0,
+					opacity: 0.5,
+					weight: 1
+				},
+				activeClass: 'active',                  //css class name for active list items
+				activeStyle: {                                  //style for Active GeoJSON feature
+					color:'#00f',
+					fillColor:'#fc0',
+					fillOpacity: 0.0,
+					opacity: 1,
+					weight: 3
+				},
+				selectClass: 'selected',
+				selectStyle: {
+					color:'#00f',
+					fillColor:'#f80',
+					fillOpacity: 0.0,
+					opacity: 1,
+					weight: 3
+				}
+			});
 
-	geoList = new L.Control.GeoJSONSelector(geoLayer, {
-		zoomToLayer: true,
-		listDisabled: true,
-		activeListFromLayer: false,
-		activeLayerFromList: false,
-		listOnlyVisibleLayers: false,
-                style: {
-                        color:'#000',
-                        fillColor:'#08f',
-                        fillOpacity: 0.0,
-                        opacity: 0.5,
-                        weight: 1
-                },
-                activeClass: 'active',                  //css class name for active list items
-                activeStyle: {                                  //style for Active GeoJSON feature
-                        color:'#00f',
-                        fillColor:'#fc0',
-                        fillOpacity: 0.0,
-                        opacity: 1,
-                        weight: 3
-                },
-                selectClass: 'selected',
-                selectStyle: {
-                        color:'#00f',
-                        fillColor:'#f80',
-                        fillOpacity: 0.0,
-                        opacity: 1,
-                        weight: 3
-                }
+			geoList.on('selector:change', function(e) {
+				country = e.layers[0].feature.properties["name"];
+				$("#region-list").val(country + "/").change();
+			});
 
-	});
+			var map = new L.Map('map-canvas', {
+				center: new L.LatLng(load("centerLat", 30.0), load("centerLng", 0.0)),
+				zoom: load("zoom", 2),
+				layers: [baseLayer, heatmapLayer, geoLayer, geoList]
+			});
 
-	geoList.on('selector:change', function(e) {
-		country = e.layers[0].feature.properties["name"];
-		$("#region-list").val(country + "/").change();
-	});
-	
-	var map = new L.Map('map-canvas', {
-		center: new L.LatLng(30.0, 0.0),
-		zoom: 2,
-		layers: [baseLayer, heatmapLayer, geoLayer, geoList]
-	});
+			map.on('moveend', function() {
+				center = map.getCenter();
+				store("centerLat", center.lat);
+				store("centerLng", center.lng);
+			});
 
-	map.addControl(function() {
-		var c = new L.Control({position:'bottomright'});
-		c.onAdd = function(map) {
-				return L.DomUtil.create('pre','selection');
-			};
-		return c;
-	}());
+			map.on('zoomend', function() {
+				zoomLev = map.getZoom();
+				store("zoom", zoomLev);
+			});
 
-	$("#region-list").change(function() {
-		for (var i = 0; i < geoList._items.length; i++) {
-			item = geoList._items[i];
-			if (item.layer.feature.properties["name"] + "/" == this.value) {
-				geoList._moveTo(item.layer);
-				geoList._selectItem(item, true);
-				geoList._selectLayer(item.layer, true);
-				break;
-			}
-		}
-	});
+			$("#region-list").change(function() {
+				for (var i = 0; i < geoList._items.length; i++) {
+					item = geoList._items[i];
+					if (item.layer.feature.properties["name"] + "/" == this.value) {
+						geoList._moveTo(item.layer);
+						geoList._selectItem(item, true);
+						geoList._selectLayer(item.layer, true);
+						break;
+					}
+				}
+			});
 
-	heatmapLayer.setData(testData);
-});
+			heatmapLayer.setData(testData);
+		});
 
-
-/*
+		/*
 		$( window ).resize(function() {
 			setTimeout(function() {
 				map.invalidateSize();
 				heatmapLayer._update();
 			}, 10);
 		});
-  */
-
+		*/
 	}
 	else {
-	heatmapLayer.setData(testData);
+		heatmapLayer.setData(testData);
 	}
 }
 
 var playing = 0;
+
+
+function load(key, def)
+{
+	v = localStorage.getItem(key);
+	if (v == null) {
+		return def;
+	}
+	return v;
+}
+
+function store(key, v)
+{
+	localStorage.setItem(key, v);
+}
 
 function playStop()
 {
@@ -851,10 +860,27 @@ function playNext()
 	else playStop();
 }
 
+
+
 $.getJSON("data.json", function(json) {
 
+	$( "#tabs" ).tabs({
+		disabled: [ 2 ],
+		active: 0,
+		activate: function(event, ui) {
+			store("tab", ui.newTab.index());
+		}
+	});
+
+	//$("ul").removeClass("ui-widget-header");
+	// $("#tabs").removeClass("ui-widget-header");
+	// ui-tabs ui-corner-all ui-widget ui-widget-content
+
+	$( ".controlgroup" ).controlgroup();
+
+
 	$( "#playbutton" ).click( function( event ) {
-																	  if (playing) { playStop(); return; }
+		if (playing) { playStop(); return; }
 		playing = 1;
 		$( "#playbutton" ).text("Stop");
 		setTimeout(playNext, 1);
@@ -866,14 +892,14 @@ $.getJSON("data.json", function(json) {
 	json.sorted_cases_keys.forEach(function(key){
 		if (json.cases.hasOwnProperty(key)) {
 			cs = json.cases[key];
-			  if (cs.province == "") {
+			if (cs.province == "") {
 				var item = $("<option/>").text(cs.country).val(key);
 				list.append(item);
 			}
 		}
 	});
 
-	function updateStates(country_key)
+	function updateStates(country_key, selection)
 	{
 		slist.empty();
 		var item = $("<option/>").text("All").val(country_key);
@@ -889,12 +915,16 @@ $.getJSON("data.json", function(json) {
 			}
 		});
 
-		slist.val(country_key)
+		if (selection == "" || selection == null) {
+			selection = country_key;
+		}
+
+		slist.val(selection);
 	}
 
 	function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
 
 	function updateStats()
 	{
@@ -919,15 +949,15 @@ $.getJSON("data.json", function(json) {
 		}
 
 		key = slist.val();
-		
-		if (key == "") {
+
+		if (key == "" || key == null) {
 			cs = json.global_case;
 		}
 		else {
 			cs = json.cases[key];
 		}
 
-      		if (cs.hasOwnProperty("timeseries_confirmed") && cs.timeseries_confirmed.hasOwnProperty(date_key)) {
+		if (cs.hasOwnProperty("timeseries_confirmed") && cs.timeseries_confirmed.hasOwnProperty(date_key)) {
 			confirmed = cs.timeseries_confirmed[date_key];
 			$("#stats-confirmed").text(numberWithCommas(cs.timeseries_confirmed[date_key]));
 		}
@@ -936,7 +966,7 @@ $.getJSON("data.json", function(json) {
 			$("#stats-confirmed").text("n/a");
 		}
 
-      		if (cs.hasOwnProperty("timeseries_recovered") && cs.timeseries_recovered.hasOwnProperty(date_key)) {
+		if (cs.hasOwnProperty("timeseries_recovered") && cs.timeseries_recovered.hasOwnProperty(date_key)) {
 			recovered = cs.timeseries_recovered[date_key];
 			$("#stats-recovered").text(numberWithCommas(cs.timeseries_recovered[date_key]));
 		}
@@ -945,7 +975,7 @@ $.getJSON("data.json", function(json) {
 			$("#stats-recovered").text("n/a");
 		}
 
-      		if (cs.hasOwnProperty("timeseries_deaths") && cs.timeseries_deaths.hasOwnProperty(date_key)) {
+		if (cs.hasOwnProperty("timeseries_deaths") && cs.timeseries_deaths.hasOwnProperty(date_key)) {
 			deaths = cs.timeseries_deaths[date_key];
 			$("#stats-deaths").text(numberWithCommas(cs.timeseries_deaths[date_key]));
 		}
@@ -954,7 +984,7 @@ $.getJSON("data.json", function(json) {
 			$("#stats-deaths").text("n/a");
 		}
 
-      		if (cs.hasOwnProperty("timeseries_active") && cs.timeseries_active.hasOwnProperty(date_key)) {
+		if (cs.hasOwnProperty("timeseries_active") && cs.timeseries_active.hasOwnProperty(date_key)) {
 			active = cs.timeseries_active[date_key];
 			$("#stats-active").text(numberWithCommas(cs.timeseries_active[date_key]));
 		}
@@ -963,7 +993,7 @@ $.getJSON("data.json", function(json) {
 			$("#stats-active").text("n/a");
 		}
 
-      		if (deaths != null && confirmed) {
+		if (deaths != null && confirmed) {
 			mortality = Math.round(deaths/confirmed*1000)/10;
 			$("#stats-mortality").text(mortality.toString() + "%");
 		}
@@ -974,15 +1004,18 @@ $.getJSON("data.json", function(json) {
 	}
 
 	list.change(function() {
-		updateStates(this.value);
+		updateStates(this.value, this.value);
 		updateStats();
 		updatePlot(json);
+		store("country", this.value);
+		store("state", this.value);
 	});
-	list.val("")
+	list.val(load("country", ""));
 
 	slist.change(function() {
 		updateStats();
 		updatePlot(json);
+		store("state", this.value);
 	});
 
 	function updateDate()
@@ -999,34 +1032,50 @@ $.getJSON("data.json", function(json) {
 		slide: function( event, ui ) { updateDate(); }
 	});
 
+	$("input[type=radio][name=plot_scale][value=" + load("plot_scale", "linear") + "]").attr('checked','checked').button("refresh");
 	$('input[type=radio][name=plot_scale]').change(function() {
 		updatePlot(json);
+		store("plot_scale", this.value);
 	});
+
+	$("input[type=radio][name=plot_data][value=" + load("plot_data", "cases") + "]").attr('checked','checked').button("refresh");
 	$('input[type=radio][name=plot_data]').change(function() {
 		updatePlot(json);
+		store("plot_data", this.value);
 	});
+
+	$("input[type=radio][name=plot_varx][value=" + load("plot_varx", "time") + "]").attr('checked','checked').button("refresh");
 	$('input[type=radio][name=plot_varx]').change(function() {
 		updatePlot(json);
+		store("plot_varx", this.value);
 	});
+
+	$("input[type=radio][name=plot_type][value=" + load("plot_type", "cummultative") + "]").attr('checked','checked').button("refresh");
 	$('input[type=radio][name=plot_type]').change(function() {
 		updatePlot(json);
+		store("plot_type", this.value);
 	});
 
+	$("input[type=radio][name=map_data][value=" + load("map_data", "confirmed") + "]").attr('checked','checked').button("refresh");
 	$('input[type=radio][name=map_data]').change(function() {
 		updateMap(json);
+		store("map_data", this.value);
 	});
 
-	updateStates("");
+	updateStates(list.val(), load("state", list.val()));
 	updateStats();
 	updateMap(json);
 	updatePlot(json);
+
+	setTimeout(function() {
+		$("#tabs").tabs("option", "active", load("tab", 0));
+	}, 100);
 });
+		</script>
 
-</script>
+		<script src="assets/third-party/prism/prism.js"></script>
 
-<script src="assets/third-party/prism/prism.js"></script>
-
-</body>
+	</body>
 </html>
 
 

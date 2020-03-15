@@ -33,6 +33,10 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
                 
             line_count += 1
 
+            # fix UK bug
+            if row[0] == row[1]:
+                row[0] = ""
+
             key = row[1] + '/' + row[0]
             if key in data:
                 rec = data[key]
