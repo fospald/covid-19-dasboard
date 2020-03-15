@@ -358,10 +358,10 @@
 							</div>
 
 							<div class="controlgroup">
-								<label for="plot-linear">Linear</label>
-								<input type="radio" name="plot_scale" value="linear" id="plot-linear" autocomplete="off" />
 								<label for="plot-log">Logarithmic</label>
 								<input type="radio" name="plot_scale" value="logarithmic" id="plot-log" autocomplete="off" />
+								<label for="plot-linear">Linear</label>
+								<input type="radio" name="plot_scale" value="linear" id="plot-linear" autocomplete="off" />
 							</div>
 
 
@@ -1068,7 +1068,7 @@ $.getJSON("data.json", function(json) {
 		slide: function( event, ui ) { updateDate(); }
 	});
 
-	$("input[type=radio][name=plot_scale][value=" + load("plot_scale", "linear") + "]").attr('checked','checked').button("refresh");
+	$("input[type=radio][name=plot_scale][value=" + load("plot_scale", "logarithmic") + "]").attr('checked','checked').button("refresh");
 	$('input[type=radio][name=plot_scale]').change(function() {
 		updatePlot(json);
 		store("plot_scale", this.value);
