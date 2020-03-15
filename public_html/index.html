@@ -282,9 +282,6 @@
 
 					<div class="controlgroup" id="regionorder">
 
-						<label for="sort-name" title="Order by name">N</label>
-						<input type="radio" name="sort" value="name" id="sort-name" autocomplete="off" />
-
 						<label for="sort-confirmed" title="Order by confirmed cases">C</label>
 						<input type="radio" name="sort" value="confirmed" id="sort-confirmed" autocomplete="off" />
 						<label for="sort-deaths" title="Order by deaths">D</label>
@@ -293,6 +290,9 @@
 						<input type="radio" name="sort" value="recovered" id="sort-recovered" autocomplete="off" />
 						<label for="sort-active" title="Order by active cases">A</label>
 						<input type="radio" name="sort" value="active" id="sort-active" autocomplete="off" />
+						<label for="sort-name" title="Order by name">N</label>
+						<input type="radio" name="sort" value="name" id="sort-name" autocomplete="off" />
+
 					</div>
 
 
@@ -532,9 +532,9 @@ function updatePlot(json)
 		{
 			var y = [];
 
-			new_keys = [];
-
-			keys.forEach(function(key) {
+			keys.forEach(function(keyval) {
+				key = keyval[0];
+				if (key == "World/") return;
 				if (json.cases.hasOwnProperty(key)) {
 					cs = json.cases[key];
 					if (cs.province == "") {
@@ -542,37 +542,13 @@ function updatePlot(json)
 							if (cs[series_key].hasOwnProperty(date_key)) {
 								x.push(cs.country);
 								y.push(cs[series_key][date_key]);
-								new_keys.push(key);
 							}
 						}
 					}
 				}
 			});
 
-			keys = new_keys;
-
-			if (series_key == "timeseries_confirmed")
-			{
-				sample_data = [ ];
-				for (var i = 0; i < x.length; i++) {
-					sample_data.push({name: x[i], value: y[i], key: keys[i]});
-				}
-
-				function custom_compare (a,b) {
-					return a.value - b.value;
-				}
-
-				sample_data.sort(custom_compare).reverse();
-
-				for (var i = 0; i < x.length; i++) {
-					x[i] = sample_data[i].name;
-					y[i] = sample_data[i].value;
-					keys[i] = sample_data[i].key;
-				}
-			}
-
 			dim = 20;
-			keys = keys.slice(0, dim);
 			x = x.slice(0, dim);
 			y = y.slice(0, dim);
 
@@ -586,7 +562,6 @@ function updatePlot(json)
 			};
 
 			datasets.push(dataset);
-
 		}
 
 		add_dataset("timeseries_confirmed", "Confirmed", window.chartColors.red);
@@ -614,6 +589,9 @@ function updatePlot(json)
 			title: {
 				display: false,
 				text: ''
+			},
+			animation: {
+				duration: 0
 			},
 			tooltips: {
 				mode: 'index',
@@ -975,11 +953,17 @@ $.getJSON("data.json", function(json) {
 		list.empty();
 		
 		keys = getOrderedKeys(json);
-		keys.forEach(function(key){
+		keys.forEach(function(keyval){
+			key = keyval[0];
 			if (json.cases.hasOwnProperty(key)) {
 				cs = json.cases[key];
 				if (cs.province == "") {
-					var item = $("<option/>").text(cs.country).val(key);
+					text = cs.country;
+					if (keyval[1] != null) {
+						val = numberWithCommas(keyval[1]);
+						text += " (" + val + ")";
+					}
+					var item = $("<option/>").text(text).val(key);
 					list.append(item);
 				}
 			}
@@ -999,7 +983,8 @@ $.getJSON("data.json", function(json) {
 		slist.append(item);
 
 		keys = getOrderedKeys(json);
-		keys.forEach(function(key){
+		keys.forEach(function(keyval){
+			key = keyval[0];
 			if (json.cases.hasOwnProperty(key)) {
 				cs = json.cases[key];
 				if (cs.province != "" && cs.country + "/" == country_key) {
@@ -1158,6 +1143,7 @@ $.getJSON("data.json", function(json) {
 	$("input[type=radio][name=sort][value=" + load("sort", "confirmed") + "]").attr('checked','checked').button("refresh");
 	$('input[type=radio][name=sort]').change(function() {
 		updateCountries(list.val());
+		updatePlot(json);
 		store("sort", this.value);
 	});
 

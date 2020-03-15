@@ -251,39 +251,54 @@ def cmp_by_name(x, y):
     return 1 if x["country"] > y["country"] else -1
 data_by_name = data.values()
 data_by_name.sort(key=cmp_to_key(cmp_by_name))
-keys_by_name = [c['id'] for c in data_by_name]
+keys_by_name = [(c['id'], None) for c in data_by_name]
 
-def cmp_by_confirmed(x, y):
-    if not "timeseries_confirmed" in x or not "timeseries_confirmed" in y:
-        return -1
-    return y["timeseries_confirmed"][max_date] - x["timeseries_confirmed"][max_date]
-data_by_confirmed = data.values()
-data_by_confirmed.sort(key=cmp_to_key(cmp_by_confirmed))
-keys_by_confirmed = [c['id'] for c in data_by_confirmed]
+def getval(dat, ts):
+    if not ts in dat:
+        return None
+    return dat[ts][max_date]
+
 
 def cmp_by_deaths(x, y):
-    if not "timeseries_deaths" in x or not "timeseries_deaths" in y:
+    if not "timeseries_deaths" in x:
+        return 1
+    if not "timeseries_deaths" in y:
         return -1
     return y["timeseries_deaths"][max_date] - x["timeseries_deaths"][max_date]
 data_by_deaths = data.values()
 data_by_deaths.sort(key=cmp_to_key(cmp_by_deaths))
-keys_by_deaths = [c['id'] for c in data_by_deaths]
+keys_by_deaths = [(c['id'], getval(c, "timeseries_deaths")) for c in data_by_deaths]
+
+
+def cmp_by_confirmed(x, y):
+    if not "timeseries_confirmed" in x:
+        return 1
+    if not "timeseries_confirmed" in y:
+        return -1
+    return y["timeseries_confirmed"][max_date] - x["timeseries_confirmed"][max_date]
+data_by_confirmed = data.values()
+data_by_confirmed.sort(key=cmp_to_key(cmp_by_confirmed))
+keys_by_confirmed = [(c['id'], getval(c, "timeseries_confirmed")) for c in data_by_confirmed]
 
 def cmp_by_recovered(x, y):
-    if not "timeseries_recovered" in x or not "timeseries_recovered" in y:
+    if not "timeseries_recovered" in x:
+        return 1
+    if not "timeseries_recovered" in y:
         return -1
     return y["timeseries_recovered"][max_date] - x["timeseries_recovered"][max_date]
 data_by_recovered = data.values()
 data_by_recovered.sort(key=cmp_to_key(cmp_by_recovered))
-keys_by_recovered = [c['id'] for c in data_by_recovered]
+keys_by_recovered = [(c['id'], getval(c, "timeseries_recovered")) for c in data_by_recovered]
 
 def cmp_by_active(x, y):
-    if not "timeseries_active" in x or not "timeseries_active" in y:
+    if not "timeseries_active" in x:
+        return 1
+    if not "timeseries_active" in y:
         return -1
     return y["timeseries_active"][max_date] - x["timeseries_active"][max_date]
 data_by_active = data.values()
 data_by_active.sort(key=cmp_to_key(cmp_by_active))
-keys_by_active = [c['id'] for c in data_by_active]
+keys_by_active = [(c['id'], getval(c, "timeseries_active")) for c in data_by_active]
 
 export_data = {
         'cases': data,
