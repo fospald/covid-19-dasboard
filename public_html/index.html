@@ -771,8 +771,40 @@ function updateMap(json)
 				}
 			});
 
+			var country_map = {
+				'United States of America': 'US',
+				'Republic of the Congo': 'Congo (Kinshasa)',
+				'Czech Republic': 'Czechia',
+				'South Korea': 'Korea, South',
+				'Macedonia': 'North Macedonia',
+				'Republic of Serbia': 'Serbia',
+				'Taiwan': 'Taiwan*',
+				/*
+				Missing country outlines or maps:
+				Andorra
+				Antigua and Barbuda
+				Aruba
+				Bahrain
+				Cayman Islands
+				Cote d'Ivoire
+				Cruise Ship
+				Guadeloupe
+				Holy See
+				Liechtenstein
+				Martinique
+				Monaco
+				Reunion
+				San Marino
+				Singapore
+				*/
+			};
+
 			geoList.on('selector:change', function(e) {
 				country = e.layers[0].feature.properties["name"];
+				if (country_map.hasOwnProperty(country)) {
+					country = country_map[country];
+				}
+				//console.log(country);
 				$("#region-list").val(country + "/").change();
 			});
 
@@ -796,7 +828,11 @@ function updateMap(json)
 			$("#region-list").change(function() {
 				for (var i = 0; i < geoList._items.length; i++) {
 					item = geoList._items[i];
-					if (item.layer.feature.properties["name"] + "/" == this.value) {
+					country = item.layer.feature.properties["name"];
+					if (country_map.hasOwnProperty(country)) {
+						country = country_map[country];
+					}
+					if (country + "/" == this.value) {
 						geoList._moveTo(item.layer);
 						geoList._selectItem(item, true);
 						geoList._selectLayer(item.layer, true);
