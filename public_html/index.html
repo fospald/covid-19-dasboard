@@ -35,14 +35,18 @@
 		height: 100%;
 	}
 
+	.ui-button {
+		padding: 0.2em 0.5em;
+	}
+
 	#plotcanvas {
 		height: auto;
 		width: auto;
 		position: absolute;
-		top: 6.5em;
-		bottom: 1em;
-		right: 1em;
-		left: 1em;
+		top: 5.1em;
+		bottom: 0.1em;
+		right: 0.3em;
+		left: 0.3em;
 	}
 
 	#custom-handle {
@@ -69,7 +73,7 @@
 		height: auto;
 		width: auto;
 		position: absolute;
-		top: 5em;
+		top: 4.7em;
 		bottom: 0.5em;
 		right: 0.5em;
 		left: 0.5em;
@@ -82,6 +86,10 @@
 	.symbol {
 		display:inline !important;
 		float:right;
+	}
+
+	html {
+		line-height: 1em;
 	}
 
 	body, html, #main {
@@ -117,18 +125,18 @@
 		margin: 0;
 	}
 	#region {
-		margin-left: 0.5em;
-		width: 11em;
+		margin-left: 0.2em;
+		width: 11.3em;
 		float: left;
 	}
 	#stats {
-		margin-right: 0.5em;
-		width: 14em;
+		margin-right: 0.2em;
+		width: 12em;
 		float: right;
 	}
 	#center {
 		margin-left: 12em;
-		margin-right: 15em;
+		margin-right: 12.7em;
 	}
 	#page {
 		min-height: 100%;
@@ -137,28 +145,31 @@
 		height: auto;
 		width: 100%;
 		position: absolute;
-		top: 3.8em;
-		bottom: 3em;
+		top: 0.2em;		/* adjust to header */
+		bottom: 0.3em;		/* adjust to footer */
 	}
 	#footer {
-		height: 1.2em;
-		width: 100%;
+		font-size: 75%;
+		height: 8.0em;
+		width: 15em;
+		right: 0.2em;
 		position: absolute;
-		bottom: 0em;
-		padding: 0.5em;
+		bottom: 0.3em;
+		padding: 0.2em 0.5em;
 	}
 	#header {
 		height: 3.2em;
+		display: none;
 	}
 	#region-header, #stats-header {
 		height: 2.3em;
 	}
 	h1 {
-		margin: 0.4em;
+		margin: 0.5em;
 		font-size: 2em;
 	}
 	h2 {
-		margin: 0.2em;
+		margin: 0.4em;
 		margin-left: 0.3em;
 		font-size: 1.5em;
 	}
@@ -188,22 +199,21 @@
 		height: 2.3em;
 		border-radius: 0px !important;
 	}
+	#state-list, #region-list {
+		position: absolute;
+		width: 10.4em;
+		left: 0.6em;
+		right: 0.3em;
+	}
+
 	#region-list {
 		height: auto;
-		width: 10.2em;
-		position: absolute;
 		top: 3em;
 		bottom: 14.5em;
-		left: 1em;
-		right: 0.3em;
 	}
 	#state-list {
 		height: 14em;
-		width: 10.2em;
-		position: absolute;
 		bottom: 0.3em;
-		left: 1em;
-		right: 0.3em;
 	}
 	.controlgroup {
 		margin: 0;
@@ -304,6 +314,22 @@
 
 
 							<div class="controlgroup">
+
+								<label for="sort-name" title="Order by name">N</label>
+								<input type="radio" name="sort" value="name" id="sort-name" autocomplete="off" />
+
+								<label for="sort-confirmed" title="Order by confirmed cases">C</label>
+								<input type="radio" name="sort" value="confirmed" id="sort-confirmed" autocomplete="off" />
+								<label for="sort-deaths" title="Order by deaths">D</label>
+								<input type="radio" name="sort" value="deaths" id="sort-deaths" autocomplete="off" />
+								<label for="sort-recovered" title="Order by recovered cases">R</label>
+								<input type="radio" name="sort" value="recovered" id="sort-recovered" autocomplete="off" />
+								<label for="sort-active" title="Order by active cases">A</label>
+								<input type="radio" name="sort" value="active" id="sort-active" autocomplete="off" />
+							</div>
+
+
+							<div class="controlgroup">
 								<label for="map-confirmed">Confirmed</label>
 								<input type="radio" name="map_data" value="confirmed" id="map-confirmed" autocomplete="off" />
 								<label for="map-deaths">Deaths</label>
@@ -382,7 +408,7 @@
 			</div>
 
 			<div id="footer" class="ui-corner-all ui-widget ui-widget-header">
-				Developed by <a href="https://www.researchgate.net/profile/Felix_Ospald">Felix Ospald</a> using <a href="https://jquery.com/">JQuery</a>, <a href="https://jqueryui.com">JQuery UI</a>, <a href="https://leafletjs.com/">Leaflet</a>, <a href="https://www.chartjs.org">ChartJS</a>; 
+				Covid-19 dashboard: developed by <a href="https://www.researchgate.net/profile/Felix_Ospald">Felix Ospald</a> using <a href="https://jquery.com/">JQuery</a>, <a href="https://jqueryui.com">JQuery UI</a>, <a href="https://leafletjs.com/">Leaflet</a>, <a href="https://www.chartjs.org">ChartJS</a>; 
 				Source: <a href="https://github.com/fospald/covid-19-dashboard">Git-repository</a>; 
 				Data by: <a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>;
 				<a href="https://github.com/iceweasel1/COVID-19-Germany">iceweasel1</a>
