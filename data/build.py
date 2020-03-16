@@ -74,11 +74,16 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
             rec[ts_key] = timeseries
             data[key] = rec
 
+    data['Germany/']['is_group'] = True
+
     # group by country
     keys = list(data.keys())
     for key in keys:
         if data[key]['province'].strip() != "":
             group_key = data[key]['country'] + '/'
+            # do not group german data since, we do not have some data for the states
+            if data[key]['country'] == "Germany":
+                continue
             if group_key in data:
                 new_group_data = data[group_key]
                 add_timeseries = copy.deepcopy(data[key][ts_key])
