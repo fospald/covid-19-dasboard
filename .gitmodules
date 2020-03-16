@@ -1,0 +1,6 @@
+[submodule "data/COVID-19"]
+	path = data/COVID-19
+	url = https://github.com/CSSEGISandData/COVID-19
+[submodule "data/COVID-19-Germany"]
+	path = data/COVID-19-Germany
+	url = https://github.com/iceweasel1/COVID-19-Germany
