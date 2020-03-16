@@ -462,10 +462,15 @@ function updatePlot(json)
 		key = slist.val();
 
 		if (key == "" || key == null) {
-			key = "World";
+			key = "World/";
 		}
 		
-		cs = json.cases[key];
+		if (json.cases.hasOwnProperty(key)) {
+			cs = json.cases[key];
+		}
+		else {
+			cs = {};
+		}
 
 		function add_dataset(data, label, color)
 		{
@@ -1007,7 +1012,7 @@ $.getJSON("data.json", function(json) {
 
 	function updateStats()
 	{
-		country = $("#region-list option:selected").text();
+		country = $("#region-list option:selected").text().replace(/\(.*\)/i, "");;
 
 		if (country == "") {
 			$("#country-label").text("N/A");
@@ -1030,10 +1035,15 @@ $.getJSON("data.json", function(json) {
 		key = slist.val();
 
 		if (key == "" || key == null) {
-			key = "World";
+			key = "World/";
 		}
 
-		cs = json.cases[key];
+		if (json.cases.hasOwnProperty(key)) {
+			cs = json.cases[key];
+		}
+		else {
+			cs = {};
+		}
 
 		if (cs.hasOwnProperty("timeseries_confirmed") && cs.timeseries_confirmed.hasOwnProperty(date_key)) {
 			confirmed = cs.timeseries_confirmed[date_key];
