@@ -16,7 +16,7 @@ global_case = {'id': 'World/', 'province': '', 'country': 'World', 'lat': 0.0, '
 for k in ["Confirmed", "Recovered", "Deaths"]:
     ts_key = 'timeseries_' + k.lower()
 
-    fn = "COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-" + k + ".csv"
+    fn = "COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-" + k + "-germany.csv"
     with open(fn) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
@@ -114,6 +114,7 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
 
 data[global_case["id"]] = global_case
 
+"""
 # add german province data
 for k in ["Confirmed"]:
     ts_key = 'timeseries_' + k.lower()
@@ -180,6 +181,7 @@ for k in ["Confirmed"]:
 
 
     data['Germany/']['is_group_confirmed'] = True
+"""
 
 
 def comp_active(cs):
@@ -219,7 +221,7 @@ for k1 in data.keys():
         dx = data[k1]['lat'] - data[k2]['lat'];
         dy = data[k1]['lng'] - data[k2]['lng'];
         r = (dx*dx + dy*dy)**0.5
-        if r < radius:
+        if r > 0 and r < radius:
             radius = r
     data[k1]['approx_radius'] = radius;
 
@@ -249,7 +251,7 @@ def cmp_by_name(x, y):
     if x["country"] == y["country"]:
         return 1 if x["province"] > y["province"] else -1
     return 1 if x["country"] > y["country"] else -1
-data_by_name = data.values()
+data_by_name = list(data.values())
 data_by_name.sort(key=cmp_to_key(cmp_by_name))
 keys_by_name = [(c['id'], None) for c in data_by_name]
 
@@ -265,7 +267,7 @@ def cmp_by_deaths(x, y):
     if not "timeseries_deaths" in y:
         return -1
     return y["timeseries_deaths"][max_date] - x["timeseries_deaths"][max_date]
-data_by_deaths = data.values()
+data_by_deaths = list(data.values())
 data_by_deaths.sort(key=cmp_to_key(cmp_by_deaths))
 keys_by_deaths = [(c['id'], getval(c, "timeseries_deaths")) for c in data_by_deaths]
 
@@ -276,7 +278,7 @@ def cmp_by_confirmed(x, y):
     if not "timeseries_confirmed" in y:
         return -1
     return y["timeseries_confirmed"][max_date] - x["timeseries_confirmed"][max_date]
-data_by_confirmed = data.values()
+data_by_confirmed = list(data.values())
 data_by_confirmed.sort(key=cmp_to_key(cmp_by_confirmed))
 keys_by_confirmed = [(c['id'], getval(c, "timeseries_confirmed")) for c in data_by_confirmed]
 
@@ -286,7 +288,7 @@ def cmp_by_recovered(x, y):
     if not "timeseries_recovered" in y:
         return -1
     return y["timeseries_recovered"][max_date] - x["timeseries_recovered"][max_date]
-data_by_recovered = data.values()
+data_by_recovered = list(data.values())
 data_by_recovered.sort(key=cmp_to_key(cmp_by_recovered))
 keys_by_recovered = [(c['id'], getval(c, "timeseries_recovered")) for c in data_by_recovered]
 
@@ -296,7 +298,7 @@ def cmp_by_active(x, y):
     if not "timeseries_active" in y:
         return -1
     return y["timeseries_active"][max_date] - x["timeseries_active"][max_date]
-data_by_active = data.values()
+data_by_active = list(data.values())
 data_by_active.sort(key=cmp_to_key(cmp_by_active))
 keys_by_active = [(c['id'], getval(c, "timeseries_active")) for c in data_by_active]
 
