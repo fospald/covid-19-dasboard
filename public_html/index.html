@@ -736,16 +736,6 @@ function updateMap(json, initHeatmap)
 		}
 	}
 
-	if (heatmapLayer && initHeatmap) {
-		heatmapLayer = null;
-		map.eachLayer(function(layer){
-			map.removeLayer(layer);
-		});
-		map.remove();
-		map = null;
-		alert("recreate");
-	}
-
 	if (!heatmapLayer)
 	{
 		var baseLayer = L.tileLayer(
@@ -1162,10 +1152,8 @@ $.getJSON("data.json", function(json) {
 	});
 
 	$( window ).resize(function() {
-		setTimeout(function() {
-			alert("resize");
-			updateMap(json, true);
-		}, 10);
+        	//setTimeout(function(){ map.invalidateSize()}, 400);
+			//	layers: [baseLayer, heatmapLayer, geoLayer, geoList]
 	});
 
 	updateCountries(load("country", "World/"));

@@ -208,6 +208,7 @@
 
         this._el.style.width = this._width + 'px';
         this._el.style.height = this._height + 'px';
+	this._heatmap._renderer.setDimensions(this._width, this._height);
       }
       this._draw();
     } 
