@@ -414,7 +414,8 @@
 				Covid-19 dashboard: developed by <a href="https://www.researchgate.net/profile/Felix_Ospald">Felix Ospald</a> using <a href="https://jquery.com/">JQuery</a>, <a href="https://jqueryui.com">JQuery UI</a>, <a href="https://leafletjs.com/">Leaflet</a>, <a href="https://www.chartjs.org">ChartJS</a>; 
 				Source: <a href="https://github.com/fospald/covid-19-dashboard">Git-repository</a>; 
 				Data by: <a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>;
-				<a href="https://github.com/iceweasel1/COVID-19-Germany">iceweasel1</a>
+				<a style="display:none;" href="https://github.com/iceweasel1/COVID-19-Germany">iceweasel1</a>
+				<a href="https://www.rki.de">RKI</a>
 			</div>
 
 		</div>
@@ -654,8 +655,9 @@ for (var i = 0; i < 100000; i++) {
 var sec_per_day = 60*60*24;
 
 var heatmapLayer = null;
+var map = null;
 
-function updateMap(json)
+function updateMap(json, initHeatmap)
 {
 	series_name = $('input[name=map_data]:checked').val();
 	max_count_factor = 4;
@@ -734,6 +736,15 @@ function updateMap(json)
 		}
 	}
 
+	if (heatmapLayer && initHeatmap) {
+		heatmapLayer = null;
+		map.eachLayer(function(layer){
+			map.removeLayer(layer);
+		});
+		map.remove();
+		map = null;
+		alert("recreate");
+	}
 
 	if (!heatmapLayer)
 	{
@@ -836,7 +847,7 @@ function updateMap(json)
 				$("#region-list").val(country + "/").change();
 			});
 
-			var map = new L.Map('map-canvas', {
+			map = new L.Map('map-canvas', {
 				center: new L.LatLng(load("centerLat", 30.0), load("centerLng", 0.0)),
 				zoom: load("zoom", 2),
 				layers: [baseLayer, heatmapLayer, geoLayer, geoList]
@@ -872,14 +883,7 @@ function updateMap(json)
 			heatmapLayer.setData(testData);
 		});
 
-		/*
-		$( window ).resize(function() {
-			setTimeout(function() {
-				map.invalidateSize();
-				heatmapLayer._update();
-			}, 10);
-		});
-		*/
+
 	}
 	else {
 		heatmapLayer.setData(testData);
@@ -1108,7 +1112,7 @@ $.getJSON("data.json", function(json) {
 
 	function updateDate()
 	{
-		updateMap(json);
+		updateMap(json, false);
 		updateStats();
 	}
 
@@ -1146,7 +1150,7 @@ $.getJSON("data.json", function(json) {
 
 	$("input[type=radio][name=map_data][value=" + load("map_data", "confirmed") + "]").attr('checked','checked').button("refresh");
 	$('input[type=radio][name=map_data]').change(function() {
-		updateMap(json);
+		updateMap(json, false);
 		store("map_data", this.value);
 	});
 
@@ -1157,10 +1161,17 @@ $.getJSON("data.json", function(json) {
 		store("sort", this.value);
 	});
 
+	$( window ).resize(function() {
+		setTimeout(function() {
+			alert("resize");
+			updateMap(json, true);
+		}, 10);
+	});
+
 	updateCountries(load("country", "World/"));
 	updateStates(list.val(), load("state", list.val()));
 	updateStats();
-	updateMap(json);
+	updateMap(json, false);
 	updatePlot(json);
 
 	setTimeout(function() {
