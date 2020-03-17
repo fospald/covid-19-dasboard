@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="imagetoolbar" content="false" />
 <meta name="MSSmartTagsPreventParsing" content="true" />
-<meta name="genTime" content="Mon Mar 16 23:28:40 CET 2020" />
+<meta name="genTime" content="Tue Mar 17 12:26:50 CET 2020" />
 <meta name="generator" content="Government Site Builder" />
 <meta name="description" content="Regionale Verteilung der COVID-19-Fälle weltweit" />
 <meta name="keywords" content="Coronavirus, nCoV, neuartiges Coronavirus, Hygiene, Wuhan, China, Risikogebiet, Hubei" />
@@ -266,7 +266,7 @@ window.LABEL_LESSDETAILS = 'weniger anzeigen';
 </li>
 <li class=""><a href="DE/Content/Gesundheitsmonitoring/gesundheitsmonitoring_node.html" title="Gesundheitsmonitoring">Ge­sund­heits­mo­ni­to­ring</a>
 <div class="menu">
- <div class="menu-box-group">
+<div class="menu-box-group">
 <div class="overview-item">
 <img src="/SharedDocs/Bilder/Flyout/Gesundheitsmonitoring.jpg?__blob=normal&amp;v=8" alt="Gesundheitsmonitoring und Gesundheitsberichterstattung. © stockwerk23/PHOTOCASE" title="Gesundheitsmonitoring und Gesundheitsberichterstattung. © stockwerk23/PHOTOCASE" style="width:210px;height:125px;" />
 <p>Das <acronym title="Robert Koch-Institut">RKI</acronym> erhebt im Rahmen seines Gesundheitsmonitorings regelmäßig Gesundheitsdaten der Bevölkerung.
@@ -689,6 +689,12 @@ Stand: 16.03.2020 15:00 Uhr (online aktualisiert um 19:00 Uhr)</p>
 <h2>Aktualisierte Dokumente</h2>
 <ul>
 <li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risikobewertung.html" target="_self" title="Risikobewertung zu COVID-19" class="">
+<span>Risikobewertung zu COVID-19 (17.3.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
 <a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Entlassmanagement.html" target="_self" title="Kriterien und zur Entlassung aus dem Krankenhaus und zur Aufhebung der häuslichen Isolierung nach COVID-19 Erkrankung (16.3.2020)" class="">
 <span>Kriterien zur Entlassung aus dem Krankenhaus <abbr title="beziehungsweise">bzw.</abbr> aus der häuslichen Isolierung (16.3.2020)</span>
 </a>
@@ -703,12 +709,6 @@ Stand: 16.03.2020 15:00 Uhr (online aktualisiert um 19:00 Uhr)</p>
 <li><h3>
 <a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risikogebiete.html" target="_self" title="Risikogebiete COVID-19 (Coronavirus SARS-CoV-2)" class="">
 <span>Risikogebiete COVID-19 (15.3.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risikobewertung.html" target="_self" title="Risikobewertung zu COVID-19" class="">
-<span>Risikobewertung zu COVID-19 (13.3.2020)</span>
 </a>
 </h3>
 </li>
