@@ -174,7 +174,7 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
                 if date in rec[ts_key]:
                     val = rec[ts_key][date]
                 cols.append(str(val))
-            f.write(",".join(cols))
             f.write("\n")
+            f.write(",".join(cols))
 
 
