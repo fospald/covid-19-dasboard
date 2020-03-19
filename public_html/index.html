@@ -366,7 +366,7 @@
 								<label for="plot-country">Plot over countries</label>
 								<input type="radio" name="plot_varx" value="country" id="plot-country" autocomplete="off" />
 								<label for="plot-states">Plot over states of selected country</label>
-								<input type="radio" name="plot_varx" value="states" id="plot-states" autocomplete="off" disabled/>
+								<input type="radio" name="plot_varx" value="states" id="plot-states" autocomplete="off" />
 							</div>
 
 							<br/>
@@ -422,6 +422,9 @@
 
 
 		<script>
+
+
+window.chartColors.black = 'rgb(0, 0, 0)';
 
 var chart = null;
 
@@ -571,7 +574,7 @@ function updatePlot(json)
 		}
 
 		add_dataset("timeseries_confirmed", "Confirmed", window.chartColors.red);
-		add_dataset("timeseries_recovered", "Recovered", window.chartColors.green);
+		//add_dataset("timeseries_recovered", "Recovered", window.chartColors.green);
 		add_dataset("timeseries_active", "Active", window.chartColors.orange);
 		add_dataset("timeseries_deaths", "Deaths", window.chartColors.black);
 
@@ -579,6 +582,50 @@ function updatePlot(json)
 	}
 	else if (plot_varx == "states")
 	{
+		var country = $("#region-list option:selected").text().replace(/\(.*\)/i, "").trim();
+		var keys = getOrderedKeys(json);
+
+		function add_dataset(series_key, label, color)
+		{
+			var y = [];
+
+			keys.forEach(function(keyval) {
+				key = keyval[0];
+				if (json.cases.hasOwnProperty(key)) {
+					cs = json.cases[key];
+					if (cs.province != "" && !cs.province.includes(",") && cs.country == country) {
+						if (cs.hasOwnProperty(series_key)) {
+							if (cs[series_key].hasOwnProperty(date_key)) {
+								x.push(cs.province);
+								y.push(cs[series_key][date_key]);
+							}
+						}
+					}
+				}
+			});
+
+			dim = y.length;
+			x = x.slice(0, dim);
+			//y = y.slice(0, dim);
+
+			dataset = {
+				label: label,
+				backgroundColor: color,
+				borderColor: color,
+				data: y,
+				fill: false,
+				//lineTension: 0
+			};
+
+			datasets.push(dataset);
+		}
+
+		add_dataset("timeseries_confirmed", "Confirmed", window.chartColors.red);
+		//add_dataset("timeseries_recovered", "Recovered", window.chartColors.green);
+		add_dataset("timeseries_active", "Active", window.chartColors.orange);
+		add_dataset("timeseries_deaths", "Deaths", window.chartColors.black);
+
+		type = "bar";
 	}
 
 
@@ -625,6 +672,12 @@ function updatePlot(json)
 					scaleLabel: {
 						display: true,
 						labelString: 'Value'
+					},
+					ticks: {
+						maxTicksLimit: 20,
+						callback: function(value, index, values) {
+							return numberWithCommas(value);
+						}
 					}
 				}]
 			}
@@ -645,6 +698,11 @@ function randn_bm() {
 	while(v === 0) v = Math.random();
 	return Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
 }
+
+function numberWithCommas(x) {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 
 var rnd = [];
 
@@ -1000,13 +1058,9 @@ $.getJSON("data.json", function(json) {
 		slist.val(selection);
 	}
 
-	function numberWithCommas(x) {
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	}
-
 	function updateStats()
 	{
-		country = $("#region-list option:selected").text().replace(/\(.*\)/i, "");;
+		country = $("#region-list option:selected").text().replace(/\(.*\)/i, "").trim();
 
 		if (country == "") {
 			$("#country-label").text("N/A");
