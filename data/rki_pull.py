@@ -6,6 +6,7 @@ import time
 import datetime
 import shutil
 import csv
+import sys
 
 states = [
     {'name': 'Baden-Württemberg', 'lat': '48.56', 'lng': '9.06'},
@@ -100,6 +101,8 @@ for root, dirs, files in os.walk("rki_data"):
         with open("rki_data/%s" % file, "rt") as f:
             data = f.read()
 
+        is_new_format = data.find('<th colspan="1" rowspan="1">Todes') > 0
+
         pos0 = data.find("Stand:")
         if pos0 < 0:
             print("Problem")
@@ -138,6 +141,16 @@ for root, dirs, files in os.walk("rki_data"):
                         deaths = txt[pos0+1:pos1].strip().replace(".", "")
                     else:
                         confirmed = txt.strip().replace(".", "")
+                    
+                        if is_new_format:
+                            # skip 3 columns
+                            pos0 = pos + len(s['name'])
+                            for _i in range(2):
+                                pos0 = data.find("<td", pos0+1)
+                            pos0 = data.find(">", pos0)
+                            pos1 = data.find("<", pos0)
+                            deaths = data[pos0+1:pos1].strip()
+                            #print(file, s, deaths)
 
             key = s['name']
 
