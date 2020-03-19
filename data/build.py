@@ -22,6 +22,9 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
         line_count = 0
         for row in csv_reader:
 
+            if len(row) < 4:
+                continue
+
             if line_count == 0:
                 header = row
 
@@ -32,6 +35,8 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
                     cd_line_count = 0
                     cd_data = {}
                     for cd_row in cd_csv:
+                        if len(cd_row) < 4:
+                            continue
                         if cd_line_count == 0:
                             cd_line_count += 1
                             continue
