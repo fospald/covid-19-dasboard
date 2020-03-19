@@ -101,7 +101,26 @@ for root, dirs, files in os.walk("rki_data"):
         with open("rki_data/%s" % file, "rt") as f:
             data = f.read()
 
-        is_new_format = data.find('<th colspan="1" rowspan="1">Todes') > 0
+        colindex = 0
+        death_colindex = -1
+        pos0 = data.find("</th></tr><tr><th", 0)
+        if pos0 < 0:
+            pos0 = 0
+        while True:
+            pos0 = data.find('<th ', pos0+1)
+            if pos0 < 0:
+                break
+            pos0 = data.find('>', pos0+1)
+            if pos0 < 0:
+                break
+            pos1 = data.find('</th>', pos0+1)
+            if pos1 < 0:
+                break
+            colname = data[(pos0+1):pos1]
+            pos0 = pos1
+            if colname[0:5] == "Todes":
+                death_colindex = colindex
+            colindex += 1
 
         pos0 = data.find("Stand:")
         if pos0 < 0:
@@ -142,15 +161,15 @@ for root, dirs, files in os.walk("rki_data"):
                     else:
                         confirmed = txt.strip().replace(".", "")
                     
-                        if is_new_format:
+                        if death_colindex >= 0:
                             # skip 3 columns
                             pos0 = pos + len(s['name'])
-                            for _i in range(2):
+                            for _i in range(death_colindex):
                                 pos0 = data.find("<td", pos0+1)
                             pos0 = data.find(">", pos0)
                             pos1 = data.find("<", pos0)
                             deaths = data[pos0+1:pos1].strip()
-                            #print(file, s, deaths)
+                            #print(file, death_colindex, s["name"], deaths)
 
             key = s['name']
 
