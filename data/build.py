@@ -124,8 +124,20 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
 
 data[global_case["id"]] = global_case
 
-"""
+name_map = {
+        "North Rhine-Westphalia": "Nordrhein-Westfalen",
+        "Bavaria": "Bayern",
+        "Lower Saxony": "Niedersachsen",
+        "Hesse": "Hessen",
+        "Rhineland-Palatinate": "Rheinland-Pfalz",
+        "Saxony": "Sachsen",
+        "Saxony-Anhalt": "Sachsen-Anhalt",
+        "Thuringia": "Thüringen"
+}
+
+
 # add german province data
+gdata = {}
 for k in ["Confirmed"]:
     ts_key = 'timeseries_' + k.lower()
     fn = "COVID-19-Germany/germany_with_source.csv"
@@ -144,11 +156,11 @@ for k in ["Confirmed"]:
             date = int((datetime.datetime.strptime(row[1], '%m/%d/%Y') - ref_time).total_seconds())
             country = "Germany"
 
-            
+            """
             key = country + '/' + row[2] + '/' + row[3] # with district
 
-            if key in data:
-                rec = data[key]
+            if key in gdata:
+                rec = gdata[key]
             else:
                 try:
                     ts = {}
@@ -164,20 +176,20 @@ for k in ["Confirmed"]:
                 rec[ts_key][date] = 1
 
             rec["last_date"] = date
-            data[key] = rec
+            gdata[key] = rec
+            """
 
+            if row[2] in name_map:
+                row[2] = name_map[row[2]]
 
             # add province grouped items
 
-            key = country + '/' + row[2] + '/'
+            key = country + '/' + row[2]
 
-            if key in data:
-                rec = data[key]
+            if key in gdata:
+                rec = gdata[key]
             else:
-                try:
-                    rec = {'id': key, 'province': row[2], 'country': country, 'lat': float(row[4]), 'lng': float(row[5]), ts_key: {}, 'is_group': True}
-                except:
-                    continue
+                rec = {'id': key, 'province': row[2], 'country': country, 'lat': float(row[4]), 'lng': float(row[5]), ts_key: {}, 'is_group': True}
 
             if date in rec[ts_key]:
                 rec[ts_key][date] += 1
@@ -187,36 +199,20 @@ for k in ["Confirmed"]:
                 rec[ts_key][date] = 1
 
             rec["last_date"] = date
-            data[key] = rec
+            gdata[key] = rec
+
+#    gdata['Germany/']['is_group_confirmed'] = True
+
+# merge
+for key in gdata.keys():
+    ts_key = 'timeseries_confirmed'
+    for date in gdata[key][ts_key].keys():
+        if not date in data[key][ts_key]:
+            data[key][ts_key][date] = gdata[key][ts_key][date]
+        else:
+            data[key][ts_key][date] = max(data[key][ts_key][date], gdata[key][ts_key][date])
 
 
-    data['Germany/']['is_group_confirmed'] = True
-"""
-
-
-def comp_active(cs):
-    # compute active cases
-        timeseries_active = {}
-        if not "timeseries_confirmed" in cs:
-            return None
-        if not "timeseries_deaths" in cs:
-            return None
-        if not "timeseries_recovered" in cs:
-            return None
-        for date, confirmed in cs["timeseries_confirmed"].items():
-            if not date in cs["timeseries_deaths"]:
-                continue
-            if not date in cs["timeseries_recovered"]:
-                continue
-            timeseries_active[date] = cs["timeseries_confirmed"][date] - cs["timeseries_deaths"][date] - cs["timeseries_recovered"][date]
-        return timeseries_active
-
-
-keys = list(data.keys())
-for key in keys:
-    timeseries_active = comp_active(data[key])
-    if timeseries_active:
-        data[key]["timeseries_active"] = timeseries_active
 
 # calculate distance to earest neighbour
 
@@ -248,9 +244,39 @@ for k in data.keys():
             continue
         for date in range(min_date, max_date + 24*60*60, 24*60*60):
             if date in data[k][ts_key]:
-                last_val = data[k][ts_key][date]
+                val = data[k][ts_key][date]
+                if not last_val is None:
+                    if ts in ["Confirmed", "Recovered", "Deaths"] and val < last_val:
+                        data[k][ts_key][date] = last_val
+                        continue
+                last_val = val
             elif not last_val is None:
                 data[k][ts_key][date] = last_val
+
+
+def comp_active(cs):
+    # compute active cases
+        timeseries_active = {}
+        if not "timeseries_confirmed" in cs:
+            return None
+        if not "timeseries_deaths" in cs:
+            return None
+        if not "timeseries_recovered" in cs:
+            return None
+        for date, confirmed in cs["timeseries_confirmed"].items():
+            if not date in cs["timeseries_deaths"]:
+                continue
+            if not date in cs["timeseries_recovered"]:
+                continue
+            timeseries_active[date] = cs["timeseries_confirmed"][date] - cs["timeseries_deaths"][date] - cs["timeseries_recovered"][date]
+        return timeseries_active
+
+
+keys = list(data.keys())
+for key in keys:
+    timeseries_active = comp_active(data[key])
+    if timeseries_active:
+        data[key]["timeseries_active"] = timeseries_active
 
 
 def cmp_by_name(x, y):
