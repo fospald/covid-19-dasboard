@@ -42,53 +42,57 @@ if not os.path.exists(save_filename) or (time - os.path.getmtime(save_filename))
         f.write(data)
 
 
-key = "20200229172202"
+for tm in ["060000", "180000"]:
 
-while True:
+    key = "20200229172202"
 
-    save_filename = "rki_data/%s" % key
-    data = ""
+    while True:
 
-    if os.path.exists(save_filename):
-        with open(save_filename, "rt") as f:
-            data = f.read()
-    
-        pos = data.find("/_static/images/toolbar/wm_tb_nxt_off.png")
-        if pos > 0 and (time - os.path.getmtime(save_filename)) > 3*60*60:
-            # pull latest record again
-            data = ""
+        key = key[0:8] + tm
 
-    if data == "":
-        url = "https://web.archive.org/web/%s/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" % key
-        print("loading", url)
-        page = urllib.request.urlopen(url)
-        data = page.read().decode("utf-8")
-        with open(save_filename, "wt") as f:
-            f.write(data)
+        save_filename = "rki_data/%s" % key
+        data = ""
 
-    pos = data.find("/_static/images/toolbar/wm_tb_nxt_on.png")
+        if os.path.exists(save_filename):
+            with open(save_filename, "rt") as f:
+                data = f.read()
+        
+            pos = data.find("/_static/images/toolbar/wm_tb_nxt_off.png")
+            if pos > 0 and (time - os.path.getmtime(save_filename)) > 3*60*60:
+                # pull latest record again
+                data = ""
 
-    if pos < 0:
-        break
-    pos = data.rfind("href", 0, pos)
-    if pos < 0:
-        break
-    pos0 = data.find('"', pos)
-    if pos0 < 0:
-        break
-    pos1 = data.find('"', pos0+1)
-    if pos1 < 0:
-        break
-    url = data[pos0+1:pos1]
+        if data == "":
+            url = "https://web.archive.org/web/%s/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" % key
+            print("loading", url)
+            page = urllib.request.urlopen(url)
+            data = page.read().decode("utf-8")
+            with open(save_filename, "wt") as f:
+                f.write(data)
 
-    pos0 = url.find("web/")
-    if pos0 < 0:
-        break
-    pos1 = url.find("/", pos0+6)
-    if pos1 < 0:
-        break
+        pos = data.find("/_static/images/toolbar/wm_tb_nxt_on.png")
 
-    key = url[pos0+4:pos1]
+        if pos < 0:
+            break
+        pos = data.rfind("href", 0, pos)
+        if pos < 0:
+            break
+        pos0 = data.find('"', pos)
+        if pos0 < 0:
+            break
+        pos1 = data.find('"', pos0+1)
+        if pos1 < 0:
+            break
+        url = data[pos0+1:pos1]
+
+        pos0 = url.find("web/")
+        if pos0 < 0:
+            break
+        pos1 = url.find("/", pos0+6)
+        if pos1 < 0:
+            break
+
+        key = url[pos0+4:pos1]
 
 
 records = {}
@@ -156,10 +160,10 @@ for root, dirs, files in os.walk("rki_data"):
                     pos0 = txt.find("(")
                     if pos0 > 0:
                         pos1 = txt.find(")")
-                        confirmed = txt[0:pos0].strip().replace(".", "")
-                        deaths = txt[pos0+1:pos1].strip().replace(".", "")
+                        confirmed = int(txt[0:pos0].strip().replace(".", ""))
+                        deaths = int(txt[pos0+1:pos1].strip().replace(".", ""))
                     else:
-                        confirmed = txt.strip().replace(".", "")
+                        confirmed = int(txt.strip().replace(".", ""))
                     
                         if death_colindex >= 0:
                             # skip 3 columns
@@ -169,7 +173,7 @@ for root, dirs, files in os.walk("rki_data"):
                             pos0 = data.find(">", pos0)
                             pos1 = data.find("<", pos0)
                             deaths = data[pos0+1:pos1].strip()
-                            #print(file, death_colindex, s["name"], deaths)
+                            deaths = int(deaths) if len(deaths) else 0
 
             key = s['name']
 
@@ -178,9 +182,21 @@ for root, dirs, files in os.walk("rki_data"):
             else:
                 rec = {'state': s['name'], 'timeseries_confirmed': {}, 'timeseries_deaths': {}, 'timeseries_recovered': {}, 'lat': s['lat'], 'lng': s['lng']}
 
-            rec['timeseries_confirmed'][date] = confirmed
-            rec['timeseries_deaths'][date] = deaths
-            rec['timeseries_recovered'][date] = recovered
+            if date in rec['timeseries_confirmed']:
+                rec['timeseries_confirmed'][date] = max(confirmed, rec['timeseries_confirmed'][date])
+            else:
+                rec['timeseries_confirmed'][date] = confirmed
+
+            if date in rec['timeseries_deaths']:
+                rec['timeseries_deaths'][date] = max(deaths, rec['timeseries_deaths'][date])
+            else:
+                rec['timeseries_deaths'][date] = deaths
+
+            if date in rec['timeseries_recovered']:
+                rec['timeseries_recovered'][date] = max(recovered, rec['timeseries_recovered'][date])
+            else:
+                rec['timeseries_recovered'][date] = recovered
+
             records[key] = rec
 
 
