@@ -150,7 +150,7 @@
 	}
 	#footer {
 		font-size: 75%;
-		height: 8.0em;
+		height: auto;
 		width: 15em;
 		right: 0.2em;
 		position: absolute;
@@ -416,6 +416,9 @@
 				Data by: <a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>;
 				<a style="display:none;" href="https://github.com/iceweasel1/COVID-19-Germany">iceweasel1</a>
 				<a href="https://www.rki.de">RKI</a>
+				<p>
+				Last data update: <div id="updated"></div>
+				</p>
 			</div>
 
 		</div>
@@ -978,7 +981,22 @@ function playNext()
 
 
 
-$.getJSON("data.json", function(json) {
+xhr = $.getJSON("data.json", function(json) {
+
+	var headers = xhr.getAllResponseHeaders();
+	var arr = headers.trim().split(/[\r\n]+/);
+
+	// Create a map of header names to values
+	var headerMap = {};
+	arr.forEach(function (line) {
+		var parts = line.split(': ');
+		var header = parts.shift();
+		var value = parts.join(': ');
+		headerMap[header] = value;
+	});
+
+	var last_mod = headerMap["last-modified"];
+	$( "#updated" ).text(last_mod);
 
 	$( "#tabs" ).tabs({
 		disabled: [ 2 ],
@@ -1045,7 +1063,12 @@ $.getJSON("data.json", function(json) {
 			if (json.cases.hasOwnProperty(key)) {
 				cs = json.cases[key];
 				if (cs.province != "" && cs.country + "/" == country_key) {
-					var item = $("<option/>").text(cs.province).val(key);
+					text = cs.province;
+					if (keyval[1] != null) {
+						val = numberWithCommas(keyval[1]);
+						text += " (" + val + ")";
+					}
+					var item = $("<option/>").text(text).val(key);
 					slist.append(item);
 				}
 			}
@@ -1061,6 +1084,7 @@ $.getJSON("data.json", function(json) {
 	function updateStats()
 	{
 		country = $("#region-list option:selected").text().replace(/\(.*\)/i, "").trim();
+		state = $("#state-list option:selected").text().replace(/\(.*\)/i, "").trim();
 
 		if (country == "") {
 			$("#country-label").text("N/A");
@@ -1068,7 +1092,7 @@ $.getJSON("data.json", function(json) {
 		}
 		else {
 			$("#country-label").text(country);
-			$("#state-label").text($("#state-list option:selected").text());
+			$("#state-label").text(state);
 		}
 
 		date_key = $( "#dateslider" ).slider("value") * sec_per_day;
@@ -1201,6 +1225,7 @@ $.getJSON("data.json", function(json) {
 	$("input[type=radio][name=sort][value=" + load("sort", "confirmed") + "]").attr('checked','checked').button("refresh");
 	$('input[type=radio][name=sort]').change(function() {
 		updateCountries(list.val());
+		updateStates(list.val(), slist.val());
 		updatePlot(json);
 		store("sort", this.value);
 	});
