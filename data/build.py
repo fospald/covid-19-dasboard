@@ -344,11 +344,12 @@ keys_by_active = [(c['id'], getval(c, "timeseries_active")) for c in data_by_act
 
 
 
-
 """
 cases = data["China/"]["timeseries_confirmed"]
 cases = data["Germany/"]["timeseries_confirmed"]
 cases = data["Korea, South/"]["timeseries_confirmed"]
+cases = data["Italy/"]["timeseries_confirmed"]
+cases = data["Spain/"]["timeseries_confirmed"]
 
 t = []
 y = []
