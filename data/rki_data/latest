@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="imagetoolbar" content="false" />
 <meta name="MSSmartTagsPreventParsing" content="true" />
-<meta name="genTime" content="Sat Mar 21 12:25:27 CET 2020" />
+<meta name="genTime" content="Sat Mar 21 16:49:23 CET 2020" />
 <meta name="generator" content="Government Site Builder" />
 <meta name="description" content="Regionale Verteilung der COVID-19-Fälle weltweit" />
 <meta name="keywords" content="Coronavirus, nCoV, neuartiges Coronavirus, Hygiene, Wuhan, China, Risikogebiet, Hubei" />
@@ -480,7 +480,7 @@ window.LABEL_LESSDETAILS = 'weniger anzeigen';
 </p>
 </div>
 <div class="navPrimary-list">
-<h2>Service</h2><ul>
+ <h2>Service</h2><ul>
 <li><a href="DE/Content/Service/Presse/presse_node.html">Pressestelle</a>
 </li>
 <li><a href="DE/Content/Service/Newsletter/newsletter-abo_node.html">Newsletter, Soziale Medien und RSS</a>
@@ -553,7 +553,7 @@ Bundesbehörden</a>
 <h1 class="firstInSlot"><abbr title="Coronavirus Disease 19">COVID-19</abbr>: Fallzahlen in Deutschland und weltweit</h1>
 <div class="subheadline">
 </div><h2 class="null">Fallzahlen weltweit</h2>
-<p>Die tagesaktuellen Fallzahlen weltweit sind auf den <a class="RichTextExtLink ExternalLink" href="https://experience.arcgis.com/experience/685d0ace521648f8a5beeeee1b9125cd" target="_blank" rel="noopener noreferrer" title="Externer Link Dashboard der WHO zu COVID-19 (Neuartiges Coronavirus, 2019-nCoV) (Öffnet neues Fenster)">Internetseiten der Weltgesundheitsorganisation</a> und des <a class="RichTextExtLink ExternalLink" href="https://qap.ecdc.europa.eu/public/extensions/COVID-19/COVID-19.html" target="_blank" rel="noopener noreferrer" title="Externer Link ECDC: Dashboard Covid-19 (Öffnet neues Fenster)">Europäischen Zentrums für die Prävention und Kontrolle von Krankheiten</a> (ECDC) abrufbar.</p>
+<p>Die tagesaktuellen Fallzahlen weltweit sind auf den <a class="RichTextExtLink ExternalLink" href="https://experience.arcgis.com/experience/685d0ace521648f8a5beeeee1b9125cd" target="_blank" rel="noopener noreferrer" title="Externer Link Dashboard der WHO zu COVID-19 (Neuartiges Coronavirus, 2019-nCoV) (Öffnet neues Fenster)">Internetseiten der Weltgesundheitsorganisation</a> und des <a class="RichTextExtLink ExternalLink" href="https://www.ecdc.europa.eu/en/cases-2019-ncov-eueea" target="_blank" rel="noopener noreferrer" title="Externer Link European Centre for Disease Prevention and Control (Öffnet neues Fenster)">Europäischen Zentrums für die Prävention und Kontrolle von Krankheiten</a> (ECDC) abrufbar.</p>
 <h2 class="null">Fallzahlen in Deutschland</h2>
 <p class="null">Stand: 21.3.2020, 00:00 Uhr (online aktualisiert um 10:00 Uhr)</p>
 <p>Eine detaillierte Darstellung der übermittelten COVID-19-Fälle in Deutschland nach Landkreis und Bundesland stellt das <a class="RichTextExtLink ExternalLink" href="https://corona.rki.de" target="_blank" rel="noopener noreferrer" title="Externer Link COVID-19-Dashboard (Öffnet neues Fenster)">COVID-19-Dashboard (https://corona.rki.de)</a> bereit. </p>
@@ -678,12 +678,6 @@ Bundesbehörden</a>
 </a>
 </h3>
 </li>
-<li><h3>
-<a href="DE/Content/Infekt/EpidBull/Archiv/2020/12/Art_02.html" target="_self" title="Schulschließung als bevölkerungsbezogene antiepidemische Maßnahme" class="">
-<span>Schul­schließung als be­völ­ke­rungs­bezo­gene anti­epi­de­mische Maß­nahme (19.3.2020)</span>
-</a>
-</h3>
-</li>
 </ul>
 </div>
 </div>
@@ -698,14 +692,14 @@ Bundesbehörden</a>
 </h3>
 </li>
 <li><h3>
-<a href="SharedDocs/FAQ/NCOV2019/FAQ_Liste.html" target="_self" title="Antworten auf häufig gestellte Fragen zum Coronavirus SARS-CoV-2" class="">
-<span>Antworten auf häufig gestellte Fragen zu COVID-19 (21.3.2020)</span>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Steckbrief.html" target="_self" title="Steckbrief zu COVID-19" class="">
+<span>Steckbrief zu COVID-19 (21.3.2020) </span>
 </a>
 </h3>
 </li>
 <li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Steckbrief.html" target="_self" title="Steckbrief zu COVID-19" class="">
-<span>Steckbrief zu COVID-19 (20.3.2020) </span>
+<a href="SharedDocs/FAQ/NCOV2019/FAQ_Liste.html" target="_self" title="Antworten auf häufig gestellte Fragen zum Coronavirus SARS-CoV-2" class="">
+<span>Antworten auf häufig gestellte Fragen zu COVID-19 (21.3.2020)</span>
 </a>
 </h3>
 </li>
