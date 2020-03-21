@@ -7,6 +7,10 @@ import copy
 import json
 from functools import cmp_to_key
 
+from scipy.optimize import least_squares
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 ref_time = datetime.datetime(1970,1,1)
 
@@ -337,6 +341,59 @@ def cmp_by_active(x, y):
 data_by_active = list(data.values())
 data_by_active.sort(key=cmp_to_key(cmp_by_active))
 keys_by_active = [(c['id'], getval(c, "timeseries_active")) for c in data_by_active]
+
+
+
+
+"""
+cases = data["China/"]["timeseries_confirmed"]
+cases = data["Germany/"]["timeseries_confirmed"]
+cases = data["Korea, South/"]["timeseries_confirmed"]
+
+t = []
+y = []
+for date in range(min_date, max_date + 24*60*60, 24*60*60):
+    t.append((date-min_date)/(60.0*60.0*24.0))
+    y.append(1.0*cases[date])
+
+t = np.array(t)
+y = np.array(y)
+
+def fun(x, t):
+    return x[0]/(1.0 + x[1]*np.exp(-x[2]*t))
+
+def jac(x, t, y):
+    return np.array([
+        1.0/(1.0 + x[1]*np.exp(-x[2]*t)),
+        -x[0]/(1.0 + x[1]*np.exp(-x[2]*t))**2*np.exp(-x[2]*t),
+        x[0]/(1.0 + x[1]*np.exp(-x[2]*t))**2*x[1]*t*np.exp(-x[2]*t)
+    ]).T
+
+def residual(x, t, y):
+    return fun(x, t) - y
+
+x0 = [8.09366542e+04,  5.15724064e+01,  2.22027655e-01] # China
+x0 = [29294.6277685,  28394730.5459,  0.30317465887] # Germany
+res = least_squares(residual, x0, jac, args=(t, y))
+print("x=", res.x)
+
+K = res.x[0]
+A = res.x[1]
+r = res.x[2]
+C0 = K/(A - 1)
+print("final epidemic size K:", K)
+print("A:", A)
+print("initial epidemic size C0:", C0)
+print("growth rate r:", r)
+print("exponentioal growth doubling time:", np.log(2)/r)
+
+plt.plot(t, y, label='data')
+plt.plot(t, fun([K,A,r], t), label='regression')
+plt.show()
+
+sys.exit(0)
+"""
+
 
 export_data = {
         'cases': data,
