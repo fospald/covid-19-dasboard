@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="imagetoolbar" content="false" />
 <meta name="MSSmartTagsPreventParsing" content="true" />
-<meta name="genTime" content="Sat Mar 21 16:49:23 CET 2020" />
+<meta name="genTime" content="Sun Mar 22 00:30:56 CET 2020" />
 <meta name="generator" content="Government Site Builder" />
 <meta name="description" content="Regionale Verteilung der COVID-19-Fälle weltweit" />
 <meta name="keywords" content="Coronavirus, nCoV, neuartiges Coronavirus, Hygiene, Wuhan, China, Risikogebiet, Hubei" />
@@ -313,7 +313,7 @@ window.LABEL_LESSDETAILS = 'weniger anzeigen';
 <li class=""><a href="DE/Content/Infekt/infekt_node.html" title="Infektionsschutz">In­fek­ti­ons­schutz</a>
 <div class="menu">
 <div class="menu-box-group">
-<div class="overview-item">
+ <div class="overview-item">
 <img src="/SharedDocs/Bilder/Flyout/Infektionsschutz.jpg?__blob=normal&amp;v=8" alt="HIV-1 - Human immunodeficiency virus 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten(Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.  © H.R. Gelderblom/RKI" title="HIV-1 - Human immunodeficiency virus 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten(Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.  © H.R. Gelderblom/RKI" style="width:210px;height:125px;" />
 <p>HIV-1 - <span lang="en-GB" xml:lang="en-GB">Human immunodeficiency virus</span> 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten (Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.
 <em class="more"><a href="DE/Content/Infekt/infekt_node.html">Weiter lesen</a></em>
@@ -480,7 +480,7 @@ window.LABEL_LESSDETAILS = 'weniger anzeigen';
 </p>
 </div>
 <div class="navPrimary-list">
- <h2>Service</h2><ul>
+<h2>Service</h2><ul>
 <li><a href="DE/Content/Service/Presse/presse_node.html">Pressestelle</a>
 </li>
 <li><a href="DE/Content/Service/Newsletter/newsletter-abo_node.html">Newsletter, Soziale Medien und RSS</a>
@@ -667,14 +667,8 @@ Bundesbehörden</a>
 <h2>Neu</h2>
 <ul>
 <li><h3>
-<a href="https://corona.rki.de" target="_blank" title="COVID-19-Dashboard: Fallzahlen nach Bundesland und Landkreis (20.3.2020)" class="ExternalLink">
-<span>COVID-19-Dashboard: Fallzahlen nach Bundesland und Landkreis - https://corona.rki.de (20.3.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="DE/Content/Service/Stellen/Containement_Scout.html" target="_self" title="Zusammen gegen Corona - Ihre Engagement ist jetzt gefragt!  Unterstützungspersonal Krisenmanagement (m/w/d) in der Funktion „Containment Scout&#034; dringend gesucht (20.2.2020)" class="">
-<span>Zusammen gegen Corona - Ihre Enga­gement ist jetzt gefragt! Unter­­stützungs­­personal Krisen­­manage­ment dringend gesucht (20.2.2020)</span>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/HCW.html" target="_self" title="Optionen für den Umgang mit medizinischem Personal bei Personalmangel" class="">
+<span>Optionen für den Umgang mit medi­zi­ni­schem Per­so­nal bei Per­sonal­mangel (21.3.2020)</span>
 </a>
 </h3>
 </li>
@@ -685,6 +679,12 @@ Bundesbehörden</a>
 <div class="box">
 <h2>Aktualisiert</h2>
 <ul>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Vorl_Testung_nCoV.html" target="_self" title="Hinweise zur Testung von Patienten auf Infektion mit dem Coronavirus SARS-CoV-2" class="">
+<span>Hin­weise zur Testung von Patien­ten auf SARS-CoV-2 (21.3.2020)</span>
+</a>
+</h3>
+</li>
 <li><h3>
 <a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risikogebiete.html" target="_self" title="Risikogebiete COVID-19 (Coronavirus SARS-CoV-2)" class="">
 <span>Risikogebiete COVID-19 (21.3.2020)</span>
@@ -705,7 +705,7 @@ Bundesbehörden</a>
 </li>
 <li><h3>
 <a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Hygiene.html" target="_self" title="Hygienemaßnahmen im Rahmen der Behandlung von Patienten mit einer Infektion durch SARS-CoV-2 " class="">
-<span>Hygienemaßnahmen im Rahmen der Behandlung und Pflege von COVID-19-Patienten (20.3.2020)</span>
+<span>Hygiene­maßnahmen im Rahmen der Behandlung und Pflege von COVID-19-Patienten (21.3.2020)</span>
 </a>
 </h3>
 </li>
