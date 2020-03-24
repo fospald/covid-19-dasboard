@@ -34,6 +34,7 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
 
                 current_day = datetime.datetime.strptime(row[-1], '%m/%d/%y')
                 current_day_data_fn = "COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/%s.csv" % current_day.strftime('%m-%d-%Y')
+                # FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key
                 with open(current_day_data_fn) as cd_csv_file:
                     cd_csv = csv.reader(cd_csv_file, delimiter=',')
                     cd_line_count = 0
@@ -45,11 +46,11 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
                             cd_line_count += 1
                             continue
                         # fix UK bug
-                        if cd_row[0] == cd_row[1]:
-                            cd_row[0] = ""
-                        cd_key = cd_row[1] + '/' + cd_row[0]
+                        if cd_row[2] == cd_row[3]:
+                            cd_row[2] = ""
+                        cd_key = cd_row[3] + '/' + cd_row[2]  # + '/' + cd_row[1]
                         # Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,Latitude,Longitude
-                        cd_data[cd_key] = {'last_update': cd_row[2], 'confirmed': int(cd_row[3]), 'deaths': int(cd_row[4]), 'recovered': int(cd_row[5])}
+                        cd_data[cd_key] = {'last_update': cd_row[4], 'confirmed': int(cd_row[7]), 'deaths': int(cd_row[8]), 'recovered': int(cd_row[9])}
                         cd_line_count += 1
 
 
