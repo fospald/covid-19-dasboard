@@ -50,7 +50,12 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
                             cd_row[2] = ""
                         cd_key = cd_row[3] + '/' + cd_row[2]  # + '/' + cd_row[1]
                         # Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,Latitude,Longitude
-                        cd_data[cd_key] = {'last_update': cd_row[4], 'confirmed': int(cd_row[7]), 'deaths': int(cd_row[8]), 'recovered': int(cd_row[9])}
+                        if cd_key in cd_data:
+                            cd_data[cd_key]['confirmed'] += int(cd_row[7])
+                            cd_data[cd_key]['deaths'] += int(cd_row[8])
+                            cd_data[cd_key]['recovered'] += int(cd_row[9])
+                        else:
+                            cd_data[cd_key] = {'last_update': cd_row[4], 'confirmed': int(cd_row[7]), 'deaths': int(cd_row[8]), 'recovered': int(cd_row[9])}
                         cd_line_count += 1
 
 
@@ -74,12 +79,14 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
 
             timeseries = {}
             for i in range(4,len(row)):
-                if row[i] == "":
-                    if i+1 == len(row) and key in cd_data:
+                if i+1 == len(row) and key in cd_data:
+                    if row[i] == "":
                         timeseries[header[i]] = cd_data[key][k.lower()]
-                        continue
+                    else:
+                        timeseries[header[i]] = max(int(row[i]), cd_data[key][k.lower()])
                     break
-                timeseries[header[i]] = int(row[i])
+                if row[i] != "":
+                    timeseries[header[i]] = int(row[i])
 
             rec[ts_key] = timeseries
             data[key] = rec
