@@ -105,6 +105,8 @@ for root, dirs, files in os.walk("rki_data"):
         with open("rki_data/%s" % file, "rt") as f:
             data = f.read()
 
+        data = data.replace("­", "")
+
         colindex = 0
         death_colindex = -1
         pos0 = data.find("</th></tr><tr><th", 0)
