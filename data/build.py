@@ -4,12 +4,47 @@ import sys
 import datetime
 import time
 import copy
+import os
 import json
 from functools import cmp_to_key
 
 from scipy.optimize import least_squares
 import numpy as np
 import matplotlib.pyplot as plt
+
+
+def load_daily_data(current_day):
+
+    current_day_data_fn = "COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/%s.csv" % current_day.strftime('%m-%d-%Y')
+    if not os.path.exists(current_day_data_fn):
+        return {}
+
+    # FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key
+    with open(current_day_data_fn) as cd_csv_file:
+        cd_csv = csv.reader(cd_csv_file, delimiter=',')
+        cd_line_count = 0
+        cd_data = {}
+        for cd_row in cd_csv:
+            if len(cd_row) < 4:
+                continue
+            if cd_line_count == 0:
+                cd_line_count += 1
+                continue
+            # fix UK bug
+            if cd_row[2] == cd_row[3]:
+                cd_row[2] = ""
+            cd_key = cd_row[3] + '/' + cd_row[2]  # + '/' + cd_row[1]
+            # Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,Latitude,Longitude
+            if cd_key in cd_data:
+                cd_data[cd_key]['confirmed'] += int(cd_row[7])
+                cd_data[cd_key]['deaths'] += int(cd_row[8])
+                cd_data[cd_key]['recovered'] += int(cd_row[9])
+            else:
+                cd_data[cd_key] = {'last_update': cd_row[4], 'confirmed': int(cd_row[7]), 'deaths': int(cd_row[8]), 'recovered': int(cd_row[9])}
+            cd_line_count += 1
+
+    return cd_data
+
 
 
 ref_time = datetime.datetime(1970,1,1)
@@ -33,31 +68,9 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
                 header = row
 
                 current_day = datetime.datetime.strptime(row[-1], '%m/%d/%y')
-                current_day_data_fn = "COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/%s.csv" % current_day.strftime('%m-%d-%Y')
-                # FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key
-                with open(current_day_data_fn) as cd_csv_file:
-                    cd_csv = csv.reader(cd_csv_file, delimiter=',')
-                    cd_line_count = 0
-                    cd_data = {}
-                    for cd_row in cd_csv:
-                        if len(cd_row) < 4:
-                            continue
-                        if cd_line_count == 0:
-                            cd_line_count += 1
-                            continue
-                        # fix UK bug
-                        if cd_row[2] == cd_row[3]:
-                            cd_row[2] = ""
-                        cd_key = cd_row[3] + '/' + cd_row[2]  # + '/' + cd_row[1]
-                        # Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,Latitude,Longitude
-                        if cd_key in cd_data:
-                            cd_data[cd_key]['confirmed'] += int(cd_row[7])
-                            cd_data[cd_key]['deaths'] += int(cd_row[8])
-                            cd_data[cd_key]['recovered'] += int(cd_row[9])
-                        else:
-                            cd_data[cd_key] = {'last_update': cd_row[4], 'confirmed': int(cd_row[7]), 'deaths': int(cd_row[8]), 'recovered': int(cd_row[9])}
-                        cd_line_count += 1
-
+                cd_data = load_daily_data(current_day)
+                nd_date = current_day + datetime.timedelta(days=1)
+                nd_data = load_daily_data(nd_date)
 
                 for i in range(4,len(row)):
                     header[i] = int((datetime.datetime.strptime(row[i], '%m/%d/%y') - ref_time).total_seconds())
@@ -87,6 +100,11 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
                     break
                 if row[i] != "":
                     timeseries[header[i]] = int(row[i])
+
+            # check if there is newer data then the last column date
+            if key in nd_data:
+                nd_key = int((nd_date - ref_time).total_seconds())
+                timeseries[nd_key] = nd_data[key][k.lower()]
 
             rec[ts_key] = timeseries
             data[key] = rec
