@@ -74,6 +74,8 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
 
                 for i in range(4,len(row)):
                     header[i] = int((datetime.datetime.strptime(row[i], '%m/%d/%y') - ref_time).total_seconds())
+                # append possible next day
+                header.append(int((nd_date - ref_time).total_seconds()))
 
                 line_count += 1
                 continue
@@ -92,7 +94,7 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
 
             timeseries = {}
             for i in range(4,len(row)):
-                if i+1 == len(row) and key in cd_data:
+                if i == len(header) and key in cd_data:
                     if row[i] == "":
                         timeseries[header[i]] = cd_data[key][k.lower()]
                     else:
@@ -103,8 +105,7 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
 
             # check if there is newer data then the last column date
             if key in nd_data:
-                nd_key = int((nd_date - ref_time).total_seconds())
-                timeseries[nd_key] = nd_data[key][k.lower()]
+                timeseries[header[-1]] = nd_data[key][k.lower()]
 
             rec[ts_key] = timeseries
             data[key] = rec

@@ -214,6 +214,15 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
             dates = row[4:]
             break
 
+    current_day = datetime.datetime.strptime(dates[-1], '%m/%d/%y')
+
+    # append next day
+    date = current_day + datetime.timedelta(days=1)
+    date = date.strftime('%m/%e/%y').replace(" ", "")
+    if date[0] == "0":
+        date = date[1:]
+    dates.append(date)
+
     fn_new = "COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-" + k + "-germany.csv"
     shutil.copyfile(fn, fn_new)
     with open(fn_new, "at") as f:
