@@ -51,18 +51,22 @@ if not os.path.exists(save_filename) or (time - os.path.getmtime(save_filename))
 for tm in ["060000", "180000"]:
 
     key = "20200229172202"
+    last_key = ""
 
     while True:
 
         key = key[0:8] + tm
 
+        if key == last_key:
+            break
+
         save_filename = "rki_data/%s" % key
         data = ""
 
         if os.path.exists(save_filename):
-            with open(save_filename, "rt") as f:
-                data = f.read()
-        
+            with open(save_filename, "rb") as f:
+                data = f.read().decode("utf-8")
+
             pos = data.find("/_static/images/toolbar/wm_tb_nxt_off.png")
             if pos > 0 and (time - os.path.getmtime(save_filename)) > 3*60*60:
                 # pull latest record again
@@ -98,6 +102,7 @@ for tm in ["060000", "180000"]:
         if pos1 < 0:
             break
 
+        last_key = key
         key = url[pos0+4:pos1]
 
 
@@ -108,8 +113,8 @@ for root, dirs, files in os.walk("rki_data"):
     for file in files:
         if file[0] == ".":
             continue
-        with open("rki_data/%s" % file, "rt") as f:
-            data = f.read()
+        with open("rki_data/%s" % file, "rb") as f:
+            data = f.read().decode("utf-8")
 
         data = data.replace("­", "")
 
