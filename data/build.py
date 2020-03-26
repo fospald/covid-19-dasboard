@@ -13,6 +13,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+def parse_us_date(d):
+    a = d.split("/")
+    if len(a[2]) < 4:
+        return datetime.datetime.strptime(d, '%m/%d/%y')
+    return datetime.datetime.strptime(d, '%m/%d/%Y')
+
 def load_daily_data(current_day):
 
     current_day_data_fn = "COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/%s.csv" % current_day.strftime('%m-%d-%Y')
@@ -67,13 +73,13 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
             if line_count == 0:
                 header = row
 
-                current_day = datetime.datetime.strptime(row[-1], '%m/%d/%y')
+                current_day = parse_us_date(row[-1])
                 cd_data = load_daily_data(current_day)
                 nd_date = current_day + datetime.timedelta(days=1)
                 nd_data = load_daily_data(nd_date)
 
                 for i in range(4,len(row)):
-                    header[i] = int((datetime.datetime.strptime(row[i], '%m/%d/%y') - ref_time).total_seconds())
+                    header[i] = int((parse_us_date(row[i]) - ref_time).total_seconds())
                 # append possible next day
                 header.append(int((nd_date - ref_time).total_seconds()))
 
@@ -90,7 +96,8 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
             if key in data:
                 rec = data[key]
             else:
-                rec = {'id': key, 'province': row[0], 'country': row[1], 'lat': float(row[2]), 'lng': float(row[3])}
+                rec = {'id': key, 'province': row[0], 'country': row[1], 'lat': float(row[2]), 'lng': float(row[3]),
+                        'timeseries_confirmed': {}, 'timeseries_deaths': {}, 'timeseries_recovered': {}}
 
             timeseries = {}
             for i in range(4,len(row)):
@@ -122,7 +129,10 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
                 continue
             if group_key in data:
                 new_group_data = data[group_key]
-                add_timeseries = copy.deepcopy(data[key][ts_key])
+                if ts_key in data[key]:
+                   add_timeseries = copy.deepcopy(data[key][ts_key])
+                else:
+                   add_timeseries = {}
                 if ts_key in new_group_data:
                     for k,v in add_timeseries.items():
                         if k in new_group_data[ts_key]:
@@ -143,7 +153,10 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
     keys = list(data.keys())
     for key in keys:
         if not "is_group" in data[key]:
-                add_timeseries = copy.deepcopy(data[key][ts_key])
+                if ts_key in data[key]:
+                   add_timeseries = copy.deepcopy(data[key][ts_key])
+                else:
+                   add_timeseries = {}
                 if ts_key in global_case:
                     for k,v in add_timeseries.items():
                         if k in global_case[ts_key]:
@@ -184,7 +197,7 @@ for k in ["Confirmed"]:
                 
             line_count += 1
 
-            date = int((datetime.datetime.strptime(row[1], '%m/%d/%Y') - ref_time).total_seconds())
+            date = int((parse_us_date(row[1]) - ref_time).total_seconds())
             country = "Germany"
 
             """
@@ -262,17 +275,19 @@ for k1 in data.keys():
             radius = r
     data[k1]['approx_radius'] = radius;
 
-    min_date = min(min_date, min(data[k1]['timeseries_confirmed'].keys()))
-    max_date = max(max_date, max(data[k1]['timeseries_confirmed'].keys()))
+    for ts in ["confirmed", "deaths", "recovered"]:
+        if len(data[k1]['timeseries_' + ts]):
+            min_date = min(min_date, min(data[k1]['timeseries_' + ts].keys()))
+            max_date = max(max_date, max(data[k1]['timeseries_' + ts].keys()))
 
 
 # complete missing dates
 for k in data.keys():
     for ts in ["Confirmed", "Recovered", "Deaths", "Active"]:
         ts_key = 'timeseries_' + ts.lower()
-        last_val = None
         if not ts_key in data[k]:
             continue
+        last_val = 0
         for date in range(min_date, max_date + 24*60*60, 24*60*60):
             if date in data[k][ts_key]:
                 val = data[k][ts_key][date]

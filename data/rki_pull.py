@@ -8,6 +8,12 @@ import shutil
 import csv
 import sys
 
+def parse_us_date(d):
+    a = d.split("/")
+    if len(a[2]) < 4:
+        return datetime.datetime.strptime(d, '%m/%d/%y')
+    return datetime.datetime.strptime(d, '%m/%d/%Y')
+
 states = [
     {'name': 'Baden-Württemberg', 'lat': '48.56', 'lng': '9.06'},
     {'name': 'Bayern', 'lat': '49.09', 'lng': '11.62'},
@@ -206,7 +212,7 @@ for root, dirs, files in os.walk("rki_data"):
 for k in ["Confirmed", "Recovered", "Deaths"]:
     ts_key = 'timeseries_' + k.lower()
 
-    fn = "COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-" + k + ".csv"
+    fn = "COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_" + k.lower() + "_global.csv"
     with open(fn) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
@@ -214,7 +220,7 @@ for k in ["Confirmed", "Recovered", "Deaths"]:
             dates = row[4:]
             break
 
-    current_day = datetime.datetime.strptime(dates[-1], '%m/%d/%y')
+    current_day = parse_us_date(dates[-1])
 
     # append next day
     date = current_day + datetime.timedelta(days=1)
