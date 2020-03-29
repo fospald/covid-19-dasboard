@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app57.us.archive.org';v.server_ms=1314;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/ait-client-rewrite.js" charset="utf-8"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app13.us.archive.org';v.server_ms=2122;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/ait-client-rewrite.js" charset="utf-8"></script>
 <script type="text/javascript">
 WB_wombat_Init("https://web.archive.org/web/", "20200328205418", "www.rki.de");
 </script>
@@ -154,7 +154,7 @@ body {
 	<tr>
 	  <td class="s">
 	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20200328205418*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">394 captures</a>
+	      	      <a class="t" href="/web/20200328205418*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">396 captures</a>
 	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 29 Mar 2020</div>
 	      </div>
 	  </td>
@@ -1159,7 +1159,7 @@ Bundesbehörden</a>
 </body>
 </html><!--
      FILE ARCHIVED ON 20:54:18 Mar 28, 2020 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 15:10:10 Mar 29, 2020.
+     INTERNET ARCHIVE ON 21:11:00 Mar 29, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1167,14 +1167,14 @@ Bundesbehörden</a>
 -->
 <!--
 playback timings (ms):
-  PetaboxLoader3.resolve: 490.966
-  CDXLines.iter: 19.889 (3)
+  PetaboxLoader3.resolve: 37.179
+  PetaboxLoader3.datanode: 1909.159 (4)
+  load_resource: 103.98 (2)
+  captures_list: 1969.835
+  RedisCDXSource: 2.29
+  LoadShardBlock: 1920.44 (3)
+  CDXLines.iter: 25.517 (3)
+  exclusion.robots.policy: 0.314
+  exclusion.robots: 0.331
   esindex: 0.016
-  exclusion.robots.policy: 0.351
-  captures_list: 1051.909
-  exclusion.robots: 0.368
-  LoadShardBlock: 986.131 (3)
-  RedisCDXSource: 29.272
-  PetaboxLoader3.datanode: 554.306 (4)
-  load_resource: 96.618 (2)
 -->
