@@ -572,7 +572,7 @@ function updatePlot(json)
 				key = keyval[0];
 				div = 1.0;
 				if (plot_data == "cases_by_population") {
-					div = json.country_population[key];
+					div = json.country_population[key]/100.0;
 				}
 				else if (plot_data == "cases_by_area") {
 					div = json.country_area[key];
@@ -637,7 +637,7 @@ function updatePlot(json)
 				key = keyval[0];
 				div = 1.0;
 				if (plot_data == "cases_by_population") {
-					div = json.country_population[key];
+					div = json.country_population[key]/100.0;
 				}
 				else if (plot_data == "cases_by_area") {
 					div = json.country_area[key];
@@ -682,6 +682,17 @@ function updatePlot(json)
 		type = "bar";
 	}
 
+	ylabel = "Number of cases [1]";
+
+	if (plot_data == "cases_by_population") {
+		ylabel = "Number of cases / Population [%]";
+	}
+	else if (plot_data == "cases_by_area") {
+		ylabel = "Number of cases / Area [1/km²]";
+	}
+	else if (plot_data == "mortality") {
+		ylabel = "Mortality [%]";
+	}
 
 
 	var config = {
@@ -725,7 +736,7 @@ function updatePlot(json)
 					type: plot_scale,
 					scaleLabel: {
 						display: true,
-						labelString: 'Value'
+						labelString: ylabel
 					},
 					ticks: {
 						maxTicksLimit: 20,
