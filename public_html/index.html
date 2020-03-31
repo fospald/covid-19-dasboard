@@ -496,6 +496,14 @@ function updatePlot(json)
 			cs = {};
 		}
 
+		div = 1.0;
+		if (plot_data == "cases_by_population") {
+			div = json.country_population[key]/100.0;
+		}
+		else if (plot_data == "cases_by_area") {
+			div = json.country_area[key];
+		}
+
 		function add_dataset(data, label, color)
 		{
 			x = Object.keys(data);
@@ -503,13 +511,12 @@ function updatePlot(json)
 
 			var y = [];
 			for (var i = 0; i < x.length; i++) {
-				y.push(data[x[i]]);
+				y.push(data[x[i]]/div);
 
 				var t = new Date(1970, 0, 1); // Epoch
 				t.setSeconds(x[i]);
 				x[i] = (t.getMonth()+1) + "/" + t.getDate() + "/" + t.getFullYear();
 			}
-
 
 			if (plot_type == "increase") {
 				y_last = y[0];
@@ -520,6 +527,8 @@ function updatePlot(json)
 				}
 				x.shift();
 				y.shift();
+				x.pop();
+				y.pop();
 			}
 
 			dataset = {
