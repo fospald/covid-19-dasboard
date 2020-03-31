@@ -40,12 +40,16 @@ for key in jdata["keys_by_name"]:
     if country == "Denmark Faroe Islands":
         popsizes[key[0]] = 49290
         continue
+    if country == "Germany Brandenburg":
+        popsizes[key[0]] = 2504000
+        continue
 
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.3'}
     url = "https://www.google.com/search?client=ubuntu&channel=fs&q=population+size+" + country + "&ie=utf-8&oe=utf-8"
     url = url.replace(" ", "+")
     url = url.replace("ü", "%C3%BC")
     url = url.replace("ä", "%C3%A4")
+    url = url.replace("ö", "%C3%B6")
 
     save_filename = "google_cache/" + hashlib.md5(url.encode("utf-8")).hexdigest()
 
@@ -81,6 +85,7 @@ for key in jdata["keys_by_name"]:
     popsize = popsize.replace(",", ".")
     popsize = popsize.replace(" ", "")
     popsize = popsize.replace(" ", "")
+    popsize = popsize.replace("residents", "")
     popsize = popsize.replace("Milliarden", "*1000000000")
     popsize = popsize.replace("Millionen", "*1000000")
     popsize = popsize.replace("million", "*1000000")
