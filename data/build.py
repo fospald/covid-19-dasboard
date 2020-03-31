@@ -299,23 +299,29 @@ for k in data.keys():
             elif not last_val is None:
                 data[k][ts_key][date] = last_val
 
+# add mortality
+for k in data.keys():
+    data[k]["timeseries_mortality"] = {}
+    for date in data[k]["timeseries_deaths"].keys():
+        data[k]["timeseries_mortality"][date] = round(data[k]["timeseries_deaths"][date] / max(1, data[k]["timeseries_confirmed"][date]) * 1000)/10.0
+
 
 def comp_active(cs):
     # compute active cases
-        timeseries_active = {}
-        if not "timeseries_confirmed" in cs:
-            return None
-        if not "timeseries_deaths" in cs:
-            return None
-        if not "timeseries_recovered" in cs:
-            return None
-        for date, confirmed in cs["timeseries_confirmed"].items():
-            if not date in cs["timeseries_deaths"]:
-                continue
-            if not date in cs["timeseries_recovered"]:
-                continue
-            timeseries_active[date] = cs["timeseries_confirmed"][date] - cs["timeseries_deaths"][date] - cs["timeseries_recovered"][date]
-        return timeseries_active
+    timeseries_active = {}
+    if not "timeseries_confirmed" in cs:
+        return None
+    if not "timeseries_deaths" in cs:
+        return None
+    if not "timeseries_recovered" in cs:
+        return None
+    for date, confirmed in cs["timeseries_confirmed"].items():
+        if not date in cs["timeseries_deaths"]:
+            continue
+        if not date in cs["timeseries_recovered"]:
+            continue
+        timeseries_active[date] = cs["timeseries_confirmed"][date] - cs["timeseries_deaths"][date] - cs["timeseries_recovered"][date]
+    return timeseries_active
 
 
 keys = list(data.keys())
@@ -341,6 +347,17 @@ def getval(dat, ts):
     if not ts in dat:
         return None
     return dat[ts][max_date]
+
+
+def cmp_by_mortality(x, y):
+    if not "timeseries_mortality" in x:
+        return 1
+    if not "timeseries_mortality" in y:
+        return -1
+    return y["timeseries_mortality"][max_date] - x["timeseries_mortality"][max_date]
+data_by_mortality = list(data.values())
+data_by_mortality.sort(key=cmp_to_key(cmp_by_mortality))
+keys_by_mortality = [(c['id'], getval(c, "timeseries_mortality")) for c in data_by_mortality]
 
 
 def cmp_by_deaths(x, y):
@@ -438,16 +455,24 @@ sys.exit(0)
 """
 
 
+
 export_data = {
         'cases': data,
         'keys_by_name': keys_by_name,
         'keys_by_confirmed': keys_by_confirmed,
         'keys_by_recovered': keys_by_recovered,
+        'keys_by_mortality': keys_by_mortality,
         'keys_by_active': keys_by_active,
         'keys_by_deaths': keys_by_deaths,
         'min_date': min_date,
         'max_date': max_date
 }
+
+
+with open("country_data.json", "rt") as f:
+    country_data = json.loads(f.read())
+    export_data.update(country_data)
+
 
 fn = "../public_html/data.json"
 with open(fn, 'w') as outfile:

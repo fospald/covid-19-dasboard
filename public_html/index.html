@@ -43,7 +43,7 @@
 		height: auto;
 		width: auto;
 		position: absolute;
-		top: 5.1em;
+		top: 7.1em;
 		bottom: 0.1em;
 		right: 0.3em;
 		left: 0.3em;
@@ -102,6 +102,10 @@
 		height: 100%;
 	}
 
+	#stats {
+		text-align: center;
+	}
+
 	#tabs {
 		height: 100%;
 	}
@@ -126,17 +130,17 @@
 	}
 	#region {
 		margin-left: 0.2em;
-		width: 11.3em;
+		width: 12.3em;
 		float: left;
 	}
 	#stats {
 		margin-right: 0.2em;
-		width: 12em;
+		width: 13.5em;
 		float: right;
 	}
 	#center {
-		margin-left: 12em;
-		margin-right: 12.7em;
+		margin-left: 13em;
+		margin-right: 14.2em;
 	}
 	#page {
 		min-height: 100%;
@@ -151,7 +155,7 @@
 	#footer {
 		font-size: 75%;
 		height: auto;
-		width: 15em;
+		width: 17em;
 		right: 0.2em;
 		position: absolute;
 		bottom: 0.3em;
@@ -201,7 +205,7 @@
 	}
 	#state-list, #region-list {
 		position: absolute;
-		width: 10.4em;
+		width: 11.6em;
 		left: 0.6em;
 		right: 0.3em;
 	}
@@ -254,12 +258,14 @@
 	#stats-table {
 		border-collapse: collapse;
 		font-size: 100%;
-		margin: 1em;
+		margin: 0.5em;
 	}
 	#stats-table td {
 		padding: 0.5em;
 		padding-bottom: 0;
 		padding-top: 0;
+		text-align: left;
+		white-space: nowrap;
 	}
 	#stats-table th {
 		text-align: right;
@@ -290,6 +296,8 @@
 						<input type="radio" name="sort" value="recovered" id="sort-recovered" autocomplete="off" />
 						<label for="sort-active" title="Order by active cases">A</label>
 						<input type="radio" name="sort" value="active" id="sort-active" autocomplete="off" />
+						<label for="sort-mortality" title="Order by mortality">M</label>
+						<input type="radio" name="sort" value="mortality" id="sort-mortality" autocomplete="off" />
 						<label for="sort-name" title="Order by name">N</label>
 						<input type="radio" name="sort" value="name" id="sort-name" autocomplete="off" />
 
@@ -313,12 +321,14 @@
 					<div id="state-label">Saxony</div>
 
 					<table id="stats-table">
-						<tr><th>Date:</th><td id="stats-date">3/11/2020<td></tr>
-						<tr><th>Confirmed:</th><td id="stats-confirmed">10<td></tr>
-						<tr><th>Recovered:</th><td id="stats-recovered">10<td></tr>
-						<tr><th>Active:</th><td id="stats-active">10<td></tr>
-						<tr><th>Deaths:</th><td id="stats-deaths">10<td></tr>
-						<tr><th>Mortality:</th><td id="stats-mortality">10%<td></tr>
+						<tr><th>Date:</th><td id="stats-date">3/11/2020</td></tr>
+						<tr><th>Confirmed:</th><td id="stats-confirmed">10</td></tr>
+						<tr><th>Recovered:</th><td id="stats-recovered">10</td></tr>
+						<tr><th>Active:</th><td id="stats-active">10</td></tr>
+						<tr><th>Deaths:</th><td id="stats-deaths">10</td></tr>
+						<tr><th>Mortality:</th><td id="stats-mortality">10%</td></tr>
+						<tr><th>Population:</th><td id="stats-population">0</td></tr>
+						<tr><th>Area [km²]:</th><td id="stats-area">0</td></tr>
 					</table>
 				</div>
 
@@ -361,11 +371,11 @@
 						<div id="tab-charts" class="ui-corner-all ui-widget ui-widget-content">
 
 							<div class="controlgroup">
-								<label for="plot-time">Plot over date for selected region</label>
+								<label for="plot-time">Plot over date for sel. region</label>
 								<input type="radio" name="plot_varx" value="time" id="plot-time" autocomplete="off" />
 								<label for="plot-country">Plot over countries</label>
 								<input type="radio" name="plot_varx" value="country" id="plot-country" autocomplete="off" />
-								<label for="plot-states">Plot over states of selected country</label>
+								<label for="plot-states">Plot over states of sel. country</label>
 								<input type="radio" name="plot_varx" value="states" id="plot-states" autocomplete="off" />
 							</div>
 
@@ -374,10 +384,15 @@
 							<div class="controlgroup">
 								<label for="plot-cases">Cases</label>
 								<input type="radio" name="plot_data" value="cases" id="plot-cases" autocomplete="off" />
+								<label for="plot-cases-by-population">Cases/Population</label>
+								<input type="radio" name="plot_data" value="cases_by_population" id="plot-cases-by-population" autocomplete="off" />
+								<label for="plot-cases-by-area">Cases/Area</label>
+								<input type="radio" name="plot_data" value="cases_by_area" id="plot-cases-by-area" autocomplete="off" />
 								<label for="plot-mortality">Mortality</label>
-								<input type="radio" name="plot_data" value="mortality" id="plot-mortality" autocomplete="off" disabled>
+								<input type="radio" name="plot_data" value="mortality" id="plot-mortality" autocomplete="off" />
 							</div>
 
+							<br/>
 
 							<div class="controlgroup">
 								<label for="plot-cummultative">Cummultative</label>
@@ -441,6 +456,8 @@ var chart = null;
 			return json.keys_by_deaths;
 		} else if (key == "active") {
 			return json.keys_by_active;
+		} else if (key == "mortality") {
+			return json.keys_by_mortality;
 		} else if (key == "recovered") {
 			return json.keys_by_recovered;
 		}
@@ -517,21 +534,28 @@ function updatePlot(json)
 			datasets.push(dataset);
 		}
 
-
-		if (cs.hasOwnProperty("timeseries_confirmed")) {
-			add_dataset(cs.timeseries_confirmed, "Confirmed", window.chartColors.red);
+		if (plot_data == "mortality")
+		{
+			if (cs.hasOwnProperty("timeseries_mortality")) {
+				add_dataset(cs.timeseries_mortality, "Mortality", window.chartColors.black);
+			}
 		}
+		else {
+			if (cs.hasOwnProperty("timeseries_confirmed")) {
+				add_dataset(cs.timeseries_confirmed, "Confirmed", window.chartColors.red);
+			}
 
-		if (cs.hasOwnProperty("timeseries_recovered")) {
-			add_dataset(cs.timeseries_recovered, "Recovered", window.chartColors.green);
-		}
+			if (cs.hasOwnProperty("timeseries_recovered")) {
+				add_dataset(cs.timeseries_recovered, "Recovered", window.chartColors.green);
+			}
 
-		if (cs.hasOwnProperty("timeseries_active")) {
-			add_dataset(cs.timeseries_active, "Active", window.chartColors.orange);
-		}
+			if (cs.hasOwnProperty("timeseries_active")) {
+				add_dataset(cs.timeseries_active, "Active", window.chartColors.orange);
+			}
 
-		if (cs.hasOwnProperty("timeseries_deaths")) {
-			add_dataset(cs.timeseries_deaths, "Deaths", window.chartColors.black);
+			if (cs.hasOwnProperty("timeseries_deaths")) {
+				add_dataset(cs.timeseries_deaths, "Deaths", window.chartColors.black);
+			}
 		}
 
 		type = "line";
@@ -546,6 +570,16 @@ function updatePlot(json)
 
 			keys.forEach(function(keyval) {
 				key = keyval[0];
+				div = 1.0;
+				if (plot_data == "cases_by_population") {
+					div = json.country_population[key];
+				}
+				else if (plot_data == "cases_by_area") {
+					div = json.country_area[key];
+				}
+				if (div == null) {
+					return;
+				}
 				if (key == "World/") return;
 				if (json.cases.hasOwnProperty(key)) {
 					cs = json.cases[key];
@@ -553,7 +587,7 @@ function updatePlot(json)
 						if (cs.hasOwnProperty(series_key)) {
 							if (cs[series_key].hasOwnProperty(date_key)) {
 								x.push(cs.country);
-								y.push(cs[series_key][date_key]);
+								y.push(cs[series_key][date_key]/div);
 							}
 						}
 					}
@@ -576,10 +610,17 @@ function updatePlot(json)
 			datasets.push(dataset);
 		}
 
-		add_dataset("timeseries_confirmed", "Confirmed", window.chartColors.red);
-		//add_dataset("timeseries_recovered", "Recovered", window.chartColors.green);
-		add_dataset("timeseries_active", "Active", window.chartColors.orange);
-		add_dataset("timeseries_deaths", "Deaths", window.chartColors.black);
+
+		if (plot_data == "mortality")
+		{
+			add_dataset("timeseries_mortality", "Mortality", window.chartColors.black);
+		}
+		else {
+			add_dataset("timeseries_confirmed", "Confirmed", window.chartColors.red);
+			//add_dataset("timeseries_recovered", "Recovered", window.chartColors.green);
+			add_dataset("timeseries_active", "Active", window.chartColors.orange);
+			add_dataset("timeseries_deaths", "Deaths", window.chartColors.black);
+		}
 
 		type = "bar";
 	}
@@ -594,13 +635,23 @@ function updatePlot(json)
 
 			keys.forEach(function(keyval) {
 				key = keyval[0];
+				div = 1.0;
+				if (plot_data == "cases_by_population") {
+					div = json.country_population[key];
+				}
+				else if (plot_data == "cases_by_area") {
+					div = json.country_area[key];
+				}
+				if (div == null) {
+					return;
+				}
 				if (json.cases.hasOwnProperty(key)) {
 					cs = json.cases[key];
 					if (cs.province != "" && !cs.province.includes(",") && cs.country == country) {
 						if (cs.hasOwnProperty(series_key)) {
 							if (cs[series_key].hasOwnProperty(date_key)) {
 								x.push(cs.province);
-								y.push(cs[series_key][date_key]);
+								y.push(cs[series_key][date_key]/div);
 							}
 						}
 					}
@@ -703,6 +754,9 @@ function randn_bm() {
 }
 
 function numberWithCommas(x) {
+	if (x < 100) {
+		return x.toString();
+	}
 	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
@@ -1161,6 +1215,35 @@ xhr = $.getJSON("data.json", function(json) {
 			mortality = null;
 			$("#stats-mortality").text("n/a");
 		}
+
+		if (json.country_population.hasOwnProperty(key)) {
+			pop_size = json.country_population[key];
+		}
+		else {
+			pop_size = null;
+		}
+
+		if (pop_size != null) {
+			$("#stats-population").text(numberWithCommas(pop_size));
+		}
+		else {
+			$("#stats-population").text("n/a");
+		}
+
+		if (json.country_area.hasOwnProperty(key)) {
+			area = json.country_area[key];
+		}
+		else {
+			area = null;
+		}
+
+		if (area != null) {
+			$("#stats-area").text(numberWithCommas(area));
+		}
+		else {
+			$("#stats-area").text("n/a");
+		}
+
 	}
 
 	list.change(function() {
