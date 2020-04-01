@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app101.us.archive.org';v.server_ms=3479;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/ait-client-rewrite.js" charset="utf-8"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app13.us.archive.org';v.server_ms=414;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/ait-client-rewrite.js" charset="utf-8"></script>
 <script type="text/javascript">
 WB_wombat_Init("https://web.archive.org/web/", "20200330151246", "www.rki.de");
 </script>
@@ -1148,7 +1148,7 @@ Bundesbehörden</a>
 </body>
 </html><!--
      FILE ARCHIVED ON 15:12:46 Mar 30, 2020 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 15:21:45 Mar 31, 2020.
+     INTERNET ARCHIVE ON 04:16:53 Apr 01, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1156,14 +1156,14 @@ Bundesbehörden</a>
 -->
 <!--
 playback timings (ms):
-  LoadShardBlock: 1795.186 (3)
-  RedisCDXSource: 2.059
-  CDXLines.iter: 16.922 (3)
-  exclusion.robots.policy: 0.202
-  captures_list: 1824.154
-  PetaboxLoader3.resolve: 2869.406 (2)
-  load_resource: 1628.178
-  esindex: 0.008
-  exclusion.robots: 0.213
-  PetaboxLoader3.datanode: 192.928 (4)
+  RedisCDXSource: 44.974
+  captures_list: 277.99
+  exclusion.robots.policy: 0.265
+  esindex: 0.268
+  PetaboxLoader3.resolve: 61.039
+  CDXLines.iter: 19.65 (3)
+  exclusion.robots: 0.279
+  LoadShardBlock: 202.584 (3)
+  PetaboxLoader3.datanode: 192.378 (4)
+  load_resource: 109.131
 -->
