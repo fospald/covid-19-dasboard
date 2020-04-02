@@ -110,6 +110,19 @@
 		height: 100%;
 	}
 
+	#tab-data {
+		overflow: scroll;
+	}
+
+	#tab-data table { border-collapse: collapse; text-align: right; }
+	#tab-data table tr:nth-child(even) {background: #CCC; }
+	#tab-data table tr:nth-child(odd) {background: #fff; }
+	#tab-data table tr:hover { background-color: #fcc;} 
+	#tab-data table td, #tab-data table th {
+		padding: 0.2em;
+		border: 1px solid black;
+	}
+
 	#tab-map, #tab-charts, #tab-data {
 		height: auto;
 		width: auto;
@@ -121,7 +134,6 @@
 		border-top: none;
 		border-top-right-radius: 0;
 		border-top-left-radius: 0;
-
 		border: none;
 		left: 0;
 		right: 0;
@@ -408,19 +420,15 @@
 								<input type="radio" name="plot_scale" value="linear" id="plot-linear" autocomplete="off" />
 							</div>
 
-
-
 							<div id="plotcanvas">
 								<canvas id="canvas" maintainAspectRatio="false"></canvas>
 							</div>
-
-
 						</div>
-
 						<div id="tab-data" class="ui-corner-all ui-widget ui-widget-content">
-							data here
+							<p style="margin-bottom: 0.5em;">Data for the current chart:</p>
+							<div id="tab-data-content">
+							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -468,7 +476,6 @@ var chart = null;
 
 function updatePlot(json)
 {
-
 	var plot_data = $('input[name=plot_data]:checked').val();
 	var plot_scale = $('input[name=plot_scale]:checked').val();
 	var plot_varx = $('input[name=plot_varx]:checked').val();
@@ -478,6 +485,7 @@ function updatePlot(json)
 	var datasets = [];
 	var x = [];
 	var show_x_label = false;
+	var x_label = "Date";
 
 	var date_key = $( "#dateslider" ).slider("value") * sec_per_day;
 
@@ -632,6 +640,7 @@ function updatePlot(json)
 		}
 
 		type = "bar";
+		x_label = "Country";
 	}
 	else if (plot_varx == "states")
 	{
@@ -689,6 +698,7 @@ function updatePlot(json)
 		add_dataset("timeseries_deaths", "Deaths", window.chartColors.black);
 
 		type = "bar";
+		x_label = "State";
 	}
 
 	ylabel = "Number of cases [1]";
@@ -702,7 +712,6 @@ function updatePlot(json)
 	else if (plot_data == "mortality") {
 		ylabel = "Mortality [%]";
 	}
-
 
 	var config = {
 		type: type,
@@ -737,7 +746,7 @@ function updatePlot(json)
 					display: true,
 					scaleLabel: {
 						display: show_x_label,
-						labelString: 'Date'
+						labelString: x_label
 					}
 				}],
 				yAxes: [{
@@ -763,6 +772,33 @@ function updatePlot(json)
 	if (chart) { chart.destroy(); }
 
 	chart = new Chart(ctx, config);
+
+
+
+	var content = "<table>";
+	content += '<tr>';
+	content += '<th>' + x_label + '</th>';
+	for(var i=0; i< datasets.length; i++){
+		content += '<th>' + datasets[i].label + '</th>';
+	}
+	content += '</tr>';
+
+	if (datasets.length > 0) {
+		for(var j=0; j< datasets[0].data.length; j++){
+			content += '<tr>';
+			content += '<td>' + x[j].toString() + '</td>';
+			for(var i=0; i< datasets.length; i++){
+				content += '<td>' + datasets[i].data[j].toString() + '</td>';
+			}
+			content += '</tr>';
+		}
+	}
+
+	content += "</table>";
+
+	$('#tab-data-content').html(content);
+
+
 }
 
 
@@ -1073,7 +1109,7 @@ xhr = $.getJSON("data.json", function(json) {
 	$( "#updated" ).text(last_mod);
 
 	$( "#tabs" ).tabs({
-		disabled: [ 2 ],
+		disabled: [ ],
 		active: 0,
 		activate: function(event, ui) {
 			store("tab", ui.newTab.index());
