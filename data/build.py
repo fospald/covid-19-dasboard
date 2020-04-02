@@ -303,7 +303,7 @@ for k in data.keys():
 for k in data.keys():
     data[k]["timeseries_mortality"] = {}
     for date in data[k]["timeseries_deaths"].keys():
-        data[k]["timeseries_mortality"][date] = round(data[k]["timeseries_deaths"][date] / max(1, data[k]["timeseries_confirmed"][date]) * 1000)/10.0
+        data[k]["timeseries_mortality"][date] = round(data[k]["timeseries_deaths"][date] / max(1, data[k]["timeseries_confirmed"][date]) * 10000)/100.0
 
 
 def comp_active(cs):
