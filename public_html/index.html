@@ -411,6 +411,8 @@
 								<input type="radio" name="plot_type" value="cummultative" id="plot-cummultative" autocomplete="off" />
 								<label for="plot-increase">Daily increase</label>
 								<input type="radio" name="plot_type" value="increase" id="plot-increase" autocomplete="off" />
+								<label for="plot-rate">Growth rate</label>
+								<input type="radio" name="plot_type" value="rate" id="plot-rate" autocomplete="off" />
 							</div>
 
 							<div class="controlgroup">
@@ -419,6 +421,20 @@
 								<label for="plot-linear">Linear</label>
 								<input type="radio" name="plot_scale" value="linear" id="plot-linear" autocomplete="off" />
 							</div>
+
+							<div class="controlgroup">
+								<label for="plot-span-all">All</label>
+								<input type="radio" name="plot_span" value="all" id="plot-span-all" autocomplete="off" />
+								<label for="plot-span-1w">1W</label>
+								<input type="radio" name="plot_span" value="1w" id="plot-span-1w" autocomplete="off" />
+								<label for="plot-span-2w">2W</label>
+								<input type="radio" name="plot_span" value="2w" id="plot-span-2w" autocomplete="off" />
+								<label for="plot-span-3w">3W</label>
+								<input type="radio" name="plot_span" value="3w" id="plot-span-3w" autocomplete="off" />
+								<label for="plot-span-4w">4W</label>
+								<input type="radio" name="plot_span" value="4w" id="plot-span-4w" autocomplete="off" />
+							</div>
+
 
 							<div id="plotcanvas">
 								<canvas id="canvas" maintainAspectRatio="false"></canvas>
@@ -478,6 +494,7 @@ function updatePlot(json)
 {
 	var plot_data = $('input[name=plot_data]:checked').val();
 	var plot_scale = $('input[name=plot_scale]:checked').val();
+	var plot_span = $('input[name=plot_span]:checked').val();
 	var plot_varx = $('input[name=plot_varx]:checked').val();
 	var plot_type = $('input[name=plot_type]:checked').val();
 
@@ -526,15 +543,22 @@ function updatePlot(json)
 				x[i] = (t.getMonth()+1) + "/" + t.getDate() + "/" + t.getFullYear();
 			}
 
+			var dy = [];
+			var dyy = [];
+			for (var i = 1; i < x.length; i++) {
+				dy.push(y[i] - y[i-1]);
+				dyy.push(Math.max(0, Math.min(2, 1 + dy[i-1]/Math.max(1, y[i]))));
+			}
+
 			if (plot_type == "increase") {
-				y_last = y[0];
-				for (var i = 1; i < x.length; i++) {
-					yi = y[i];
-					y[i] = yi - y_last;
-					y_last = yi;
-				}
+				y = dy;
 				x.shift();
-				y.shift();
+				x.pop();
+				y.pop();
+			}
+			else if (plot_type == "rate") {
+				y = dyy;
+				x.shift();
 				x.pop();
 				y.pop();
 			}
@@ -711,6 +735,21 @@ function updatePlot(json)
 	}
 	else if (plot_data == "mortality") {
 		ylabel = "Mortality [%]";
+	}
+
+	if (plot_type == "rate") {
+		ylabel = "Growth rate [1]";
+	}
+
+	if (plot_span != "all")
+	{
+		var span = parseInt(plot_span.substring(0, 1))*7;
+
+		x = x.slice(Math.max(0, x.length - span), x.length);
+
+		for (var i = 0; i < datasets.length; i++) {
+			datasets[i].data = datasets[i].data.slice(Math.max(0, datasets[i].data.length - span), datasets[i].data.length);
+		}
 	}
 
 	var config = {
@@ -1347,6 +1386,12 @@ xhr = $.getJSON("data.json", function(json) {
 	$('input[type=radio][name=plot_varx]').change(function() {
 		updatePlot(json);
 		store("plot_varx", this.value);
+	});
+
+	$("input[type=radio][name=plot_span][value=" + load("plot_span", "all") + "]").attr('checked','checked').button("refresh");
+	$('input[type=radio][name=plot_span]').change(function() {
+		updatePlot(json);
+		store("plot_span", this.value);
 	});
 
 	$("input[type=radio][name=plot_type][value=" + load("plot_type", "cummultative") + "]").attr('checked','checked').button("refresh");
