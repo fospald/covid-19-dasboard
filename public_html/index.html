@@ -547,7 +547,7 @@ function updatePlot(json)
 			var dyy = [];
 			for (var i = 1; i < x.length; i++) {
 				dy.push(y[i] - y[i-1]);
-				dyy.push(Math.max(0, Math.min(2, 1 + dy[i-1]/Math.max(1, y[i]))));
+				dyy.push(100*Math.max(-1, Math.min(1, dy[i-1]/Math.max(1, 0.5*(y[i] + y[i-1])))));
 			}
 
 			if (plot_type == "increase") {
@@ -738,7 +738,7 @@ function updatePlot(json)
 	}
 
 	if (plot_type == "rate") {
-		ylabel = "Growth rate [1]";
+		ylabel = "Growth rate [%]";
 	}
 
 	if (plot_span != "all")
