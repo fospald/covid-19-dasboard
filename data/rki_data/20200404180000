@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app57.us.archive.org';v.server_ms=294;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/ait-client-rewrite.js" charset="utf-8"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app42.us.archive.org';v.server_ms=331;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/ait-client-rewrite.js" charset="utf-8"></script>
 <script type="text/javascript">
 WB_wombat_Init("https://web.archive.org/web/", "20200404171634", "www.rki.de");
 </script>
@@ -139,7 +139,7 @@ body {
 		<tr class="d">
 		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200403145321/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="14:53:21 Apr 03, 2020"><img src="/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
 		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 17:16:34 Apr 04, 2020">04</td>
-		  <td class="f" nowrap="nowrap"><img src="/_static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0" /></td>
+		  <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20200405233224/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="23:32:24 Apr 05, 2020"><img src="/_static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0" /></a></td>
 		</tr>
 		<!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
 		<tr class="y">
@@ -154,7 +154,7 @@ body {
 	<tr>
 	  <td class="s">
 	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20200404171634*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">454 captures</a>
+	      	      <a class="t" href="/web/20200404171634*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">458 captures</a>
 	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 05 Apr 2020</div>
 	      </div>
 	  </td>
@@ -1171,7 +1171,7 @@ Bundesbehörden</a>
 </body>
 </html><!--
      FILE ARCHIVED ON 17:16:34 Apr 04, 2020 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 23:13:44 Apr 05, 2020.
+     INTERNET ARCHIVE ON 02:50:43 Apr 06, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1179,14 +1179,14 @@ Bundesbehörden</a>
 -->
 <!--
 playback timings (ms):
-  captures_list: 111.927
-  LoadShardBlock: 75.193 (3)
-  exclusion.robots.policy: 0.356
-  CDXLines.iter: 18.052 (3)
-  PetaboxLoader3.datanode: 88.93 (4)
-  load_resource: 120.779 (2)
-  exclusion.robots: 0.372
-  RedisCDXSource: 1.472
-  esindex: 0.01
-  PetaboxLoader3.resolve: 48.031
+  PetaboxLoader3.resolve: 77.733 (2)
+  LoadShardBlock: 134.367 (3)
+  CDXLines.iter: 21.459 (3)
+  esindex: 0.012
+  PetaboxLoader3.datanode: 59.753 (4)
+  RedisCDXSource: 0.998
+  exclusion.robots.policy: 0.304
+  load_resource: 97.562 (2)
+  captures_list: 173.301
+  exclusion.robots: 0.317
 -->
