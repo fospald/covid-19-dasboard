@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app12.us.archive.org';v.server_ms=823;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/ait-client-rewrite.js" charset="utf-8"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app101.us.archive.org';v.server_ms=194;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/ait-client-rewrite.js" charset="utf-8"></script>
 <script type="text/javascript">
 WB_wombat_Init("https://web.archive.org/web/", "20200405180307", "www.rki.de");
 </script>
@@ -154,8 +154,8 @@ body {
 	<tr>
 	  <td class="s">
 	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20200405180307*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">459 captures</a>
-	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 05 Apr 2020</div>
+	      	      <a class="t" href="/web/20200405180307*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">457 captures</a>
+	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 06 Apr 2020</div>
 	      </div>
 	  </td>
 	  <td class="k">
@@ -1160,7 +1160,7 @@ Bundesbehörden</a>
 </body>
 </html><!--
      FILE ARCHIVED ON 18:03:07 Apr 05, 2020 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 06:55:59 Apr 06, 2020.
+     INTERNET ARCHIVE ON 00:55:34 Apr 07, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1168,14 +1168,14 @@ Bundesbehörden</a>
 -->
 <!--
 playback timings (ms):
-  load_resource: 687.228
-  PetaboxLoader3.datanode: 729.308 (4)
-  exclusion.robots.policy: 0.298
-  captures_list: 105.501
-  exclusion.robots: 0.31
-  LoadShardBlock: 77.736 (3)
-  RedisCDXSource: 1.384
-  CDXLines.iter: 14.905 (3)
-  esindex: 0.01
-  PetaboxLoader3.resolve: 26.079
+  load_resource: 71.896
+  exclusion.robots: 0.379
+  PetaboxLoader3.resolve: 26.416
+  PetaboxLoader3.datanode: 48.159 (4)
+  exclusion.robots.policy: 0.362
+  RedisCDXSource: 0.822
+  CDXLines.iter: 20.602 (3)
+  captures_list: 85.996
+  LoadShardBlock: 39.212 (3)
+  esindex: 0.014
 -->
