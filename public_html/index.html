@@ -505,6 +505,8 @@ function updatePlot(json)
 	var x_label = "Date";
 
 	var date_key = $( "#dateslider" ).slider("value") * sec_per_day;
+	var min_date_key = $( "#dateslider" ).slider( "option", "min" ) * sec_per_day;
+	var prev_date_key = Math.max(min_date_key, date_key - sec_per_day);
 
 	if (plot_varx == "time")
 	{
@@ -608,6 +610,8 @@ function updatePlot(json)
 		function add_dataset(series_key, label, color)
 		{
 			var y = [];
+			var dy = [];
+			var dyy = [];
 
 			keys.forEach(function(keyval) {
 				key = keyval[0];
@@ -627,13 +631,25 @@ function updatePlot(json)
 					if (cs.province == "") {
 						if (cs.hasOwnProperty(series_key)) {
 							if (cs[series_key].hasOwnProperty(date_key)) {
+								_y = cs[series_key][date_key]/div;
+								_yp = cs[series_key][prev_date_key]/div;
+								_dy = (cs[series_key][date_key] - cs[series_key][prev_date_key])/div;
 								x.push(cs.country);
-								y.push(cs[series_key][date_key]/div);
+								y.push(_y);
+								dy.push(_dy);
+								dyy.push(100*Math.max(-1, Math.min(1, _dy/Math.max(1, 0.5*(_y + _yp)))));
 							}
 						}
 					}
 				}
 			});
+
+			if (plot_type == "increase") {
+				y = dy;
+			}
+			else if (plot_type == "rate") {
+				y = dyy;
+			}
 
 			dim = 20;
 			x = x.slice(0, dim);
@@ -674,6 +690,8 @@ function updatePlot(json)
 		function add_dataset(series_key, label, color)
 		{
 			var y = [];
+			var dy = [];
+			var dyy = [];
 
 			keys.forEach(function(keyval) {
 				key = keyval[0];
@@ -692,13 +710,25 @@ function updatePlot(json)
 					if (cs.province != "" && !cs.province.includes(",") && cs.country == country) {
 						if (cs.hasOwnProperty(series_key)) {
 							if (cs[series_key].hasOwnProperty(date_key)) {
+								_y = cs[series_key][date_key]/div;
+								_yp = cs[series_key][prev_date_key]/div;
+								_dy = (cs[series_key][date_key] - cs[series_key][prev_date_key])/div;
 								x.push(cs.province);
-								y.push(cs[series_key][date_key]/div);
+								y.push(_y);
+								dy.push(_dy);
+								dyy.push(100*Math.max(-1, Math.min(1, _dy/Math.max(1, 0.5*(_y + _yp)))));
 							}
 						}
 					}
 				}
 			});
+
+			if (plot_type == "increase") {
+				y = dy;
+			}
+			else if (plot_type == "rate") {
+				y = dyy;
+			}
 
 			dim = y.length;
 			x = x.slice(0, dim);
@@ -716,10 +746,16 @@ function updatePlot(json)
 			datasets.push(dataset);
 		}
 
-		add_dataset("timeseries_confirmed", "Confirmed", window.chartColors.red);
-		//add_dataset("timeseries_recovered", "Recovered", window.chartColors.green);
-		add_dataset("timeseries_active", "Active", window.chartColors.orange);
-		add_dataset("timeseries_deaths", "Deaths", window.chartColors.black);
+		if (plot_data == "mortality")
+		{
+			add_dataset("timeseries_mortality", "Mortality", window.chartColors.black);
+		}
+		else {
+			add_dataset("timeseries_confirmed", "Confirmed", window.chartColors.red);
+			//add_dataset("timeseries_recovered", "Recovered", window.chartColors.green);
+			add_dataset("timeseries_active", "Active", window.chartColors.orange);
+			add_dataset("timeseries_deaths", "Deaths", window.chartColors.black);
+		}
 
 		type = "bar";
 		x_label = "State";
@@ -752,6 +788,8 @@ function updatePlot(json)
 		}
 	}
 
+	// TODO: https://stackoverflow.com/questions/52785769/how-can-i-sort-data-from-highest-to-lowest-in-chart-js
+	
 	var config = {
 		type: type,
 		data: {
