@@ -506,7 +506,8 @@ function updatePlot(json)
 
 	var date_key = $( "#dateslider" ).slider("value") * sec_per_day;
 	var min_date_key = $( "#dateslider" ).slider( "option", "min" ) * sec_per_day;
-	var prev_date_key = Math.max(min_date_key, date_key - sec_per_day);
+	var prev_date_key = Math.max(min_date_key, date_key - 2*sec_per_day);
+	var date_diff = (date_key - prev_date_key)/sec_per_day;
 
 	if (plot_varx == "time")
 	{
@@ -633,7 +634,7 @@ function updatePlot(json)
 							if (cs[series_key].hasOwnProperty(date_key)) {
 								_y = cs[series_key][date_key]/div;
 								_yp = cs[series_key][prev_date_key]/div;
-								_dy = (cs[series_key][date_key] - cs[series_key][prev_date_key])/div;
+								_dy = (cs[series_key][date_key] - cs[series_key][prev_date_key])/div/date_diff;
 								x.push(cs.country);
 								y.push(_y);
 								dy.push(_dy);
@@ -712,7 +713,7 @@ function updatePlot(json)
 							if (cs[series_key].hasOwnProperty(date_key)) {
 								_y = cs[series_key][date_key]/div;
 								_yp = cs[series_key][prev_date_key]/div;
-								_dy = (cs[series_key][date_key] - cs[series_key][prev_date_key])/div;
+								_dy = (cs[series_key][date_key] - cs[series_key][prev_date_key])/div/date_diff;
 								x.push(cs.province);
 								y.push(_y);
 								dy.push(_dy);
@@ -777,7 +778,7 @@ function updatePlot(json)
 		ylabel = "Growth rate [%]";
 	}
 
-	if (plot_span != "all")
+	if (plot_varx == "time" && plot_span != "all")
 	{
 		var span = parseInt(plot_span.substring(0, 1))*7;
 
