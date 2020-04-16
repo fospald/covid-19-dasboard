@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="imagetoolbar" content="false" />
 <meta name="MSSmartTagsPreventParsing" content="true" />
-<meta name="genTime" content="Wed Apr 15 13:28:58 CEST 2020" />
+<meta name="genTime" content="Thu Apr 16 04:41:06 CEST 2020" />
 <meta name="generator" content="Government Site Builder" />
 <meta name="description" content="Regionale Verteilung der COVID-19-Fälle weltweit" />
 <meta name="keywords" content="Coronavirus, nCoV, neuartiges Coronavirus, Hygiene, Wuhan, China, Risikogebiet, Hubei" />
@@ -665,7 +665,7 @@ Vor­pommern</td><td class="center" colspan="1" rowspan="1">624</td><td class="c
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/GesundAZ_node.html?cms_lv2=3544212" rel="letter_P">P</a></li>
 <li class="empty"><strong>Q</strong></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/GesundAZ_node.html?cms_lv2=3544216" rel="letter_R">R</a></li>
- <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/GesundAZ_node.html?cms_lv2=3544218" rel="letter_S">S</a></li>
+<li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/GesundAZ_node.html?cms_lv2=3544218" rel="letter_S">S</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/GesundAZ_node.html?cms_lv2=3544220" rel="letter_T">T</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/GesundAZ_node.html?cms_lv2=3544222" rel="letter_U">U</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/GesundAZ_node.html?cms_lv2=3544224" rel="letter_V">V</a></li>
@@ -687,14 +687,14 @@ Vor­pommern</td><td class="center" colspan="1" rowspan="1">624</td><td class="c
 <h2>Neu</h2>
 <ul>
 <li><h3>
-<a href="/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/19_20_MNB.pdf?__blob=publicationFile" target="_blank" title="Epidemiologisches Bulletin (PDF-Datei) (Öffnet neues Fenster)" class="">
-<span>Mund-Nasen-Be­deckung im öffent­lichen Raum zur Re­duk­tion von COVID-19-Über­tra­gun­gen, Epid Bull 19/2020 <span lang="en-GB" xml:lang="en-GB">online</span> vorab (14.4.2020)</span>
+<a href="DE/Content/Infekt/EpidBull/Archiv/2020/17/Art_02.html" target="_self" title="Epidemiologisches Bulletin 17/2020 online-vorab: Schätzung der aktuellen Entwicklung der SARS-CoV-2-Epidemie in Deutschland - Nowcasting (PDF-Datei)" class="">
+<span>Schätzung der aktuellen Entwicklung der SARS-CoV-2-Epidemie in Deutschland - <span lang="en-GB" xml:lang="en-GB">Nowcasting</span> (15.4.2020)</span>
 </a>
 </h3>
 </li>
 <li><h3>
-<a href="/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Alten_Pflegeeinrichtung_Empfehlung.pdf?__blob=publicationFile" target="_blank" title="Prävention und Management für Alten- und Pflegeeinrichtungen und Einrichtungen für Menschen mit Beeinträchtigungen sowie für den ÖGD (14.4.2020) (Öffnet neues Fenster)" class="">
-<span>Prävention und Management für Alten- und Pflegeeinrichtungen und Einrichtungen für Menschen mit Beeinträchtigungen sowie für den <abbr title="Öffentlicher Gesundheitsdienst">ÖGD</abbr> (Anhänge folgen in Kürze) (14.4.2020)</span>
+<a href="/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/19_20_MNB.pdf?__blob=publicationFile" target="_blank" title="Epidemiologisches Bulletin (PDF-Datei) (Öffnet neues Fenster)" class="">
+<span>Mund-Nasen-Be­deckung im öffent­lichen Raum zur Re­duk­tion von COVID-19-Über­tra­gun­gen, Epid Bull 19/2020 <span lang="en-GB" xml:lang="en-GB">online</span> vorab (14.4.2020)</span>
 </a>
 </h3>
 </li>
@@ -706,8 +706,20 @@ Vor­pommern</td><td class="center" colspan="1" rowspan="1">624</td><td class="c
 <h2>Aktualisiert</h2>
 <ul>
 <li><h3>
-<a href="SharedDocs/FAQ/NCOV2019/FAQ_Liste.html" target="_self" title="Antworten auf häufig gestellte Fragen zum Coronavirus SARS-CoV-2" class="">
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Pflege/Dokumente.html" target="_self" title="Prävention und Management in Alten- und Pflegeeinrichtungen und Einrichtungen für Menschen mit Beeinträchtigungen" class="">
+<span>Pflege: Prävention und Management in Alten- und Pflege­ein­rich­tungen und Ein­rich­tungen für Menschen mit Beein­träch­ti­gungen (15.4.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="SharedDocs/FAQ/NCOV2019/gesamt.html" target="_self" title="Antworten auf häufig gestellte Fragen zum Coronavirus SARS-CoV-2" class="">
 <span>Antworten auf häufig gestellte Fragen zu COVID-19 (15.4.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Arbeitsschutz_Tab.html" target="_self" title="Hinweise zur Verwendung von Masken (MNS-, FFP- sowie Mund-Nasen-Bedeckung)" class="">
+<span>Hinweise zur Verwendung von Masken (<abbr title="Mund-Nasen-Schutz">MNS</abbr>-, <abbr title="Partikelfiltrierende Halbmasken">FFP</abbr>- sowie Mund-Nasen-Bedeckung) (15.4.2020)</span>
 </a>
 </h3>
 </li>
@@ -720,12 +732,6 @@ Vor­pommern</td><td class="center" colspan="1" rowspan="1">624</td><td class="c
 <li><h3>
 <a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Hygiene.html" target="_self" title="Hygienemaßnahmen im Rahmen der Behandlung von Patienten mit einer Infektion durch SARS-CoV-2 " class="">
 <span>Hygiene­maßnahmen im Rahmen der Behandlung und Pflege von COVID-19-Patienten (14.4.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Arbeitsschutz_Tab.html" target="_self" title="Hinweise zur Verwendung von Masken (MNS-, FFP- sowie Mund-Nasen-Bedeckung) (2.4.2020)" class="">
-<span>Hinweise zur Verwendung von Masken (<abbr title="Mund-Nasen-Schutz">MNS</abbr>-, <abbr title="Partikelfiltrierende Halbmasken">FFP</abbr>- sowie Mund-Nasen-Bedeckung) (14.4.2020)</span>
 </a>
 </h3>
 </li>
@@ -862,11 +868,11 @@ Vor­pommern</td><td class="center" colspan="1" rowspan="1">624</td><td class="c
 </li>
 <li><a href="DE/Content/Forsch/Projektgruppen/projektgruppen_node.html">Projektgruppen</a>
 </li>
-<li><a href="DE/Content/Forsch/Nachwuchsgruppen/Nachwuchsgruppen_node.html">Nachwuchsgruppen</a>
+ <li><a href="DE/Content/Forsch/Nachwuchsgruppen/Nachwuchsgruppen_node.html">Nachwuchsgruppen</a>
 </li>
 <li><a href="DE/Content/Forsch/Graduiertenkolleg/Graduiertenkolleg_node.html">Graduiertenkolleg</a>
 </li>
- <li><a href="SiteGlobals/Forms/Suche/Publikationssuche_Formular.html?nn=13490888">RKI-Publikationen in Fachzeitschriften und -büchern</a>
+<li><a href="SiteGlobals/Forms/Suche/Publikationssuche_Formular.html?nn=13490888">RKI-Publikationen in Fachzeitschriften und -büchern</a>
 </li>
 <li><a href="DE/Content/Forsch/FellowProgramm/fp_node.html">Robert Koch-<span lang="en-GB" xml:lang="en-GB">Fellow</span>-Programm</a>
 </li>
