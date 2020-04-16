@@ -185,7 +185,7 @@ for root, dirs, files in os.walk("rki_data"):
                                 pos0 = data.find("<td", pos0+1)
                             pos0 = data.find(">", pos0)
                             pos1 = data.find("<", pos0)
-                            deaths = data[pos0+1:pos1].strip()
+                            deaths = data[pos0+1:pos1].strip().replace(".", "")
                             deaths = int(deaths) if len(deaths) else 0
 
             key = s['name']
