@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="imagetoolbar" content="false" />
 <meta name="MSSmartTagsPreventParsing" content="true" />
-<meta name="genTime" content="Wed Apr 22 08:06:05 CEST 2020" />
+<meta name="genTime" content="Thu Apr 23 00:22:43 CEST 2020" />
 <meta name="generator" content="Government Site Builder" />
 <meta name="description" content="Regionale Verteilung der COVID-19-Fälle weltweit" />
 <meta name="keywords" content="Coronavirus, nCoV, neuartiges Coronavirus, Hygiene, Wuhan, China, Risikogebiet, Hubei" />
@@ -313,7 +313,7 @@ window.LABEL_LESSDETAILS = 'weniger anzeigen';
 <li class=""><a href="DE/Content/Infekt/infekt_node.html" title="Infektionsschutz">In­fek­ti­ons­schutz</a>
 <div class="menu">
 <div class="menu-box-group">
-<div class="overview-item">
+ <div class="overview-item">
 <img src="/SharedDocs/Bilder/Flyout/Infektionsschutz.jpg?__blob=normal&amp;v=8" alt="HIV-1 - Human immunodeficiency virus 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten(Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.  © H.R. Gelderblom/RKI" title="HIV-1 - Human immunodeficiency virus 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten(Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.  © H.R. Gelderblom/RKI" style="width:210px;height:125px;" />
 <p>HIV-1 - <span lang="en-GB" xml:lang="en-GB">Human immunodeficiency virus</span> 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten (Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.
 <em class="more"><a href="DE/Content/Infekt/infekt_node.html">Weiter lesen</a></em>
@@ -505,7 +505,7 @@ window.LABEL_LESSDETAILS = 'weniger anzeigen';
 Bundesbehörden</a>
 </li></ul>
 </div>
- <div class="overview-articles">
+<div class="overview-articles">
 <h3>Wissenswertes aus dem Bereich</h3>
 <ul><li><a href="https://edoc.rki.de/" target="_blank" title="Externer Link Publikationsserver RKI (Öffnet neues Fenster)">Publikationsserver edoc des RKI</a></li><li><a href="DE/Content/Service/Stellen/Hospitanz/Hospitanz_Presse.html">Praktikum in der Presse- und Öffent­lich­keits­arbeit des RKI (2.1.2020)</a></li><li><a href="DE/Content/Service/Stellen/Promotion/Promotionsmoeglichkeiten.html">Promotion Diplom Bachelor Master</a></li>
 </ul>
@@ -689,14 +689,8 @@ Vor­pommern</td><td class="center" colspan="1" rowspan="1">656</td><td class="c
 <h2>Neu</h2>
 <ul>
 <li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Projekte.html" target="_self" title="Surveillance und Studien am RKI (18.4.2020)" class="">
-<span>Surveillance und Studien am RKI (18.4.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Management_Ausbruch_Gesundheitswesen.html" target="_self" title="Management von COVID-19 Ausbrüchen im Gesundheitswesen (17.4.2020)" class="">
-<span>Management von COVID-19 Ausbrüchen im Gesundheitswesen (17.4.2020)</span>
+<a href="DE/Content/Infekt/EpidBull/Archiv/2020/20/Art_01.html" target="_self" title="Der erste Monat mit COVID-19-Fällen im Landkreis Wittenberg, Sachsen-Anhalt - Epid Bull 20/2020 online vorab (21.4.2020)" class="">
+<span>Der erste Monat mit COVID-19-Fällen im Landkreis Wittenberg, Sachsen-Anhalt - Epid Bull 20/2020 online vorab (21.4.2020)</span>
 </a>
 </h3>
 </li>
@@ -708,8 +702,26 @@ Vor­pommern</td><td class="center" colspan="1" rowspan="1">656</td><td class="c
 <h2>Aktualisiert</h2>
 <ul>
 <li><h3>
+<a href="DE/Content/Infekt/EpidBull/Archiv/2020/17/Art_02.html" target="_self" title="Epidemiologisches Bulletin 17/2020 online-vorab: Schätzung der aktuellen Entwicklung der SARS-CoV-2-Epidemie in Deutschland - Nowcasting (PDF-Datei)" class="">
+<span>Schätzung der aktuellen Entwicklung der SARS-CoV-2-Epidemie in Deutschland - <span lang="en-GB" xml:lang="en-GB">Nowcasting</span> (22.4.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Altenpflegeheime.html" target="_self" title="Hinweise für ambulante Pflegedienste (22.4.2020)" class="">
+<span>Hinweise für ambulante Pflegedienste (22.4.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
 <a href="SharedDocs/FAQ/NCOV2019/gesamt.html" target="_self" title="Antworten auf häufig gestellte Fragen zum Coronavirus SARS-CoV-2" class="">
-<span>Antworten auf häufig gestellte Fragen zu COVID-19 (18.4.2020)</span>
+<span>Antworten auf häufig gestellte Fragen zu COVID-19 (22.4.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Massnahmen_Verdachtsfall_Infografik_Tab.html" target="_self" title="Flussschema: Verdachtsabklärung und Maßnahmen" class="">
+<span>Flussschema: Maß­nahmen und Test­kriterien bei COVID-19-Verdacht (22.4.2020)</span>
 </a>
 </h3>
 </li>
@@ -728,24 +740,6 @@ Vor­pommern</td><td class="center" colspan="1" rowspan="1">656</td><td class="c
 <li><h3>
 <a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Entlassmanagement.html" target="_self" title="Kriterien und zur Entlassung aus dem Krankenhaus und zur Aufhebung der häuslichen Isolierung nach COVID-19 Erkrankung (17.4.2020)" class="">
 <span>Kriterien zur Entlassung aus dem Krankenhaus <abbr title="beziehungsweise">bzw.</abbr> aus der häuslichen Isolierung (17.4.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/HCW.html" target="_self" title="Optionen zum Management von Kontaktpersonen unter medizinischem Personal bei Personalmangel" class="">
-<span>Optionen zum Management von Kontakt­per­sonen unter medi­zi­ni­schem Personal bei Personal­mangel (17.4.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Personal_Pflege.html" target="_self" title="Optionen zum Management von Kontaktpersonen unter Personal von Alten- und Pflegeeinrichtungen bei Personalmangel" class="">
-<span>Optionen zum Management von Kontakt­personen unter Personal von Alten- und Pflege­ein­rich­tungen bei Personal­mangel (17.4.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Alten_Pflegeeinrichtung_Empfehlung.pdf?__blob=publicationFile" target="_blank" title="Prävention und Management in Alten- und Pflegeeinrichtungen und Einrichtungen für Menschen mit Beeinträchtigungen (Öffnet neues Fenster)" class="">
-<span>Prävention und Management in Alten- und Pflege­ein­rich­tungen und Ein­rich­tungen für Menschen mit Beein­träch­ti­gungen (17.4.2020)</span>
 </a>
 </h3>
 </li>
