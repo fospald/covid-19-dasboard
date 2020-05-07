@@ -909,7 +909,7 @@ var map = null;
 function updateMap(json, initHeatmap)
 {
 	series_name = $('input[name=map_data]:checked').val();
-	max_count_factor = 50;
+	max_count_factor = 1;
 
 	var testData = {
 		max: max_count_factor,
@@ -970,7 +970,7 @@ function updateMap(json, initHeatmap)
 			else {
 				spread_radius = cs.approx_radius / 2.0 * count / (count + 20);
 				count_factor = 1
-				//count = Math.min(count, 1000);
+				count = Math.min(count, 1000);
 				if (count > 10000) {
 					count_factor = max_count_factor;
 					count = Math.round(count/max_count_factor);
