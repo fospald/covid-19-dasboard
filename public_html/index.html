@@ -909,7 +909,7 @@ var map = null;
 function updateMap(json, initHeatmap)
 {
 	series_name = $('input[name=map_data]:checked').val();
-	max_count_factor = 5;
+	max_count_factor = 50;
 
 	var testData = {
 		max: max_count_factor,
@@ -984,7 +984,7 @@ function updateMap(json, initHeatmap)
 			}
 		}
 	}
-
+	
 	if (!heatmapLayer)
 	{
 		var baseLayer = L.tileLayer(
