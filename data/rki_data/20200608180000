@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app103.us.archive.org';v.server_ms=490;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app57.us.archive.org';v.server_ms=1311;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
 <script type="text/javascript" src="/_static/js/wombat.js?v=nWgLpXRB" charset="utf-8"></script>
 <script type="text/javascript">
 if (window._WBWombatInit) {
@@ -148,13 +148,13 @@ body {
 	      <tbody>
 		<!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
 		<tr class="m">
-		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200508113941/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="08 May 2020"><strong>May</strong></a></td>
+		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200508123056/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="08 May 2020"><strong>May</strong></a></td>
 		  <td class="c" id="displayMonthEl" title="You are here: 16:00:02 Jun 08, 2020">JUN</td>
 		  <td class="f" nowrap="nowrap">Jul</td>
 		</tr>
 		<!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
 		<tr class="d">
-		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200607094245/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="09:42:45 Jun 07, 2020"><img src="/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
+		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200607160001/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="16:00:01 Jun 07, 2020"><img src="/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
 		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 16:00:02 Jun 08, 2020">08</td>
 		  <td class="f" nowrap="nowrap"><img src="/_static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0" /></td>
 		</tr>
@@ -171,8 +171,8 @@ body {
 	<tr>
 	  <td class="s">
 	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20200608160002*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">928 captures</a>
-	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 08 Jun 2020</div>
+	      	      <a class="t" href="/web/20200608160002*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">959 captures</a>
+	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 09 Jun 2020</div>
 	      </div>
 	  </td>
 	  <td class="k">
@@ -1213,7 +1213,7 @@ Bundesbehörden</a>
 </body>
 </html><!--
      FILE ARCHIVED ON 16:00:02 Jun 08, 2020 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 02:30:24 Jun 09, 2020.
+     INTERNET ARCHIVE ON 10:20:22 Jun 09, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1221,14 +1221,14 @@ Bundesbehörden</a>
 -->
 <!--
 playback timings (ms):
-  captures_list: 275.368
-  CDXLines.iter: 18.001 (3)
-  RedisCDXSource: 0.999
+  exclusion.robots.policy: 0.349
+  exclusion.robots: 0.363
+  RedisCDXSource: 2.572
+  CDXLines.iter: 21.353 (3)
+  captures_list: 384.462
+  load_resource: 891.028
+  LoadShardBlock: 320.18 (3)
   esindex: 0.013
-  exclusion.robots: 0.34
-  exclusion.robots.policy: 0.325
-  PetaboxLoader3.datanode: 180.868 (4)
-  PetaboxLoader3.resolve: 89.098 (2)
-  load_resource: 158.669
-  LoadShardBlock: 220.416 (3)
+  PetaboxLoader3.resolve: 998.274 (3)
+  PetaboxLoader3.datanode: 111.238 (4)
 -->
