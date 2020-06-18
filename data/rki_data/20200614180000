@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app13.us.archive.org';v.server_ms=437;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app56.us.archive.org';v.server_ms=519;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
 <script type="text/javascript" src="/_static/js/wombat.js?v=nWgLpXRB" charset="utf-8"></script>
 <script type="text/javascript">
 if (window._WBWombatInit) {
@@ -156,7 +156,7 @@ body {
 		<tr class="d">
 		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200613165802/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="16:58:02 Jun 13, 2020"><img src="/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
 		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 18:45:38 Jun 14, 2020">14</td>
-		  <td class="f" nowrap="nowrap"><img src="/_static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0" /></td>
+		  <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20200615202306/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="20:23:06 Jun 15, 2020"><img src="/_static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0" /></a></td>
 		</tr>
 		<!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
 		<tr class="y">
@@ -171,8 +171,8 @@ body {
 	<tr>
 	  <td class="s">
 	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20200614184538*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">1,011 captures</a>
-	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 15 Jun 2020</div>
+	      	      <a class="t" href="/web/20200614184538*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">1,024 captures</a>
+	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 18 Jun 2020</div>
 	      </div>
 	  </td>
 	  <td class="k">
@@ -194,15 +194,8 @@ body {
     <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
     <div style="padding:3px;position:relative" id="wm-collected-by-content">
       <div style="display:inline-block;vertical-align:top;width:49%;">
-			<span class="c-logo" style="background-image:url(https://archive.org/services/img/liveweb)"></span>
-		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/liveweb" target="_new"><span class="wm-title">Live Web Proxy Crawls</span></a></div>
-		<div style="max-height:75px;overflow:hidden;position:relative;">
-	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
-	  Content crawled via the <a href="http://archive.org/web/web.php">Wayback Machine</a> Live Proxy mostly by the Save Page Now feature on web.archive.org.
-<br /><br />
-Liveweb proxy is a component of Internet Archive’s wayback machine project. The liveweb proxy captures the content of a web page in real time, archives it into a ARC or WARC file and returns the ARC/WARC record back to the wayback machine to process. The recorded ARC/WARC file becomes part of the wayback machine in due course of time.
-<br /><br />
-	</div>
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/save-page-now)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/save-page-now" target="_new"><span class="wm-title">Save Page Now</span></a></div>
 	      </div>
     </div>
     </div>
@@ -1179,7 +1172,7 @@ Bundesbehörden</a>
 </body>
 </html><!--
      FILE ARCHIVED ON 18:45:38 Jun 14, 2020 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 19:32:23 Jun 15, 2020.
+     INTERNET ARCHIVE ON 02:14:40 Jun 18, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1187,14 +1180,14 @@ Bundesbehörden</a>
 -->
 <!--
 playback timings (ms):
-  PetaboxLoader3.datanode: 69.692 (4)
-  CDXLines.iter: 18.184 (3)
-  captures_list: 202.078
-  esindex: 0.009
-  LoadShardBlock: 146.397 (3)
-  exclusion.robots: 0.253
-  RedisCDXSource: 1.463
-  exclusion.robots.policy: 0.243
-  load_resource: 188.033
-  PetaboxLoader3.resolve: 238.172 (2)
+  PetaboxLoader3.datanode: 58.697 (4)
+  RedisCDXSource: 15.059
+  exclusion.robots.policy: 0.478
+  load_resource: 94.721
+  LoadShardBlock: 133.747 (3)
+  CDXLines.iter: 16.226 (3)
+  exclusion.robots: 173.235
+  PetaboxLoader3.resolve: 116.202 (2)
+  esindex: 0.013
+  captures_list: 369.278
 -->
