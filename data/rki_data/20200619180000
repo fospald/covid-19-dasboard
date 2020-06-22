@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app56.us.archive.org';v.server_ms=502;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app102.us.archive.org';v.server_ms=1593;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
 <script type="text/javascript" src="/_static/js/wombat.js?v=nWgLpXRB" charset="utf-8"></script>
 <script type="text/javascript">
 if (window._WBWombatInit) {
@@ -156,7 +156,7 @@ body {
 		<tr class="d">
 		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200618151926/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="15:19:26 Jun 18, 2020"><img src="/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
 		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 20:11:21 Jun 19, 2020">19</td>
-		  <td class="f" nowrap="nowrap"><img src="/_static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0" /></td>
+		  <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20200620213000/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="21:30:00 Jun 20, 2020"><img src="/_static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0" /></a></td>
 		</tr>
 		<!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
 		<tr class="y">
@@ -171,8 +171,8 @@ body {
 	<tr>
 	  <td class="s">
 	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20200619201121*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">1,042 captures</a>
-	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 20 Jun 2020</div>
+	      	      <a class="t" href="/web/20200619201121*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">1,056 captures</a>
+	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 21 Jun 2020</div>
 	      </div>
 	  </td>
 	  <td class="k">
@@ -193,6 +193,18 @@ body {
                     <div id="wm-capinfo-collected-by">
     <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
     <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/webwidecrawl);"></span>
+		Organization: <a style="color:#33f;" href="https://archive.org/details/webwidecrawl" target="_new"><span class="wm-title">Internet Archive</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  The Internet Archive discovers and captures web pages through many different web crawls.
+
+At any given time several distinct crawls are running, some for months, and some every day or longer.
+
+View the web archive through the <a href="http://archive.org/web/web.php">Wayback Machine</a>.
+	</div>
+	      </div>
       <div style="display:inline-block;vertical-align:top;width:49%;">
 			<span class="c-logo" style="background-image:url(https://archive.org/services/img/liveweb)"></span>
 		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/liveweb" target="_new"><span class="wm-title">Live Web Proxy Crawls</span></a></div>
@@ -1183,7 +1195,7 @@ Bundesbehörden</a>
 </body>
 </html><!--
      FILE ARCHIVED ON 20:11:21 Jun 19, 2020 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 21:27:22 Jun 20, 2020.
+     INTERNET ARCHIVE ON 12:41:47 Jun 22, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1191,14 +1203,14 @@ Bundesbehörden</a>
 -->
 <!--
 playback timings (ms):
-  captures_list: 109.664
-  exclusion.robots.policy: 0.288
-  load_resource: 349.779
-  exclusion.robots: 0.307
-  PetaboxLoader3.resolve: 267.644
-  PetaboxLoader3.datanode: 71.417 (4)
-  CDXLines.iter: 22.814 (3)
-  LoadShardBlock: 47.87 (3)
-  RedisCDXSource: 5.431
-  esindex: 0.018
+  captures_list: 969.134
+  PetaboxLoader3.datanode: 576.95 (4)
+  exclusion.robots: 0.355
+  exclusion.robots.policy: 0.339
+  CDXLines.iter: 14.392 (3)
+  LoadShardBlock: 876.199 (3)
+  PetaboxLoader3.resolve: 77.734 (2)
+  RedisCDXSource: 44.462
+  esindex: 0.013
+  load_resource: 568.105
 -->
