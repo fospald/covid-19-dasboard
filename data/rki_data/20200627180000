@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app103.us.archive.org';v.server_ms=509;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app22.us.archive.org';v.server_ms=1104;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
 <script type="text/javascript" src="/_static/js/wombat.js?v=nWgLpXRB" charset="utf-8"></script>
 <script type="text/javascript">
 if (window._WBWombatInit) {
   wbinfo = {}
   wbinfo.url = "https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html";
-  wbinfo.timestamp = "20200627215528";
-  wbinfo.request_ts = "20200627215528";
+  wbinfo.timestamp = "20200628182023";
+  wbinfo.request_ts = "20200628182023";
   wbinfo.prefix = "https://web.archive.org/web/";
   wbinfo.mod = "if_";
   wbinfo.is_framed = false;
@@ -18,8 +18,8 @@ if (window._WBWombatInit) {
   wbinfo.static_prefix = "/_static/";
   wbinfo.enable_auto_fetch = true;
   wbinfo.auto_fetch_worker_prefix = "https://web.archive.org/web/";
-  wbinfo.wombat_ts = "20200627215528";
-  wbinfo.wombat_sec = "1593294928";
+  wbinfo.wombat_ts = "20200628182023";
+  wbinfo.wombat_sec = "1593368423";
   wbinfo.wombat_scheme = "https";
   wbinfo.wombat_host = "www.rki.de";
   wbinfo.ignore_prefixes = ["/__wb/",
@@ -44,7 +44,7 @@ __wm.init("https://web.archive.org/web");
 <link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
 <!-- End Wayback Rewrite JS Include -->
 
-<base href="https://web.archive.org/web/20200627215528/https://www.rki.de/"></base>
+<base href="https://web.archive.org/web/20200628182023/https://www.rki.de/"></base>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <title>RKI  -  Coronavirus SARS-CoV-2 - COVID-19: Fallzahlen in Deutschland und weltweit</title>
 <meta http-equiv="Content-Style-Type" content="text/css"/>
@@ -52,11 +52,11 @@ __wm.init("https://web.archive.org/web");
 <meta http-equiv="Content-Script-Type" content="text/javascript"/>
 <meta http-equiv="imagetoolbar" content="false"/>
 <meta name="MSSmartTagsPreventParsing" content="true"/>
-<meta name="genTime" content="Sat Jun 27 23:43:33 CEST 2020"/>
+<meta name="genTime" content="Sun Jun 28 20:08:32 CEST 2020"/>
 <meta name="generator" content="Government Site Builder"/>
 <meta name="description" content="Regionale Verteilung der COVID-19-Fälle weltweit"/>
 <meta name="keywords" content="Coronavirus, nCoV, neuartiges Coronavirus, Hygiene, Wuhan, China, Risikogebiet, Hubei"/>
-<link rel="canonical" href="https://web.archive.org/web/20200627215528/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html"/>
+<link rel="canonical" href="https://web.archive.org/web/20200628182023/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html"/>
 <link rel="bookmark" href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html?nn=13490888#Start" type="text/html" title="Zum Inhalt"/>
 <link rel="copyright" href="DE/Service/Impressum/impressum_node.html" type="text/html" title="Impressum"/>
 <link rel="glossary" href="DE/Service/Glossar/glossar_node.html" type="text/html" title="Glossar"/>
@@ -65,22 +65,22 @@ __wm.init("https://web.archive.org/web");
 <link rel="contents" href="DE/Service/Sitemap/sitemap_node.html" type="text/html" title="Übersicht"/>
 <link rel="search" href="DE/Service/Suche/suche_node.html" type="text/html" title="Suche"/>
 <link rel="up" href="DE/Content/InfAZ/InfAZ_marginal_node.html" type="text/html" title="Infektionskrankheiten A-Z"/>
-<link rel="shortcut icon" href="/web/20200627215528im_/https://www.rki.de/SiteGlobals/StyleBundles/Bilder/favicon.gif?__blob=normal&amp;v=2" type="image/ico"/>
-<link rel="apple-touch-icon" href="/web/20200627215528im_/https://www.rki.de/SiteGlobals/StyleBundles/Bilder/favicon_mobile.png?__blob=normal&amp;v=1" type="image/ico"/>
+<link rel="shortcut icon" href="/web/20200628182023im_/https://www.rki.de/SiteGlobals/StyleBundles/Bilder/favicon.gif?__blob=normal&amp;v=2" type="image/ico"/>
+<link rel="apple-touch-icon" href="/web/20200628182023im_/https://www.rki.de/SiteGlobals/StyleBundles/Bilder/favicon_mobile.png?__blob=normal&amp;v=1" type="image/ico"/>
 <link rel="alternate" type="application/rss+xml" title="Robert Koch-Institut News" href="SiteGlobals/Functions/RSSFeed/RSSGenerator.xml"/>
 <link rel="alternate" type="application/rss+xml" title="Robert Koch-Institut: Stellenangebote" href="SiteGlobals/Functions/RSSFeed/RSSGenerator_Stellen.xml"/>
-<link rel="stylesheet" href="/web/20200627215528cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/basic.css?v=2" type="text/css"/>
-<link rel="stylesheet" href="/web/20200627215528cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/print/print.css?v=17" type="text/css" media="print"/>
-<link rel="stylesheet" type="text/css" href="/web/20200627215528cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/handheld/handheld.css?v=20" media="only screen and (max-width: 600px), only screen and (max-device-width: 600px), handheld"/>
-<link rel="alternate stylesheet" href="/web/20200627215528cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/screen/font-normal.css?v=4" title="normaleSchrift" type="text/css" media="screen, projection"/>
-<link rel="alternate stylesheet" href="/web/20200627215528cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/screen/font-big.css?v=5" title="grosseSchrift" type="text/css" media="screen, projection"/>
+<link rel="stylesheet" href="/web/20200628182023cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/basic.css?v=2" type="text/css"/>
+<link rel="stylesheet" href="/web/20200628182023cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/print/print.css?v=17" type="text/css" media="print"/>
+<link rel="stylesheet" type="text/css" href="/web/20200628182023cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/handheld/handheld.css?v=20" media="only screen and (max-width: 600px), only screen and (max-device-width: 600px), handheld"/>
+<link rel="alternate stylesheet" href="/web/20200628182023cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/screen/font-normal.css?v=4" title="normaleSchrift" type="text/css" media="screen, projection"/>
+<link rel="alternate stylesheet" href="/web/20200628182023cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/screen/font-big.css?v=5" title="grosseSchrift" type="text/css" media="screen, projection"/>
 <!--[if lte IE 7]><link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/screen_iew-6-7.css?v=7" type="text/css" media="projection, screen" /><![endif]-->
 <!--[if lte IE 9]><link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/screen_iew.css?v=9" type="text/css" media="projection, screen" /><![endif]-->
-<link rel="stylesheet" href="/web/20200627215528cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/additional.css?v=2" type="text/css"/>
-<link rel="stylesheet" type="text/css" href="/web/20200627215528cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/handheld/additional_Materna.css?v=19" media="only screen and (max-width: 600px), handheld"/>
-<link rel="stylesheet" href="/web/20200627215528cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/screen/rebrush-2014-desktop-only-min.css?v=7" media="screen and (min-width:960px)"/>
-<link rel="stylesheet" href="/web/20200627215528cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/screen/rebrush-2014-desktop-only-max.css?v=39" media="screen and (min-width:1300px)"/>
-<script src="/web/20200627215528js_/https://www.rki.de/SiteGlobals/Functions/JavaScript/Init.js?v=35" type="text/javascript"></script>
+<link rel="stylesheet" href="/web/20200628182023cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/additional.css?v=2" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="/web/20200628182023cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/handheld/additional_Materna.css?v=19" media="only screen and (max-width: 600px), handheld"/>
+<link rel="stylesheet" href="/web/20200628182023cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/screen/rebrush-2014-desktop-only-min.css?v=7" media="screen and (min-width:960px)"/>
+<link rel="stylesheet" href="/web/20200628182023cs_/https://www.rki.de/SiteGlobals/StyleBundles/CSS/screen/rebrush-2014-desktop-only-max.css?v=39" media="screen and (min-width:1300px)"/>
+<script src="/web/20200628182023js_/https://www.rki.de/SiteGlobals/Functions/JavaScript/Init.js?v=35" type="text/javascript"></script>
 <script type="text/javascript">//<![CDATA[
       // i18n
         var PRINT_PAGE_TEXT = 'Seite drucken';
@@ -128,40 +128,40 @@ body {
 	<a id="wm-tb-close" href="#close" onclick="__wm.h(event);return false;" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
       </div>
       <div id="wm-share">
-          <a href="/web/20200627215528/http://web.archive.org/screenshot/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html"
+          <a href="/web/20200628182023/http://web.archive.org/screenshot/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html"
              id="wm-screenshot"
              title="screenshot">
             <span class="wm-icon-screen-shot"></span>
           </a>
-	<a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20200627215528/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
-	<a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20200627215528/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+	<a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20200628182023/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+	<a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20200628182023/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
       </div>
     </div>
     <table class="c" style="">
       <tbody>
 	<tr>
 	  <td class="u" colspan="2">
-	    <form target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20200627215528" /><input type="submit" value="Go" /></form>
+	    <form target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20200628182023" /><input type="submit" value="Go" /></form>
 	  </td>
 	  <td class="n" rowspan="2" style="width:110px;">
 	    <table>
 	      <tbody>
 		<!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
 		<tr class="m">
-		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200527203047/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="27 May 2020"><strong>May</strong></a></td>
-		  <td class="c" id="displayMonthEl" title="You are here: 21:55:28 Jun 27, 2020">JUN</td>
+		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200528165416/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="28 May 2020"><strong>May</strong></a></td>
+		  <td class="c" id="displayMonthEl" title="You are here: 18:20:23 Jun 28, 2020">JUN</td>
 		  <td class="f" nowrap="nowrap">Jul</td>
 		</tr>
 		<!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
 		<tr class="d">
 		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200626160001/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="16:00:01 Jun 26, 2020"><img src="/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
-		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 21:55:28 Jun 27, 2020">27</td>
+		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 18:20:23 Jun 28, 2020">28</td>
 		  <td class="f" nowrap="nowrap"><img src="/_static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0" /></td>
 		</tr>
 		<!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
 		<tr class="y">
 		  <td class="b" nowrap="nowrap">2019</td>
-		  <td class="c" id="displayYearEl" title="You are here: 21:55:28 Jun 27, 2020">2020</td>
+		  <td class="c" id="displayYearEl" title="You are here: 18:20:23 Jun 28, 2020">2020</td>
 		  <td class="f" nowrap="nowrap">2021</td>
 		</tr>
 	      </tbody>
@@ -171,7 +171,7 @@ body {
 	<tr>
 	  <td class="s">
 	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20200627215528*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">1,074 captures</a>
+	      	      <a class="t" href="/web/20200628182023*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">1,076 captures</a>
 	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 28 Jun 2020</div>
 	      </div>
 	  </td>
@@ -215,12 +215,12 @@ Liveweb proxy is a component of Internet Archive’s wayback machine project. Th
     </div>
   </div></div></div></div><div id="donato" style="position:relative;width:100%;">
   <div id="donato-base">
-    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;transpiled=0&amp;referer=https%3A//web.archive.org/web/20200627215528/https%3A//www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html"
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;transpiled=0&amp;referer=https%3A//web.archive.org/web/20200628182023/https%3A//www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html"
 	    scrolling="no" frameborder="0" style="width:100%; height:100%">
     </iframe>
   </div>
 </div><script type="text/javascript">
-__wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html","20200627215528",1996,"/_static/",["/_static/css/banner-styles.css?v=HyR5oymJ","/_static/css/iconochive.css?v=qtvMKcIJ"]);
+__wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html","20200628182023",1996,"/_static/",["/_static/css/banner-styles.css?v=HyR5oymJ","/_static/css/iconochive.css?v=qtvMKcIJ"]);
 </script>
 <!-- END WAYBACK TOOLBAR INSERT -->
 <div id="wrapperOuter">
@@ -236,7 +236,7 @@ __wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coro
 <div id="wrapperHeader">
 <div id="branding">
 <div id="logo">
-<a href="DE/Home/homepage_node.html" id="anfang" title="Zur Startseite"><img src="/web/20200627215528im_/https://www.rki.de/SiteGlobals/StyleBundles/Bilder/Farbschema_A/logo_a.jpg?__blob=normal&amp;v=7" alt="Logo Robert Koch-Institut (zur Startseite)"/></a>
+<a href="DE/Home/homepage_node.html" id="anfang" title="Zur Startseite"><img src="/web/20200628182023im_/https://www.rki.de/SiteGlobals/StyleBundles/Bilder/Farbschema_A/logo_a.jpg?__blob=normal&amp;v=7" alt="Logo Robert Koch-Institut (zur Startseite)"/></a>
 </div>
 <div id="navServiceMeta">
 <h2>Servicemenü</h2>
@@ -263,7 +263,7 @@ __wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coro
 <p>
 <span class="formField">
 <input id="f2390936d2390938" name="searchEngineQueryString" value="Suchbegriff eingeben" title="Standardsuche" type="text" size="18" maxlength="100"/></span>
-<input class="button" type="image" src="/web/20200627215528im_/https://www.rki.de/SiteGlobals/Forms/_components/Buttons/ServicesucheSubmit.png?__blob=image" id="f2390936d2390958" name="submit" title="suchen" alt="suchen"/>
+<input class="button" type="image" src="/web/20200628182023im_/https://www.rki.de/SiteGlobals/Forms/_components/Buttons/ServicesucheSubmit.png?__blob=image" id="f2390936d2390958" name="submit" title="suchen" alt="suchen"/>
 </p>
 </fieldset>
 </form>
@@ -387,7 +387,7 @@ __wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coro
 <div class="menu">
 <div class="menu-box-group">
 <div class="overview-item">
-<img src="/web/20200627215528im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Institut_Luftaufnahme.jpg?__blob=normal&amp;v=7" alt="© manuel frauendorf fotografie | skyfilmberlin / RKI" title="© manuel frauendorf fotografie | skyfilmberlin / RKI" style="width:210px;height:125px;"/>
+<img src="/web/20200628182023im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Institut_Luftaufnahme.jpg?__blob=normal&amp;v=7" alt="© manuel frauendorf fotografie | skyfilmberlin / RKI" title="© manuel frauendorf fotografie | skyfilmberlin / RKI" style="width:210px;height:125px;"/>
 <p>Der Hauptsitz des Robert Koch-Instituts (RKI) in Berlin.
 <em class="more"><a href="DE/Content/Institut/institut_node.html">Weiter lesen</a></em>
 </p>
@@ -439,7 +439,7 @@ __wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coro
 <div class="menu">
 <div class="menu-box-group">
 <div class="overview-item">
-<img src="/web/20200627215528im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Gesundheitsmonitoring.jpg?__blob=normal&amp;v=8" alt="Gesundheitsmonitoring und Gesundheitsberichterstattung. © stockwerk23/PHOTOCASE" title="Gesundheitsmonitoring und Gesundheitsberichterstattung. © stockwerk23/PHOTOCASE" style="width:210px;height:125px;"/>
+<img src="/web/20200628182023im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Gesundheitsmonitoring.jpg?__blob=normal&amp;v=8" alt="Gesundheitsmonitoring und Gesundheitsberichterstattung. © stockwerk23/PHOTOCASE" title="Gesundheitsmonitoring und Gesundheitsberichterstattung. © stockwerk23/PHOTOCASE" style="width:210px;height:125px;"/>
 <p>Das <acronym title="Robert Koch-Institut">RKI</acronym> erhebt im Rahmen seines Gesundheitsmonitorings regelmäßig Gesundheitsdaten der Bevölkerung.
 <em class="more"><a href="DE/Content/Gesundheitsmonitoring/gesundheitsmonitoring_node.html">Weiter lesen</a></em>
 </p>
@@ -484,8 +484,8 @@ __wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coro
 <li class=""><a href="DE/Content/Infekt/infekt_node.html" title="Infektionsschutz">In­fek­ti­ons­schutz</a>
 <div class="menu">
 <div class="menu-box-group">
-<div class="overview-item">
-<img src="/web/20200627215528im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Infektionsschutz.jpg?__blob=normal&amp;v=8" alt="HIV-1 - Human immunodeficiency virus 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten(Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.  © H.R. Gelderblom/RKI" title="HIV-1 - Human immunodeficiency virus 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten(Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.  © H.R. Gelderblom/RKI" style="width:210px;height:125px;"/>
+ <div class="overview-item">
+<img src="/web/20200628182023im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Infektionsschutz.jpg?__blob=normal&amp;v=8" alt="HIV-1 - Human immunodeficiency virus 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten(Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.  © H.R. Gelderblom/RKI" title="HIV-1 - Human immunodeficiency virus 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten(Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.  © H.R. Gelderblom/RKI" style="width:210px;height:125px;"/>
 <p>HIV-1 - <span lang="en-GB" xml:lang="en-GB">Human immunodeficiency virus</span> 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten (Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.
 <em class="more"><a href="DE/Content/Infekt/infekt_node.html">Weiter lesen</a></em>
 </p>
@@ -533,7 +533,7 @@ __wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coro
 </div>
 <div class="overview-articles">
 <h3>Wissenswertes aus dem Bereich</h3>
-<ul><li><a href="https://web.archive.org/web/20200627215528/https://tools.rki.de/PLZTool/" target="_blank" title="Externer Link Gesundheitsamt nach Postleitzahl oder Ort (Öffnet neues Fenster)">Gesundheitsamt nach Postleitzahl</a></li><li><a href="SharedDocs/FAQ/Krankenhausinfektionen-und-Antibiotikaresistenz/FAQ_Liste.html">FAQ Antibiotika­resistenz und Noso­komiale Infek­tionen</a></li><li><a href="DE/Content/Infekt/NRZ/EM/Aufnahmen/Aufnahmen_node.html">EM-Aufnahmen von Erregern</a></li><li><a href="DE/Content/Infekt/Krankenhaushygiene/Erreger_ausgewaehlt/MRSA/Uebersicht.html">MRSA</a></li><li><a href="DE/Content/Infekt/Krankenhaushygiene/Erreger_ausgewaehlt/ESBL/Uebersicht.html">ESBL-Bildner</a></li>
+<ul><li><a href="https://web.archive.org/web/20200628182023/https://tools.rki.de/PLZTool/" target="_blank" title="Externer Link Gesundheitsamt nach Postleitzahl oder Ort (Öffnet neues Fenster)">Gesundheitsamt nach Postleitzahl</a></li><li><a href="SharedDocs/FAQ/Krankenhausinfektionen-und-Antibiotikaresistenz/FAQ_Liste.html">FAQ Antibiotika­resistenz und Noso­komiale Infek­tionen</a></li><li><a href="DE/Content/Infekt/NRZ/EM/Aufnahmen/Aufnahmen_node.html">EM-Aufnahmen von Erregern</a></li><li><a href="DE/Content/Infekt/Krankenhaushygiene/Erreger_ausgewaehlt/MRSA/Uebersicht.html">MRSA</a></li><li><a href="DE/Content/Infekt/Krankenhaushygiene/Erreger_ausgewaehlt/ESBL/Uebersicht.html">ESBL-Bildner</a></li>
 </ul>
 </div>
 </div>
@@ -543,7 +543,7 @@ __wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coro
 <div class="menu">
 <div class="menu-box-group">
 <div class="overview-item">
-<img src="/web/20200627215528im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Forschung.jpg?__blob=normal&amp;v=6" alt="Koloniewachstum eines aeroben Sporenbildners (Bacillus sp.) auf Blutagar ohne Hämolyse.  © Bredow/RKI" title="Koloniewachstum eines aeroben Sporenbildners (Bacillus sp.) auf Blutagar ohne Hämolyse.  © Bredow/RKI" style="width:210px;height:125px;"/>
+<img src="/web/20200628182023im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Forschung.jpg?__blob=normal&amp;v=6" alt="Koloniewachstum eines aeroben Sporenbildners (Bacillus sp.) auf Blutagar ohne Hämolyse.  © Bredow/RKI" title="Koloniewachstum eines aeroben Sporenbildners (Bacillus sp.) auf Blutagar ohne Hämolyse.  © Bredow/RKI" style="width:210px;height:125px;"/>
 <p>Koloniewachstum eines aeroben Sporenbildners (Bacillus sp.) auf Blutagar ohne Hämolyse.
 <em class="more"><a href="DE/Content/Forsch/forsch_node.html">Weiter lesen</a></em>
 </p>
@@ -591,7 +591,7 @@ __wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coro
 <div class="menu">
 <div class="menu-box-group">
 <div class="overview-item">
-<img src="/web/20200627215528im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Kommissionen.jpg?__blob=normal&amp;v=5" alt="Kommissionsmitglieder bei einem Vortrag.  © Schnartendorff/RKI " title="Kommissionsmitglieder bei einem Vortrag.  © Schnartendorff/RKI " style="width:210px;height:125px;"/>
+<img src="/web/20200628182023im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Kommissionen.jpg?__blob=normal&amp;v=5" alt="Kommissionsmitglieder bei einem Vortrag.  © Schnartendorff/RKI " title="Kommissionsmitglieder bei einem Vortrag.  © Schnartendorff/RKI " style="width:210px;height:125px;"/>
 <p>Zahlreiche wissenschaftliche Kommissionen haben ihre Geschäftsstelle am RKI
 <em class="more"><a href="DE/Content/Kommissionen/kommissionen_node.html">Weiter lesen</a></em>
 </p>
@@ -645,7 +645,7 @@ __wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coro
 <div class="menu">
 <div class="menu-box-group">
 <div class="overview-item">
-<img src="/web/20200627215528im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Service.jpg?__blob=normal&amp;v=12" alt="Arbeiten im RKI.  © Bredow/RKI" title="Arbeiten im RKI.  © Bredow/RKI" style="width:210px;height:125px;"/>
+<img src="/web/20200628182023im_/https://www.rki.de/SharedDocs/Bilder/Flyout/Service.jpg?__blob=normal&amp;v=12" alt="Arbeiten im RKI.  © Bredow/RKI" title="Arbeiten im RKI.  © Bredow/RKI" style="width:210px;height:125px;"/>
 <p>
 <em class="more"><a href="DE/Content/Service/service_node.html">Weiter lesen</a></em>
 </p>
@@ -678,7 +678,7 @@ Bundesbehörden</a>
 </div>
 <div class="overview-articles">
 <h3>Wissenswertes aus dem Bereich</h3>
-<ul><li><a href="https://web.archive.org/web/20200627215528/https://edoc.rki.de/" target="_blank" title="Externer Link Publikationsserver RKI (Öffnet neues Fenster)">Publikationsserver edoc des RKI</a></li><li><a href="DE/Content/Service/Stellen/Hospitanz/Hospitanz_Presse.html">Praktikum in der Presse- und Öffent­lich­keits­arbeit des RKI (2.1.2020)</a></li><li><a href="DE/Content/Service/Stellen/Promotion/Promotionsmoeglichkeiten.html">Promotion Diplom Bachelor Master</a></li>
+<ul><li><a href="https://web.archive.org/web/20200628182023/https://edoc.rki.de/" target="_blank" title="Externer Link Publikationsserver RKI (Öffnet neues Fenster)">Publikationsserver edoc des RKI</a></li><li><a href="DE/Content/Service/Stellen/Hospitanz/Hospitanz_Presse.html">Praktikum in der Presse- und Öffent­lich­keits­arbeit des RKI (2.1.2020)</a></li><li><a href="DE/Content/Service/Stellen/Promotion/Promotionsmoeglichkeiten.html">Promotion Diplom Bachelor Master</a></li>
 </ul>
 </div>
 </div>
@@ -724,7 +724,7 @@ Bundesbehörden</a>
 <h1 class="firstInSlot"><abbr title="Coronavirus Disease 19">COVID-19</abbr>: Fallzahlen in Deutschland und weltweit</h1>
 <div class="subheadline">
 </div><h3 class="null">Fallzahlen in Deutschland</h3>
-<p>Stand: 27.6.2020, 00:00 Uhr (online aktualisiert um 12:00 Uhr)</p>
+<p>Stand: 28.6.2020, 00:00 Uhr (online aktualisiert um 13:30 Uhr)</p>
 <p>Die Differenz zum Vortag bezieht sich auf Fälle, die dem RKI täglich übermittelt werden. Dies beinhaltet Fälle, die am gleichen Tag oder bereits an früheren Tagen an das Gesundheitsamt gemeldet worden sind.</p>
 <p><br/>
 </p>
@@ -734,11 +734,13 @@ Vor­tag</th><th class="center" colspan="1" rowspan="1">Fälle<br/>
 in den <br/>
 letzten<br/>
 7 Tagen</th><th class="right" colspan="1" rowspan="1">7-Tage-<br/>
-Inzi­denz</th><th class="center" colspan="1" rowspan="1">Todes­fälle</th></tr></thead><tbody><tr class="even"><td colspan="1" rowspan="1">Baden-Württem­berg</td><td class="right" colspan="1" rowspan="1">35.530</td><td class="right" colspan="1" rowspan="1">+54</td><td class="right" colspan="1" rowspan="1">212</td><td class="right" colspan="1" rowspan="1">1,9</td><td class="right" colspan="1" rowspan="1">1.829</td></tr><tr><td colspan="1" rowspan="1">Bayern</td><td class="right" colspan="1" rowspan="1">48.262</td><td class="right" colspan="1" rowspan="1">+60</td><td class="right" colspan="1" rowspan="1">295</td><td class="right" colspan="1" rowspan="1">2,3</td><td class="right" colspan="1" rowspan="1">2.591</td></tr><tr class="even"><td colspan="1" rowspan="1">Berlin</td><td class="right" colspan="1" rowspan="1">8.145</td><td class="right" colspan="1" rowspan="1">+49</td><td class="right" colspan="1" rowspan="1">327</td><td class="right" colspan="1" rowspan="1">8,7</td><td class="right" colspan="1" rowspan="1">213</td></tr><tr><td colspan="1" rowspan="1">Branden­burg</td><td class="right" colspan="1" rowspan="1">3.437</td><td class="right" colspan="1" rowspan="1">+0</td><td class="right" colspan="1" rowspan="1">40</td><td class="right" colspan="1" rowspan="1">1,6</td><td class="right" colspan="1" rowspan="1">165</td></tr><tr class="even"><td colspan="1" rowspan="1">Bremen</td><td class="right" colspan="1" rowspan="1">1.659</td><td class="right" colspan="1" rowspan="1">+1</td><td class="right" colspan="1" rowspan="1">23</td><td class="right" colspan="1" rowspan="1">3,4</td><td class="right" colspan="1" rowspan="1">50</td></tr><tr><td colspan="1" rowspan="1">Hamburg</td><td class="right" colspan="1" rowspan="1">5.178</td><td class="right" colspan="1" rowspan="1">+5</td><td class="right" colspan="1" rowspan="1">28</td><td class="right" colspan="1" rowspan="1">1,5</td><td class="right" colspan="1" rowspan="1">259</td></tr><tr class="even"><td colspan="1" rowspan="1">Hessen</td><td class="right" colspan="1" rowspan="1">10.731</td><td class="right" colspan="1" rowspan="1">+24</td><td class="right" colspan="1" rowspan="1">159</td><td class="right" colspan="1" rowspan="1">2,5</td><td class="right" colspan="1" rowspan="1">506</td></tr><tr><td colspan="1" rowspan="1">Meck­lenburg-<br/>
-Vor­pommern</td><td class="right" colspan="1" rowspan="1">798</td><td class="right" colspan="1" rowspan="1">+1</td><td class="right" colspan="1" rowspan="1">5</td><td class="right" colspan="1" rowspan="1">0,3</td><td class="right" colspan="1" rowspan="1">20</td></tr><tr class="even"><td colspan="1" rowspan="1">Nieder­sachsen</td><td class="right" colspan="1" rowspan="1">13.456</td><td class="right" colspan="1" rowspan="1">+34</td><td class="right" colspan="1" rowspan="1">212</td><td class="right" colspan="1" rowspan="1">2,7</td><td class="right" colspan="1" rowspan="1">627</td></tr><tr><td colspan="1" rowspan="1">Nord­rhein-West­falen</td><td class="right" colspan="1" rowspan="1">42.571</td><td class="right" colspan="1" rowspan="1">+421</td><td class="right" colspan="1" rowspan="1">1.664</td><td class="right" colspan="1" rowspan="1">9,3</td><td class="right" colspan="1" rowspan="1">1.674</td></tr><tr class="even"><td colspan="1" rowspan="1">Rhein­land-Pfalz</td><td class="right" colspan="1" rowspan="1">6.971</td><td class="right" colspan="1" rowspan="1">+20</td><td class="right" colspan="1" rowspan="1">63</td><td class="right" colspan="1" rowspan="1">1,5</td><td class="right" colspan="1" rowspan="1">235</td></tr><tr><td colspan="1" rowspan="1">Saarland</td><td class="right" colspan="1" rowspan="1">2.802</td><td class="right" colspan="1" rowspan="1">+0</td><td class="right" colspan="1" rowspan="1">4</td><td class="right" colspan="1" rowspan="1">0,4</td><td class="right" colspan="1" rowspan="1">172</td></tr><tr class="even"><td colspan="1" rowspan="1">Sachsen</td><td class="right" colspan="1" rowspan="1">5.444</td><td class="right" colspan="1" rowspan="1">+5</td><td class="right" colspan="1" rowspan="1">32</td><td class="right" colspan="1" rowspan="1">0,8</td><td class="right" colspan="1" rowspan="1">222</td></tr><tr><td colspan="1" rowspan="1">Sachsen-Anhalt</td><td class="right" colspan="1" rowspan="1">1.865</td><td class="right" colspan="1" rowspan="1">+3</td><td class="right" colspan="1" rowspan="1">26</td><td class="right" colspan="1" rowspan="1">1,2</td><td class="right" colspan="1" rowspan="1">58</td></tr><tr class="even"><td colspan="1" rowspan="1">Schles­wig-Holstein</td><td class="right" colspan="1" rowspan="1">3.146</td><td class="right" colspan="1" rowspan="1">+2</td><td class="right" colspan="1" rowspan="1">13</td><td class="right" colspan="1" rowspan="1">0,4</td><td class="right" colspan="1" rowspan="1">152</td></tr><tr><td colspan="1" rowspan="1">Thüringen</td><td class="right" colspan="1" rowspan="1">3.248</td><td class="right" colspan="1" rowspan="1">+8</td><td class="right" colspan="1" rowspan="1">25</td><td class="right" colspan="1" rowspan="1">1,2</td><td class="right" colspan="1" rowspan="1">181</td></tr><tr class="even"><td colspan="1" rowspan="1"><strong>Gesamt</strong></td><td class="right" colspan="1" rowspan="1"><strong>193.243</strong></td><td class="right" colspan="1" rowspan="1"><strong>+687</strong></td><td class="right" colspan="1" rowspan="1"><strong>3.128</strong></td><td class="right" colspan="1" rowspan="1"><strong>3,8</strong></td><td class="right" colspan="1" rowspan="1"><strong>8.954</strong></td></tr></tbody></table><div class="teaser gbe target">
+Inzi­denz</th><th class="center" colspan="1" rowspan="1">Todes­fälle</th></tr></thead><tbody><tr class="even"><td colspan="1" rowspan="1">Baden-Württem­berg</td><td class="right" colspan="1" rowspan="1">35.530</td><td class="right" colspan="1" rowspan="1">+0</td><td class="right" colspan="1" rowspan="1">178</td><td class="right" colspan="1" rowspan="1">1,6</td><td class="right" colspan="1" rowspan="1">1.829</td></tr><tr><td colspan="1" rowspan="1">Bayern</td><td class="right" colspan="1" rowspan="1">48.294</td><td class="right" colspan="1" rowspan="1">+32</td><td class="right" colspan="1" rowspan="1">296</td><td class="right" colspan="1" rowspan="1">2,3</td><td class="right" colspan="1" rowspan="1">2.592</td></tr><tr class="even"><td colspan="1" rowspan="1">Berlin</td><td class="right" colspan="1" rowspan="1">8.168</td><td class="right" colspan="1" rowspan="1">+23</td><td class="right" colspan="1" rowspan="1">317</td><td class="right" colspan="1" rowspan="1">8,5</td><td class="right" colspan="1" rowspan="1">213</td></tr><tr><td colspan="1" rowspan="1">Branden­burg</td><td class="right" colspan="1" rowspan="1">3.417</td><td class="right" colspan="1" rowspan="1">-20</td><td class="right" colspan="1" rowspan="1">29</td><td class="right" colspan="1" rowspan="1">1,2</td><td class="right" colspan="1" rowspan="1">165</td></tr><tr class="even"><td colspan="1" rowspan="1">Bremen</td><td class="right" colspan="1" rowspan="1">1.661</td><td class="right" colspan="1" rowspan="1">+2</td><td class="right" colspan="1" rowspan="1">17</td><td class="right" colspan="1" rowspan="1">2,5</td><td class="right" colspan="1" rowspan="1">50</td></tr><tr><td colspan="1" rowspan="1">Hamburg</td><td class="right" colspan="1" rowspan="1">5.178</td><td class="right" colspan="1" rowspan="1">+0</td><td class="right" colspan="1" rowspan="1">24</td><td class="right" colspan="1" rowspan="1">1,3</td><td class="right" colspan="1" rowspan="1">259</td></tr><tr class="even"><td colspan="1" rowspan="1">Hessen</td><td class="right" colspan="1" rowspan="1">10.761</td><td class="right" colspan="1" rowspan="1">+30</td><td class="right" colspan="1" rowspan="1">169</td><td class="right" colspan="1" rowspan="1">2,7</td><td class="right" colspan="1" rowspan="1">506</td></tr><tr><td colspan="1" rowspan="1">Meck­lenburg-<br/>
+Vor­pommern</td><td class="right" colspan="1" rowspan="1">801</td><td class="right" colspan="1" rowspan="1">+3</td><td class="right" colspan="1" rowspan="1">8</td><td class="right" colspan="1" rowspan="1">0,5</td><td class="right" colspan="1" rowspan="1">20</td></tr><tr class="even"><td colspan="1" rowspan="1">Nieder­sachsen</td><td class="right" colspan="1" rowspan="1">13.478</td><td class="right" colspan="1" rowspan="1">+22</td><td class="right" colspan="1" rowspan="1">192</td><td class="right" colspan="1" rowspan="1">2,4</td><td class="right" colspan="1" rowspan="1">628</td></tr><tr><td colspan="1" rowspan="1">Nord­rhein-West­falen</td><td class="right" colspan="1" rowspan="1">42.723</td><td class="right" colspan="1" rowspan="1">+152</td><td class="right" colspan="1" rowspan="1">1.532</td><td class="right" colspan="1" rowspan="1">8,5</td><td class="right" colspan="1" rowspan="1">1.674</td></tr><tr class="even"><td colspan="1" rowspan="1">Rhein­land-Pfalz</td><td class="right" colspan="1" rowspan="1">6.974</td><td class="right" colspan="1" rowspan="1">+3</td><td class="right" colspan="1" rowspan="1">56</td><td class="right" colspan="1" rowspan="1">1,4</td><td class="right" colspan="1" rowspan="1">235</td></tr><tr><td colspan="1" rowspan="1">Saarland</td><td class="right" colspan="1" rowspan="1">2.805</td><td class="right" colspan="1" rowspan="1">+3</td><td class="right" colspan="1" rowspan="1">6</td><td class="right" colspan="1" rowspan="1">0,6</td><td class="right" colspan="1" rowspan="1">173</td></tr><tr class="even"><td colspan="1" rowspan="1">Sachsen</td><td class="right" colspan="1" rowspan="1">5.444</td><td class="right" colspan="1" rowspan="1">+0</td><td class="right" colspan="1" rowspan="1">23</td><td class="right" colspan="1" rowspan="1">0,6</td><td class="right" colspan="1" rowspan="1">222</td></tr><tr><td colspan="1" rowspan="1">Sachsen-Anhalt</td><td class="right" colspan="1" rowspan="1">1.868</td><td class="right" colspan="1" rowspan="1">+3</td><td class="right" colspan="1" rowspan="1">26</td><td class="right" colspan="1" rowspan="1">1,2</td><td class="right" colspan="1" rowspan="1">58</td></tr><tr class="even"><td colspan="1" rowspan="1">Schles­wig-Holstein</td><td class="right" colspan="1" rowspan="1">3.147</td><td class="right" colspan="1" rowspan="1">+1</td><td class="right" colspan="1" rowspan="1">13</td><td class="right" colspan="1" rowspan="1">0,4</td><td class="right" colspan="1" rowspan="1">152</td></tr><tr><td colspan="1" rowspan="1">Thüringen</td><td class="right" colspan="1" rowspan="1">3.250</td><td class="right" colspan="1" rowspan="1">+2</td><td class="right" colspan="1" rowspan="1">19</td><td class="right" colspan="1" rowspan="1">0,9</td><td class="right" colspan="1" rowspan="1">181</td></tr><tr class="even"><td colspan="1" rowspan="1"><strong>Gesamt</strong></td><td class="right" colspan="1" rowspan="1"><strong>193.499</strong></td><td class="right" colspan="1" rowspan="1"><strong>+256</strong></td><td class="right" colspan="1" rowspan="1"><strong>2.905</strong></td><td class="right" colspan="1" rowspan="1"><strong>3,5</strong></td><td class="right" colspan="1" rowspan="1"><strong>8.957</strong></td></tr></tbody></table>
+<p>Aus Baden-Württemberg, Hamburg und Sachsen wurden keine Daten übermittelt. Aufgrund einer Datenkorrektur am RKI werden für Brandenburg weniger Fälle als im Vergleich zum Vortag angezeigt. </p>
+<div class="teaser gbe target">
 <div class="text"></div> <div class="text" data-textclip="219">
 <h2>Detaillierte Fallzahlen in Deutschland: Dashboard </h2>
-<p>Eine detaillierte Darstellung der übermittelten COVID-19-Fälle in Deutschland nach Landkreis und Bundesland stellt das <a class="RichTextExtLink ExternalLink" href="https://web.archive.org/web/20200627215528/https://corona.rki.de/" target="_blank" rel="noopener noreferrer" title="Externer Link COVID-19-Dashboard (Öffnet neues Fenster)">COVID-19-Dashboard (https://corona.rki.de)</a> bereit.</p>
+<p>Eine detaillierte Darstellung der übermittelten COVID-19-Fälle in Deutschland nach Landkreis und Bundesland stellt das <a class="RichTextExtLink ExternalLink" href="https://web.archive.org/web/20200628182023/https://corona.rki.de/" target="_blank" rel="noopener noreferrer" title="Externer Link COVID-19-Dashboard (Öffnet neues Fenster)">COVID-19-Dashboard (https://corona.rki.de)</a> bereit.</p>
 <p><strong>Hinweise zum Dashboard:</strong></p>
 <p>Für die <strong>Gesamtzahl pro Bundesland/Landkreis</strong> werden die den Gesundheitsämtern nach Infektionsschutzgesetz gemeldeten Fälle verwendet, die dem RKI bis zum jeweiligen Tag um 0 Uhr <strong>übermittelt wurden</strong>. </p>
 <p>Für die Darstellung <strong>der neu übermittelten Fälle pro Tag</strong> wird das <strong>Meldedatum</strong> verwendet – das Datum, an dem das lokale Gesundheitsamt Kenntnis über den Fall erlangt und ihn elektronisch erfasst hat.</p>
@@ -758,21 +760,21 @@ Vor­pommern</td><td class="right" colspan="1" rowspan="1">798</td><td class="ri
 <br/>
 </strong>In der aktuellen Krise werden die Daten des infektionsepidemiologischen Meldewesens zu COVID-19 mit einem möglichst geringen Zeitverzug publiziert. Dies trägt der sehr hohen Dynamik der Lage Rechnung. Allerdings werden hierdurch zuweilen auch Daten vor Qualitätskontrollen und Validierungen veröffentlicht. Durch weitere Ermittlungen der Gesundheitsämter und Plausibilitätsprüfungen kann es zu Nachträgen oder Korrekturen kommen, was vereinzelt zu Abweichungen gegenüber den zuvor berichteten Daten führt. Auch Abweichungen nach unten sind möglich, etwa, wenn ein Fall nach der Ermittlung des Wohnortes einem anderen Gesundheitsamt zugewiesen wird.  Dies ist Ausdruck der kontinuierlichen Qualitätssicherung durch die zuständigen Behörden.<br/>
 <br/>
-Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglichen <a class="RichTextIntLink Basepage" href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html" title="Aktueller Lage-/Situationsbericht des RKI zu COVID-19">Lagebericht des RKI</a>, für detaillierte Zahlen nach Landkreis bitte das <a class="RichTextExtLink ExternalLink" href="https://web.archive.org/web/20200627215528/https://corona.rki.de/" target="_blank" rel="noopener noreferrer" title="Externer Link COVID-19-Dashboard (Öffnet neues Fenster)">Dashboard (https://corona.rki.de)</a>.</p>
+Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglichen <a class="RichTextIntLink Basepage" href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html" title="Aktueller Lage-/Situationsbericht des RKI zu COVID-19">Lagebericht des RKI</a>, für detaillierte Zahlen nach Landkreis bitte das <a class="RichTextExtLink ExternalLink" href="https://web.archive.org/web/20200628182023/https://corona.rki.de/" target="_blank" rel="noopener noreferrer" title="Externer Link COVID-19-Dashboard (Öffnet neues Fenster)">Dashboard (https://corona.rki.de)</a>.</p>
 <div class="dateOfIssue"><p>Stand: 12.05.2020</p>
 </div>
 <p class="navToTop"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html#Start" title="Zum Seitenanfang">nach oben</a></p>
 <ul class="publikation"/>
 </div>
 </div><h2 class="null">Fallzahlen weltweit</h2>
-<p>Die tagesaktuellen Fallzahlen weltweit sind auf den <a class="RichTextExtLink ExternalLink" href="https://web.archive.org/web/20200627215528/https://who.sprinklr.com/" target="_blank" rel="noopener noreferrer" title="Externer Link Dashboard der WHO zu COVID-19 (Neuartiges Coronavirus, 2019-nCoV) (Öffnet neues Fenster)">Internetseiten der Weltgesundheitsorganisation</a> und des <a class="RichTextExtLink ExternalLink" href="https://web.archive.org/web/20200627215528/https://www.ecdc.europa.eu/en/cases-2019-ncov-eueea" target="_blank" rel="noopener noreferrer" title="Externer Link European Centre for Disease Prevention and Control (Öffnet neues Fenster)">Europäischen Zentrums für die Prävention und Kontrolle von Krankheiten</a> (ECDC) abrufbar.</p>
+<p>Die tagesaktuellen Fallzahlen weltweit sind auf den <a class="RichTextExtLink ExternalLink" href="https://web.archive.org/web/20200628182023/https://who.sprinklr.com/" target="_blank" rel="noopener noreferrer" title="Externer Link Dashboard der WHO zu COVID-19 (Neuartiges Coronavirus, 2019-nCoV) (Öffnet neues Fenster)">Internetseiten der Weltgesundheitsorganisation</a> und des <a class="RichTextExtLink ExternalLink" href="https://web.archive.org/web/20200628182023/https://www.ecdc.europa.eu/en/cases-2019-ncov-eueea" target="_blank" rel="noopener noreferrer" title="Externer Link European Centre for Disease Prevention and Control (Öffnet neues Fenster)">Europäischen Zentrums für die Prävention und Kontrolle von Krankheiten</a> (ECDC) abrufbar.</p>
 <div class="sectionRelated links">
 <h2>Weitere Informationen</h2>
 <ul>
 <li class="first"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html" title="Tägliche Situationsberichte (deutsch und englisch)" class="themenLink " target="_self">Tägliche Situationsberichte (deutsch und englisch)</a></li>
 <li class="last"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html" title="Internetseite des Robert Koch-Instituts zum Coronavirus SARS-CoV-2, unter anderem mit Hinweisen zu Diagnostik, Hygiene und Infektionskontrolle" class="themenLink " target="_self">RKI-Seite zu COVID-19, <abbr title="unter anderem">u.a.</abbr> mit Hinweisen zu Diagnostik, Hygiene und Infektionskontrolle</a></li>
 </ul>
-</div><div class="dateOfIssue"><p>Stand: 27.06.2020</p></div><p class="navToTop"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html#Start" title="Zum Seitenanfang">nach oben</a></p>
+</div><div class="dateOfIssue"><p>Stand: 28.06.2020</p></div><p class="navToTop"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html#Start" title="Zum Seitenanfang">nach oben</a></p>
 </div>
 <div id="navFunctions">
 
@@ -788,7 +790,7 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 <div class="nav-box-box">
 <div>
 <ul class="glossaryIndex navIndex">
-<li class="first"><a href="DE/Content/InfAZ/InfAZ_marginal_node.html?cms_lv2=3544236" rel="letter_A">A</a></li>
+ <li class="first"><a href="DE/Content/InfAZ/InfAZ_marginal_node.html?cms_lv2=3544236" rel="letter_A">A</a></li>
 <li><a href="DE/Content/InfAZ/InfAZ_marginal_node.html?cms_lv2=3544238" rel="letter_B">B</a></li>
 <li><a href="DE/Content/InfAZ/InfAZ_marginal_node.html?cms_lv2=3544240" rel="letter_C">C</a></li>
 <li><a href="DE/Content/InfAZ/InfAZ_marginal_node.html?cms_lv2=3544242" rel="letter_D">D</a></li>
@@ -930,17 +932,17 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 </h3>
 </li>
 <li class="image">
-<a href="https://web.archive.org/web/20200627215528/https://www.rki.de/SharedDocs/Newsletter/Infektionsschutz/2020/200622-NewsletterInfektionsschutz.html?view=renderNewsletterHtml" target="_blank" title="Newsletter des Robert Koch-Instituts zu Infektionsschutzthemen">
-<img src="/web/20200627215528im_/https://www.rki.de/SharedDocs/Bilder/Service/Newsletter_Pikto_Startseite.jpg?__blob=thumbnail&amp;v=2" alt="RKI-News­letter In­fek­tions­schutz: Aus­gabe vom 22.6.2020" title="Newsletter" style="width: 90px;"/>
+<a href="https://web.archive.org/web/20200628182023/https://www.rki.de/SharedDocs/Newsletter/Infektionsschutz/2020/200622-NewsletterInfektionsschutz.html?view=renderNewsletterHtml" target="_blank" title="Newsletter des Robert Koch-Instituts zu Infektionsschutzthemen">
+<img src="/web/20200628182023im_/https://www.rki.de/SharedDocs/Bilder/Service/Newsletter_Pikto_Startseite.jpg?__blob=thumbnail&amp;v=2" alt="RKI-News­letter In­fek­tions­schutz: Aus­gabe vom 22.6.2020" title="Newsletter" style="width: 90px;"/>
 </a><h3>
-<a href="https://web.archive.org/web/20200627215528/https://www.rki.de/SharedDocs/Newsletter/Infektionsschutz/2020/200622-NewsletterInfektionsschutz.html?view=renderNewsletterHtml" target="_blank" title="Newsletter des Robert Koch-Instituts zu Infektionsschutzthemen" class="ExternalLink">
+<a href="https://web.archive.org/web/20200628182023/https://www.rki.de/SharedDocs/Newsletter/Infektionsschutz/2020/200622-NewsletterInfektionsschutz.html?view=renderNewsletterHtml" target="_blank" title="Newsletter des Robert Koch-Instituts zu Infektionsschutzthemen" class="ExternalLink">
 <span>RKI-News­letter In­fek­tions­schutz: Aus­gabe vom 22.6.2020</span>
 </a>
 </h3>
 </li>
 <li class="image">
 <a href="SiteGlobals/Functions/RSSFeed/RSSGenerator_nCoV.xml" target="_self" title="RSS-Feed: Covid-19 (Coronavirus SARS-CoV2)">
-<img src="/web/20200627215528im_/https://www.rki.de/DE/Service/RSS/RSSFeed_Icon_nCoV.jpg?__blob=thumbnail" alt="RSS-Feed zu COVID-19 (Coronavirus SARS-CoV-2)" title="RSS-Feed des Robert Koch-Instituts:  Coronavirus SARS-CoV-2" style="width: 90px;"/>
+<img src="/web/20200628182023im_/https://www.rki.de/DE/Service/RSS/RSSFeed_Icon_nCoV.jpg?__blob=thumbnail" alt="RSS-Feed zu COVID-19 (Coronavirus SARS-CoV-2)" title="RSS-Feed des Robert Koch-Instituts:  Coronavirus SARS-CoV-2" style="width: 90px;"/>
 </a><h3>
 <a href="SiteGlobals/Functions/RSSFeed/RSSGenerator_nCoV.xml" target="_self" title="RSS-Feed: Covid-19 (Coronavirus SARS-CoV2)" class="">
 <span>RSS-Feed zu COVID-19 (Coronavirus SARS-CoV-2)</span>
@@ -1179,8 +1181,8 @@ Bundesbehörden</a>
 
 </body>
 </html><!--
-     FILE ARCHIVED ON 21:55:28 Jun 27, 2020 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 18:59:29 Jun 28, 2020.
+     FILE ARCHIVED ON 18:20:23 Jun 28, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:55:54 Jun 29, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1188,14 +1190,14 @@ Bundesbehörden</a>
 -->
 <!--
 playback timings (ms):
-  PetaboxLoader3.resolve: 29.504
-  LoadShardBlock: 112.753 (3)
-  exclusion.robots.policy: 0.38
-  CDXLines.iter: 17.962 (3)
-  captures_list: 169.969
-  exclusion.robots: 0.396
-  RedisCDXSource: 1.363
-  esindex: 0.014
-  load_resource: 297.845
-  PetaboxLoader3.datanode: 290.95 (4)
+  PetaboxLoader3.datanode: 212.17 (4)
+  exclusion.robots.policy: 0.428
+  CDXLines.iter: 21.167 (3)
+  captures_list: 543.044
+  LoadShardBlock: 420.46 (3)
+  load_resource: 456.788
+  exclusion.robots: 0.448
+  PetaboxLoader3.resolve: 332.849 (4)
+  RedisCDXSource: 38.559
+  esindex: 0.021
 -->
