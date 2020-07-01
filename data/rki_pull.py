@@ -117,6 +117,9 @@ for root, dirs, files in os.walk("rki_data"):
             data = f.read().decode("utf-8")
 
         data = data.replace("­", "")
+        data = data.replace("<sup>*</sup>", "")
+        data = data.replace("<sup>**</sup>", "")
+        data = data.replace("<sup>***</sup>", "")
 
         colindex = 0
         death_colindex = -1
