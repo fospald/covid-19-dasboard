@@ -433,6 +433,10 @@
 								<input type="radio" name="plot_span" value="3w" id="plot-span-3w" autocomplete="off" />
 								<label for="plot-span-4w">4W</label>
 								<input type="radio" name="plot_span" value="4w" id="plot-span-4w" autocomplete="off" />
+								<label for="plot-span-8w">8W</label>
+								<input type="radio" name="plot_span" value="8w" id="plot-span-8w" autocomplete="off" />
+								<label for="plot-span-16w">16W</label>
+								<input type="radio" name="plot_span" value="16w" id="plot-span-16w" autocomplete="off" />
 							</div>
 
 
@@ -780,7 +784,7 @@ function updatePlot(json)
 
 	if (plot_varx == "time" && plot_span != "all")
 	{
-		var span = parseInt(plot_span.substring(0, 1))*7;
+		var span = parseInt(plot_span.replace("W", ""))*7;
 
 		x = x.slice(Math.max(0, x.length - span), x.length);
 
