@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app12.us.archive.org';v.server_ms=284;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
-<script type="text/javascript" src="/_static/js/wombat.js?v=nWgLpXRB" charset="utf-8"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app102.us.archive.org';v.server_ms=502;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=cRqOKCOw" charset="utf-8"></script>
 <script type="text/javascript">
 if (window._WBWombatInit) {
   wbinfo = {}
@@ -40,7 +40,7 @@ if (window._WBWombatInit) {
 }
 __wm.init("https://web.archive.org/web");
 </script>
-<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=HyR5oymJ" />
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=_99BHQfY" />
 <link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
 <!-- End Wayback Rewrite JS Include -->
 
@@ -156,7 +156,7 @@ body {
 		<tr class="d">
 		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20200702195054/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="19:50:54 Jul 02, 2020"><img src="/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
 		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 19:07:15 Jul 04, 2020">04</td>
-		  <td class="f" nowrap="nowrap"><img src="/_static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0" /></td>
+		  <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20200705210021/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="21:00:21 Jul 05, 2020"><img src="/_static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0" /></a></td>
 		</tr>
 		<!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
 		<tr class="y">
@@ -171,8 +171,8 @@ body {
 	<tr>
 	  <td class="s">
 	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20200704190715*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">1,077 captures</a>
-	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 04 Jul 2020</div>
+	      	      <a class="t" href="/web/20200704190715*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">1,081 captures</a>
+	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 06 Jul 2020</div>
 	      </div>
 	  </td>
 	  <td class="k">
@@ -193,6 +193,18 @@ body {
                     <div id="wm-capinfo-collected-by">
     <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
     <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/webwidecrawl);"></span>
+		Organization: <a style="color:#33f;" href="https://archive.org/details/webwidecrawl" target="_new"><span class="wm-title">Internet Archive</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  The Internet Archive discovers and captures web pages through many different web crawls.
+
+At any given time several distinct crawls are running, some for months, and some every day or longer.
+
+View the web archive through the <a href="http://archive.org/web/web.php">Wayback Machine</a>.
+	</div>
+	      </div>
       <div style="display:inline-block;vertical-align:top;width:49%;">
 			<span class="c-logo" style="background-image:url(https://archive.org/services/img/liveweb)"></span>
 		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/liveweb" target="_new"><span class="wm-title">Live Web Proxy Crawls</span></a></div>
@@ -220,7 +232,7 @@ Liveweb proxy is a component of Internet Archive’s wayback machine project. Th
     </iframe>
   </div>
 </div><script type="text/javascript">
-__wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html","20200704190715",1996,"/_static/",["/_static/css/banner-styles.css?v=HyR5oymJ","/_static/css/iconochive.css?v=qtvMKcIJ"]);
+__wm.bt(625,27,25,2,"web","https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html","20200704190715",1996,"/_static/",["/_static/css/banner-styles.css?v=_99BHQfY","/_static/css/iconochive.css?v=qtvMKcIJ"]);
 </script>
 <!-- END WAYBACK TOOLBAR INSERT -->
 <div id="wrapperOuter">
@@ -1202,7 +1214,7 @@ Bundesbehörden</a>
 </body>
 </html><!--
      FILE ARCHIVED ON 19:07:15 Jul 04, 2020 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 19:13:57 Jul 04, 2020.
+     INTERNET ARCHIVE ON 23:41:32 Jul 06, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1210,14 +1222,14 @@ Bundesbehörden</a>
 -->
 <!--
 playback timings (ms):
-  CDXLines.iter: 15.515 (3)
-  captures_list: 210.25
-  esindex: 0.013
-  RedisCDXSource: 24.704
-  PetaboxLoader3.resolve: 28.941
-  LoadShardBlock: 137.699 (3)
-  PetaboxLoader3.datanode: 70.389 (3)
-  exclusion.robots.policy: 0.324
-  exclusion.robots: 0.341
-  load_resource: 43.602
+  exclusion.robots: 0.244
+  exclusion.robots.policy: 0.234
+  RedisCDXSource: 1.404
+  esindex: 0.01
+  load_resource: 114.088
+  CDXLines.iter: 14.239 (3)
+  captures_list: 357.123
+  LoadShardBlock: 313.576 (3)
+  PetaboxLoader3.datanode: 77.731 (4)
+  PetaboxLoader3.resolve: 71.484 (2)
 -->
