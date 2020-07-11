@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="imagetoolbar" content="false" />
 <meta name="MSSmartTagsPreventParsing" content="true" />
-<meta name="genTime" content="Thu Jul 09 22:31:16 CEST 2020" />
+<meta name="genTime" content="Sat Jul 11 16:04:21 CEST 2020" />
 <meta name="generator" content="Government Site Builder" />
 <meta name="description" content="Regionale Verteilung der COVID-19-Fälle weltweit" />
 <meta name="keywords" content="Coronavirus, nCoV, neuartiges Coronavirus, Hygiene, Wuhan, China, Risikogebiet, Hubei" />
@@ -313,7 +313,7 @@ window.LABEL_LESSDETAILS = 'weniger anzeigen';
 <li class=""><a href="DE/Content/Infekt/infekt_node.html" title="Infektionsschutz">In­fek­ti­ons­schutz</a>
 <div class="menu">
 <div class="menu-box-group">
- <div class="overview-item">
+<div class="overview-item">
 <img src="/SharedDocs/Bilder/Flyout/Infektionsschutz.jpg?__blob=normal&amp;v=8" alt="HIV-1 - Human immunodeficiency virus 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten(Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.  © H.R. Gelderblom/RKI" title="HIV-1 - Human immunodeficiency virus 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten(Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.  © H.R. Gelderblom/RKI" style="width:210px;height:125px;" />
 <p>HIV-1 - <span lang="en-GB" xml:lang="en-GB">Human immunodeficiency virus</span> 1 (Retroviren) Reife Virionen (rote Hülle) sammeln sich an der Oberfläche eines T-Lymphozyten (Wirtszelle). Transmissions-Elektronenmikroskopie, Ultradünnschnitt.
 <em class="more"><a href="DE/Content/Infekt/infekt_node.html">Weiter lesen</a></em>
@@ -553,7 +553,7 @@ Bundesbehörden</a>
 <h1 class="firstInSlot"><abbr title="Coronavirus Disease 19">COVID-19</abbr>: Fallzahlen in Deutschland und weltweit</h1>
 <div class="subheadline">
 </div><h3 class="null">Fallzahlen in Deutschland</h3>
-<p>Stand: 9.7.2020, 00:00 Uhr (online aktualisiert um 9:20 Uhr)</p>
+<p>Stand: 11.7.2020, 00:00 Uhr (online aktualisiert um 11:55 Uhr)</p>
 <p>Die Differenz zum Vortag bezieht sich auf Fälle, die dem RKI täglich übermittelt werden. Dies beinhaltet Fälle, die am gleichen Tag oder bereits an früheren Tagen an das Gesundheitsamt gemeldet worden sind.</p>
 <table><colgroup><col width="20%" /><col width="15%" /><col width="15%" /><col width="15%" /><col width="15%" /><col width="20%" /></colgroup><thead><tr><th colspan="1" rowspan="1">Bundes­land</th><th class="center" colspan="5" rowspan="1">Elektro­nisch über­mittelte Fälle</th></tr><tr><th colspan="1" rowspan="1"></th><th class="center" colspan="1" rowspan="1">An­zahl</th><th class="center" colspan="1" rowspan="1">Dif­fe­renz<br />
 zum <br />
@@ -561,8 +561,8 @@ Vor­tag</th><th class="center" colspan="1" rowspan="1">Fälle<br />
 in den <br />
 letzten<br />
 7 Tagen</th><th class="right" colspan="1" rowspan="1">7-Tage-<br />
-Inzi­denz</th><th class="center" colspan="1" rowspan="1">Todes­fälle</th></tr></thead><tbody><tr class="even"><td colspan="1" rowspan="1">Baden-Württem­berg</td><td class="right" colspan="1" rowspan="1">35.942</td><td class="right" colspan="1" rowspan="1">+52</td><td class="right" colspan="1" rowspan="1">170</td><td class="right" colspan="1" rowspan="1">1,5</td><td class="right" colspan="1" rowspan="1">1.838</td></tr><tr><td colspan="1" rowspan="1">Bayern</td><td class="right" colspan="1" rowspan="1">49.023</td><td class="right" colspan="1" rowspan="1">+70</td><td class="right" colspan="1" rowspan="1">459</td><td class="right" colspan="1" rowspan="1">3,5</td><td class="right" colspan="1" rowspan="1">2.609</td></tr><tr class="even"><td colspan="1" rowspan="1">Berlin</td><td class="right" colspan="1" rowspan="1">8.537</td><td class="right" colspan="1" rowspan="1">+35</td><td class="right" colspan="1" rowspan="1">213</td><td class="right" colspan="1" rowspan="1">5,7</td><td class="right" colspan="1" rowspan="1">216</td></tr><tr><td colspan="1" rowspan="1">Branden­burg</td><td class="right" colspan="1" rowspan="1">3.483</td><td class="right" colspan="1" rowspan="1">+7</td><td class="right" colspan="1" rowspan="1">29</td><td class="right" colspan="1" rowspan="1">1,2</td><td class="right" colspan="1" rowspan="1">168</td></tr><tr class="even"><td colspan="1" rowspan="1">Bremen</td><td class="right" colspan="1" rowspan="1">1.684</td><td class="right" colspan="1" rowspan="1">+5</td><td class="right" colspan="1" rowspan="1">13</td><td class="right" colspan="1" rowspan="1">1,9</td><td class="right" colspan="1" rowspan="1">54</td></tr><tr><td colspan="1" rowspan="1">Hamburg</td><td class="right" colspan="1" rowspan="1">5.230</td><td class="right" colspan="1" rowspan="1">+6</td><td class="right" colspan="1" rowspan="1">16</td><td class="right" colspan="1" rowspan="1">0,9</td><td class="right" colspan="1" rowspan="1">261</td></tr><tr class="even"><td colspan="1" rowspan="1">Hessen</td><td class="right" colspan="1" rowspan="1">11.062</td><td class="right" colspan="1" rowspan="1">+50</td><td class="right" colspan="1" rowspan="1">191</td><td class="right" colspan="1" rowspan="1">3,0</td><td class="right" colspan="1" rowspan="1">514</td></tr><tr><td colspan="1" rowspan="1">Meck­lenburg-<br />
-Vor­pommern</td><td class="right" colspan="1" rowspan="1">805</td><td class="right" colspan="1" rowspan="1">0</td><td class="right" colspan="1" rowspan="1">1</td><td class="right" colspan="1" rowspan="1">0,1</td><td class="right" colspan="1" rowspan="1">20</td></tr><tr class="even"><td colspan="1" rowspan="1">Nieder­sachsen</td><td class="right" colspan="1" rowspan="1">13.754</td><td class="right" colspan="1" rowspan="1">+6</td><td class="right" colspan="1" rowspan="1">123</td><td class="right" colspan="1" rowspan="1">1,5</td><td class="right" colspan="1" rowspan="1">640</td></tr><tr><td colspan="1" rowspan="1">Nord­rhein-West­falen</td><td class="right" colspan="1" rowspan="1">44.492</td><td class="right" colspan="1" rowspan="1">+186</td><td class="right" colspan="1" rowspan="1">940</td><td class="right" colspan="1" rowspan="1">5,2</td><td class="right" colspan="1" rowspan="1">1.698</td></tr><tr class="even"><td colspan="1" rowspan="1">Rhein­land-Pfalz</td><td class="right" colspan="1" rowspan="1">7.112</td><td class="right" colspan="1" rowspan="1">+12</td><td class="right" colspan="1" rowspan="1">47</td><td class="right" colspan="1" rowspan="1">1,2</td><td class="right" colspan="1" rowspan="1">236</td></tr><tr><td colspan="1" rowspan="1">Saarland</td><td class="right" colspan="1" rowspan="1">2.809</td><td class="right" colspan="1" rowspan="1">+1</td><td class="right" colspan="1" rowspan="1">5</td><td class="right" colspan="1" rowspan="1">0,5</td><td class="right" colspan="1" rowspan="1">174</td></tr><tr class="even"><td colspan="1" rowspan="1">Sachsen</td><td class="right" colspan="1" rowspan="1">5.466</td><td class="right" colspan="1" rowspan="1">+1</td><td class="right" colspan="1" rowspan="1">13</td><td class="right" colspan="1" rowspan="1">0,3</td><td class="right" colspan="1" rowspan="1">225</td></tr><tr><td colspan="1" rowspan="1">Sachsen-Anhalt</td><td class="right" colspan="1" rowspan="1">1.898</td><td class="right" colspan="1" rowspan="1">+2</td><td class="right" colspan="1" rowspan="1">22</td><td class="right" colspan="1" rowspan="1">1,0</td><td class="right" colspan="1" rowspan="1">60</td></tr><tr class="even"><td colspan="1" rowspan="1">Schles­wig-Holstein</td><td class="right" colspan="1" rowspan="1">3.200</td><td class="right" colspan="1" rowspan="1">+6</td><td class="right" colspan="1" rowspan="1">28</td><td class="right" colspan="1" rowspan="1">1,0</td><td class="right" colspan="1" rowspan="1">153</td></tr><tr><td colspan="1" rowspan="1">Thüringen</td><td class="right" colspan="1" rowspan="1">3.286</td><td class="right" colspan="1" rowspan="1">+3</td><td class="right" colspan="1" rowspan="1">29</td><td class="right" colspan="1" rowspan="1">1,4</td><td class="right" colspan="1" rowspan="1">182</td></tr><tr class="even"><td colspan="1" rowspan="1"><strong>Gesamt</strong></td><td class="right" colspan="1" rowspan="1"><strong>197.783</strong></td><td class="right" colspan="1" rowspan="1"><strong>+442</strong></td><td class="right" colspan="1" rowspan="1"><strong>2.299</strong></td><td class="right" colspan="1" rowspan="1"><strong>2,8</strong></td><td class="right" colspan="1" rowspan="1"><strong>9.048</strong></td></tr></tbody></table><div class="teaser gbe target">
+Inzi­denz</th><th class="center" colspan="1" rowspan="1">Todes­fälle</th></tr></thead><tbody><tr class="even"><td colspan="1" rowspan="1">Baden-Württem­berg</td><td class="right" colspan="1" rowspan="1">36.041</td><td class="right" colspan="1" rowspan="1">+51</td><td class="right" colspan="1" rowspan="1">199</td><td class="right" colspan="1" rowspan="1">1,8</td><td class="right" colspan="1" rowspan="1">1.837</td></tr><tr><td colspan="1" rowspan="1">Bayern</td><td class="right" colspan="1" rowspan="1">49.184</td><td class="right" colspan="1" rowspan="1">+98</td><td class="right" colspan="1" rowspan="1">469</td><td class="right" colspan="1" rowspan="1">3,6</td><td class="right" colspan="1" rowspan="1">2.612</td></tr><tr class="even"><td colspan="1" rowspan="1">Berlin</td><td class="right" colspan="1" rowspan="1">8.617</td><td class="right" colspan="1" rowspan="1">+31</td><td class="right" colspan="1" rowspan="1">195</td><td class="right" colspan="1" rowspan="1">5,2</td><td class="right" colspan="1" rowspan="1">216</td></tr><tr><td colspan="1" rowspan="1">Branden­burg</td><td class="right" colspan="1" rowspan="1">3.459</td><td class="right" colspan="1" rowspan="1">+7</td><td class="right" colspan="1" rowspan="1">20</td><td class="right" colspan="1" rowspan="1">0,8</td><td class="right" colspan="1" rowspan="1">168</td></tr><tr class="even"><td colspan="1" rowspan="1">Bremen</td><td class="right" colspan="1" rowspan="1">1.689</td><td class="right" colspan="1" rowspan="1">+1</td><td class="right" colspan="1" rowspan="1">14</td><td class="right" colspan="1" rowspan="1">2,0</td><td class="right" colspan="1" rowspan="1">55</td></tr><tr><td colspan="1" rowspan="1">Hamburg</td><td class="right" colspan="1" rowspan="1">5.230</td><td class="right" colspan="1" rowspan="1">-1</td><td class="right" colspan="1" rowspan="1">16</td><td class="right" colspan="1" rowspan="1">0,9</td><td class="right" colspan="1" rowspan="1">261</td></tr><tr class="even"><td colspan="1" rowspan="1">Hessen</td><td class="right" colspan="1" rowspan="1">11.122</td><td class="right" colspan="1" rowspan="1">+18</td><td class="right" colspan="1" rowspan="1">189</td><td class="right" colspan="1" rowspan="1">3,0</td><td class="right" colspan="1" rowspan="1">514</td></tr><tr><td colspan="1" rowspan="1">Meck­lenburg-<br />
+Vor­pommern</td><td class="right" colspan="1" rowspan="1">804</td><td class="right" colspan="1" rowspan="1">+1</td><td class="right" colspan="1" rowspan="1">0</td><td class="right" colspan="1" rowspan="1">0,0</td><td class="right" colspan="1" rowspan="1">20</td></tr><tr class="even"><td colspan="1" rowspan="1">Nieder­sachsen</td><td class="right" colspan="1" rowspan="1">13.799</td><td class="right" colspan="1" rowspan="1">+8</td><td class="right" colspan="1" rowspan="1">97</td><td class="right" colspan="1" rowspan="1">1,2</td><td class="right" colspan="1" rowspan="1">641</td></tr><tr><td colspan="1" rowspan="1">Nord­rhein-West­falen</td><td class="right" colspan="1" rowspan="1">44.788</td><td class="right" colspan="1" rowspan="1">+143</td><td class="right" colspan="1" rowspan="1">857</td><td class="right" colspan="1" rowspan="1">4,8</td><td class="right" colspan="1" rowspan="1">1.704</td></tr><tr class="even"><td colspan="1" rowspan="1">Rhein­land-Pfalz</td><td class="right" colspan="1" rowspan="1">7.136</td><td class="right" colspan="1" rowspan="1">+10</td><td class="right" colspan="1" rowspan="1">56</td><td class="right" colspan="1" rowspan="1">1,4</td><td class="right" colspan="1" rowspan="1">236</td></tr><tr><td colspan="1" rowspan="1">Saarland</td><td class="right" colspan="1" rowspan="1">2.812</td><td class="right" colspan="1" rowspan="1">0</td><td class="right" colspan="1" rowspan="1">7</td><td class="right" colspan="1" rowspan="1">0,7</td><td class="right" colspan="1" rowspan="1">174</td></tr><tr class="even"><td colspan="1" rowspan="1">Sachsen</td><td class="right" colspan="1" rowspan="1">5.473</td><td class="right" colspan="1" rowspan="1">+4</td><td class="right" colspan="1" rowspan="1">14</td><td class="right" colspan="1" rowspan="1">0,3</td><td class="right" colspan="1" rowspan="1">225</td></tr><tr><td colspan="1" rowspan="1">Sachsen-Anhalt</td><td class="right" colspan="1" rowspan="1">1.907</td><td class="right" colspan="1" rowspan="1">+2</td><td class="right" colspan="1" rowspan="1">24</td><td class="right" colspan="1" rowspan="1">1,1</td><td class="right" colspan="1" rowspan="1">61</td></tr><tr class="even"><td colspan="1" rowspan="1">Schles­wig-Holstein</td><td class="right" colspan="1" rowspan="1">3.206</td><td class="right" colspan="1" rowspan="1">+4</td><td class="right" colspan="1" rowspan="1">24</td><td class="right" colspan="1" rowspan="1">0,8</td><td class="right" colspan="1" rowspan="1">154</td></tr><tr><td colspan="1" rowspan="1">Thüringen</td><td class="right" colspan="1" rowspan="1">3.289</td><td class="right" colspan="1" rowspan="1">+1</td><td class="right" colspan="1" rowspan="1">22</td><td class="right" colspan="1" rowspan="1">1,0</td><td class="right" colspan="1" rowspan="1">182</td></tr><tr class="even"><td colspan="1" rowspan="1"><strong>Gesamt</strong></td><td class="right" colspan="1" rowspan="1"><strong>198.556</strong></td><td class="right" colspan="1" rowspan="1"><strong>+378</strong></td><td class="right" colspan="1" rowspan="1"><strong>2.203</strong></td><td class="right" colspan="1" rowspan="1"><strong>2,7</strong></td><td class="right" colspan="1" rowspan="1"><strong>9.060</strong></td></tr></tbody></table><div class="teaser gbe target">
 <div class="text"></div> <div class="text" data-textclip="219">
 <h2>Detaillierte Fallzahlen in Deutschland: Dashboard </h2>
 <p>Eine detaillierte Darstellung der übermittelten COVID-19-Fälle in Deutschland nach Landkreis und Bundesland stellt das <a class="RichTextExtLink ExternalLink" href="https://corona.rki.de" target="_blank" rel="noopener noreferrer" title="Externer Link COVID-19-Dashboard (Öffnet neues Fenster)">COVID-19-Dashboard (https://corona.rki.de)</a> bereit.</p>
@@ -575,6 +575,7 @@ Vor­pommern</td><td class="right" colspan="1" rowspan="1">805</td><td class="ri
 <div class="dateOfIssue"><p>Stand: 26.03.2020</p>
 </div>
 <p class="navToTop"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html#Start" title="Zum Seitenanfang">nach oben</a></p>
+
 <ul class="publikation" />
 </div>
 <div class="text" data-textclip="359">
@@ -599,7 +600,7 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 <li class="first"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html" title="Tägliche Situationsberichte (deutsch und englisch)" class="themenLink " target="_self">Tägliche Situationsberichte (deutsch und englisch)</a></li>
 <li class="last"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html" title="Internetseite des Robert Koch-Instituts zum Coronavirus SARS-CoV-2, unter anderem mit Hinweisen zu Diagnostik, Hygiene und Infektionskontrolle" class="themenLink " target="_self">RKI-Seite zu COVID-19, <abbr title="unter anderem">u.a.</abbr> mit Hinweisen zu Diagnostik, Hygiene und Infektionskontrolle</a></li>
 </ul>
-</div><div class="dateOfIssue"><p>Stand: 09.07.2020</p></div><p class="navToTop"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html#Start" title="Zum Seitenanfang">nach oben</a></p>
+</div><div class="dateOfIssue"><p>Stand: 11.07.2020</p></div><p class="navToTop"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html#Start" title="Zum Seitenanfang">nach oben</a></p>
 </div>
 <div id="navFunctions">
 
@@ -703,7 +704,7 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 </li>
 <li><h3>
 <a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/AE-GU/Aufnahmeeinrichtungen.html" target="_self" title="Empfehlungen für Gesundheitsämter zu Prävention und Management von COVID-19-Erkrankungen in Aufnahmeeinrichtungen und Gemeinschaftsunterkünften für Schutzsuchende (im Sinne von §§ 44, 53 AsylG)" class="">
- <span>Präven­tion und Manage­ment von COVID-19-Er­kran­kungen in Auf­nahme­ein­richtungen und Gemein­schafts­unter­künften für Schutz­suchende gemäß §§ 44, 53 AsylG (8.7.2020)</span>
+<span>Präven­tion und Manage­ment von COVID-19-Er­kran­kungen in Auf­nahme­ein­richtungen und Gemein­schafts­unter­künften für Schutz­suchende gemäß §§ 44, 53 AsylG (10.7.2020)</span>
 </a>
 </h3>
 </li>
@@ -714,6 +715,12 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 <div class="box">
 <h2>Aktualisiert</h2>
 <ul>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Steckbrief.html" target="_self" title="Steckbrief zu COVID-19" class="">
+<span>Steckbrief zu COVID-19 (10.7.2020) </span>
+</a>
+</h3>
+</li>
 <li><h3>
 <a href="SharedDocs/FAQ/NCOV2019/gesamt.html" target="_self" title="Antworten auf häufig gestellte Fragen zum Coronavirus SARS-CoV-2" class="">
 <span>Antworten auf häufig gestellte Fragen zu COVID-19 (8.7.2020)</span>
@@ -738,24 +745,12 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 </a>
 </h3>
 </li>
-<li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Getrennte_Patientenversorgung.html" target="_self" title="Getrennte Versorgung von COVID-19-Verdachtsfällen/-Fällen und anderen Patienten" class="">
-<span>Getrennte Versor­gung von COVID-19-Ver­dachts­fällen/-Fällen und anderen Patienten (6.7.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Alten_Pflegeeinrichtung_Empfehlung.html" target="_blank" title="Prävention und Management in Alten- und Pflegeeinrichtungen und Einrichtungen für Menschen mit Beeinträchtigungen und Behinderungen" class="">
-<span>Prävention und Management in Alten- und Pflege­ein­rich­tungen und Ein­rich­tungen für Menschen mit Beein­träch­ti­gungen und Behinderungen (6.7.2020)</span>
-</a>
-</h3>
-</li>
 <li class="image">
 <a href="https://www.rki.de/SharedDocs/Newsletter/Infektionsschutz/2020/200706-NewsletterInfektionsschutz.html?view=renderNewsletterHtml" target="_blank" title="Newsletter des Robert Koch-Instituts zu Infektionsschutzthemen">
 <img src="/SharedDocs/Bilder/Service/Newsletter_Pikto_Startseite.jpg?__blob=thumbnail&amp;v=2" alt="RKI-News­letter In­fek­tions­schutz: Aus­gabe vom 6.7.2020" title="Newsletter" style="width: 90px;" />
 </a><h3>
 <a href="https://www.rki.de/SharedDocs/Newsletter/Infektionsschutz/2020/200706-NewsletterInfektionsschutz.html?view=renderNewsletterHtml" target="_blank" title="Newsletter des Robert Koch-Instituts zu Infektionsschutzthemen" class="ExternalLink">
-<span>RKI-News­letter In­fek­tions­schutz: Aus­gabe vom 6.7.2020</span>
+ <span>RKI-News­letter In­fek­tions­schutz: Aus­gabe vom 6.7.2020</span>
 </a>
 </h3>
 </li>

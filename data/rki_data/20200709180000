@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app104.us.archive.org';v.server_ms=1109;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app57.us.archive.org';v.server_ms=407;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=R56vIgLu" charset="utf-8"></script>
 <script type="text/javascript" src="/_static/js/wombat.js?v=cRqOKCOw" charset="utf-8"></script>
 <script type="text/javascript">
 if (window._WBWombatInit) {
@@ -171,8 +171,8 @@ body {
 	<tr>
 	  <td class="s">
 	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20200709195750*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">1,102 captures</a>
-	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 09 Jul 2020</div>
+	      	      <a class="t" href="/web/20200709195750*/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html" title="See a list of every capture for this URL">1,106 captures</a>
+	      <div class="r" title="Timespan for captures of this URL">30 Jan 2020 - 10 Jul 2020</div>
 	      </div>
 	  </td>
 	  <td class="k">
@@ -193,6 +193,18 @@ body {
                     <div id="wm-capinfo-collected-by">
     <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
     <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/webwidecrawl);"></span>
+		Organization: <a style="color:#33f;" href="https://archive.org/details/webwidecrawl" target="_new"><span class="wm-title">Internet Archive</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  The Internet Archive discovers and captures web pages through many different web crawls.
+
+At any given time several distinct crawls are running, some for months, and some every day or longer.
+
+View the web archive through the <a href="http://archive.org/web/web.php">Wayback Machine</a>.
+	</div>
+	      </div>
       <div style="display:inline-block;vertical-align:top;width:49%;">
 			<span class="c-logo" style="background-image:url(https://archive.org/services/img/liveweb)"></span>
 		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/liveweb" target="_new"><span class="wm-title">Live Web Proxy Crawls</span></a></div>
@@ -1172,7 +1184,7 @@ Bundesbehörden</a>
 </body>
 </html><!--
      FILE ARCHIVED ON 19:57:50 Jul 09, 2020 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 21:09:04 Jul 09, 2020.
+     INTERNET ARCHIVE ON 14:16:25 Jul 11, 2020.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
@@ -1180,14 +1192,14 @@ Bundesbehörden</a>
 -->
 <!--
 playback timings (ms):
-  exclusion.robots: 0.186
-  esindex: 0.009
-  LoadShardBlock: 36.487 (3)
-  RedisCDXSource: 0.697
-  PetaboxLoader3.resolve: 778.794
-  PetaboxLoader3.datanode: 42.394 (4)
-  load_resource: 833.879
-  exclusion.robots.policy: 0.176
-  captures_list: 227.703
-  CDXLines.iter: 17.22 (3)
+  PetaboxLoader3.resolve: 93.558 (2)
+  exclusion.robots: 0.383
+  exclusion.robots.policy: 0.367
+  load_resource: 92.213
+  esindex: 0.012
+  PetaboxLoader3.datanode: 158.389 (4)
+  LoadShardBlock: 223.382 (3)
+  RedisCDXSource: 0.683
+  captures_list: 270.351
+  CDXLines.iter: 20.859 (3)
 -->
