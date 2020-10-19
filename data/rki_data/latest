@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="imagetoolbar" content="false" />
 <meta name="MSSmartTagsPreventParsing" content="true" />
-<meta name="genTime" content="Thu Aug 06 04:36:42 CEST 2020" />
+<meta name="genTime" content="Mon Oct 19 10:55:20 CEST 2020" />
 <meta name="generator" content="Government Site Builder" />
 <meta name="description" content="Regionale Verteilung der COVID-19-Fälle weltweit" />
 <meta name="keywords" content="Coronavirus, nCoV, neuartiges Coronavirus, Hygiene, Wuhan, China, Risikogebiet, Hubei" />
@@ -26,16 +26,16 @@
 <link rel="apple-touch-icon" href="/SiteGlobals/StyleBundles/Bilder/favicon_mobile.png?__blob=normal&amp;v=1" type="image/ico" />
 <link rel="alternate" type="application/rss+xml" title="Robert Koch-Institut News" href="SiteGlobals/Functions/RSSFeed/RSSGenerator.xml" />
 <link rel="alternate" type="application/rss+xml" title="Robert Koch-Institut: Stellenangebote" href="SiteGlobals/Functions/RSSFeed/RSSGenerator_Stellen.xml" />
-<link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/basic.css?v=2" type="text/css" />
+<link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/basic.css?v=3" type="text/css" />
 <link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/print/print.css?v=17" type="text/css" media="print" />
 <link rel="stylesheet" type="text/css" href="SiteGlobals/StyleBundles/CSS/handheld/handheld.css?v=20" media="only screen and (max-width: 600px), only screen and (max-device-width: 600px), handheld" />
-<link rel="alternate stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/font-normal.css?v=4" title="normaleSchrift" type="text/css" media="screen, projection" />
-<link rel="alternate stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/font-big.css?v=5" title="grosseSchrift" type="text/css" media="screen, projection" />
-<!--[if lte IE 7]><link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/screen_iew-6-7.css?v=7" type="text/css" media="projection, screen" /><![endif]-->
-<!--[if lte IE 9]><link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/screen_iew.css?v=9" type="text/css" media="projection, screen" /><![endif]-->
-<link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/additional.css?v=2" type="text/css" />
+<link rel="alternate stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/font-normal.css?v=5" title="normaleSchrift" type="text/css" media="screen, projection" />
+<link rel="alternate stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/font-big.css?v=6" title="grosseSchrift" type="text/css" media="screen, projection" />
+<!--[if lte IE 7]><link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/screen_iew-6-7.css?v=8" type="text/css" media="projection, screen" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/screen_iew.css?v=10" type="text/css" media="projection, screen" /><![endif]-->
+<link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/additional.css?v=5" type="text/css" />
 <link rel="stylesheet" type="text/css" href="SiteGlobals/StyleBundles/CSS/handheld/additional_Materna.css?v=19" media="only screen and (max-width: 600px), handheld" />
-<link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/rebrush-2014-desktop-only-min.css?v=7" media="screen and (min-width:960px)" />
+<link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/rebrush-2014-desktop-only-min.css?v=8" media="screen and (min-width:960px)" />
 <link rel="stylesheet" href="SiteGlobals/StyleBundles/CSS/screen/rebrush-2014-desktop-only-max.css?v=39" media="screen and (min-width:1300px)" />
 <script src="SiteGlobals/Functions/JavaScript/Init.js?v=39" type="text/javascript"></script>
 <script type="text/javascript">//<![CDATA[
@@ -47,7 +47,7 @@
         var SCALE_IMG_NORMAL = 'Schriftgröße verkleinern';
         var SHOW_MORE = 'mehr anzeigen';
 window.LABEL_MOREDETAILS = 'mehr anzeigen';
-window.LABEL_LESSDETAILS = 'weniger anzeigen'; 
+window.LABEL_LESSDETAILS = 'weniger anzeigen';
       //]]>
     </script>
 </head>
@@ -73,6 +73,9 @@ window.LABEL_LESSDETAILS = 'weniger anzeigen';
 </div>
 <div id="navServiceLanguage">
 <ul>
+<li id="Tree">
+<a href="DE/Service/Barrierefreiheit/Barrierefreiheit-node.html" title="Erklärung zur Barrierefreiheit">Erklärung zur Barrierefreiheit</a>
+</li>
 <li id="navServiceGBS">
 <a href="DE/Service/Gebaerdensprache/gebaerdensprache-node.html" title="Gebärdensprache">Gebärdensprache</a>
 </li>
@@ -164,7 +167,7 @@ window.LABEL_LESSDETAILS = 'weniger anzeigen';
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614444" rel="letter_F">F</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614448" rel="letter_G">G</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614456" rel="letter_H">H</a></li>
-<li class="empty"><strong>I</strong></li>
+<li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614460" rel="letter_I">I</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614464" rel="letter_J">J</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614468" rel="letter_K">K</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614472" rel="letter_L">L</a></li>
@@ -507,7 +510,7 @@ Bundesbehörden</a>
 </div>
 <div class="overview-articles">
 <h3>Wissenswertes aus dem Bereich</h3>
-<ul><li><a href="https://edoc.rki.de/" target="_blank" title="Externer Link Publikationsserver RKI (Öffnet neues Fenster)">Publikationsserver edoc des RKI</a></li><li><a href="DE/Content/Service/Stellen/Hospitanz/Hospitanz_Presse.html">Praktikum in der Presse- und Öffent­lich­keits­arbeit des RKI (2.1.2020)</a></li><li><a href="DE/Content/Service/Stellen/Promotion/Promotionsmoeglichkeiten.html">Promotion Diplom Bachelor Master</a></li>
+<ul><li><a href="https://edoc.rki.de/" target="_blank" title="Externer Link Publikationsserver RKI (Öffnet neues Fenster)">Publikationsserver edoc des RKI</a></li><li><a href="DE/Content/Service/Stellen/Hospitanz/Hospitanz_Presse.html">Praktikum in der Presse- und Öffent­lich­keits­arbeit des RKI (ab 1.4.2021)</a></li><li><a href="DE/Content/Service/Stellen/Promotion/Promotionsmoeglichkeiten.html">Promotion Diplom Bachelor Master</a></li>
 </ul>
 </div>
 </div>
@@ -519,14 +522,11 @@ Bundesbehörden</a>
 </div>
 </div>
 <div id="wrapperDivisions">
-<div id="cookiebanner" class="cookiebanner bottom " data-animation="true" data-position="bottom">
+<div id="cookiebanner" class="cookiebanner" data-animation="true">
 <div class="cookiebannerbox">
 <div>
 <div class="text">
-<h2>Hinweis zum Einsatz von Cookies</h2>
-<p>Mit dem Klick auf "Erlauben" erklären Sie sich damit einverstanden, dass wir Ihren Aufenthalt auf der Seite anonymisiert aufzeichnen. Die Auswertungen enthalten keine personenbezogenen Daten und werden ausschließlich zur Analyse, Pflege und Verbesserung unseres Internetauftritts eingesetzt. Weitere Informationen zum Datenschutz erhalten Sie über den folgenden Link:
- <a class="RichTextIntLink NavNode" href="DE/Service/Datenschutz/datenschutzerklaerung_node.html" title="Datenschutz">Datenschutz</a>
-</p>
+<h2>Hinweis zur Verwendung von Cookies</h2><p>Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklären Sie sich damit einverstanden, dass wir Cookies verwenden. Weitere Informationen zum Datenschutz erhalten Sie über den folgenden Link: <a class="RichTextIntLink NavNode" href="DE/Service/Datenschutz/datenschutzerklaerung_node.html" title="Datenschutzerklärung">Datenschutz</a></p>
 </div>
 <p class="all">
 <a class="button right close" href="#">OK</a>
@@ -552,8 +552,8 @@ Bundesbehörden</a>
 <div class="text">
 <h1 class="firstInSlot"><abbr title="Coronavirus Disease 19">COVID-19</abbr>: Fallzahlen in Deutschland und weltweit</h1>
 <div class="subheadline">
-</div><h3 class="null">Fallzahlen in Deutschland</h3>
-<p>Stand: 5.8.2020, 00:00 Uhr (online aktualisiert um 08:30 Uhr)</p>
+</div><h2 class="null">Fallzahlen in Deutschland</h2>
+<p>Stand: 19.10.2020, 00:00 Uhr (online aktualisiert um 08:20 Uhr)</p>
 <p>Die Differenz zum Vortag bezieht sich auf Fälle, die dem RKI täglich übermittelt werden. Dies beinhaltet Fälle, die am gleichen Tag oder bereits an früheren Tagen an das Gesundheitsamt gemeldet worden sind.</p>
 <table><colgroup><col width="20%" /><col width="15%" /><col width="15%" /><col width="15%" /><col width="15%" /><col width="20%" /></colgroup><thead><tr><th colspan="1" rowspan="1">Bundes­land</th><th class="center" colspan="5" rowspan="1">Elektro­nisch über­mittelte Fälle</th></tr><tr><th colspan="1" rowspan="1"></th><th class="center" colspan="1" rowspan="1">An­zahl</th><th class="center" colspan="1" rowspan="1">Dif­fe­renz<br />
 zum <br />
@@ -561,8 +561,10 @@ Vor­tag</th><th class="center" colspan="1" rowspan="1">Fälle<br />
 in den <br />
 letzten<br />
 7 Tagen</th><th class="right" colspan="1" rowspan="1">7-Tage-<br />
-Inzi­denz</th><th class="center" colspan="1" rowspan="1">Todes­fälle</th></tr></thead><tbody><tr class="even"><td colspan="1" rowspan="1">Baden-Württem­berg</td><td class="right" colspan="1" rowspan="1">37.514</td><td class="right" colspan="1" rowspan="1">+59</td><td class="right" colspan="1" rowspan="1">402</td><td class="right" colspan="1" rowspan="1">3,6</td><td class="right" colspan="1" rowspan="1">1.847</td></tr><tr><td colspan="1" rowspan="1">Bayern</td><td class="right" colspan="1" rowspan="1">51.377</td><td class="right" colspan="1" rowspan="1">+98</td><td class="right" colspan="1" rowspan="1">631</td><td class="right" colspan="1" rowspan="1">4,8</td><td class="right" colspan="1" rowspan="1">2.624</td></tr><tr class="even"><td colspan="1" rowspan="1">Berlin</td><td class="right" colspan="1" rowspan="1">9.399</td><td class="right" colspan="1" rowspan="1">+32</td><td class="right" colspan="1" rowspan="1">289</td><td class="right" colspan="1" rowspan="1">7,7</td><td class="right" colspan="1" rowspan="1">223</td></tr><tr><td colspan="1" rowspan="1">Branden­burg</td><td class="right" colspan="1" rowspan="1">3.588</td><td class="right" colspan="1" rowspan="1">+9</td><td class="right" colspan="1" rowspan="1">28</td><td class="right" colspan="1" rowspan="1">1,1</td><td class="right" colspan="1" rowspan="1">168</td></tr><tr class="even"><td colspan="1" rowspan="1">Bremen</td><td class="right" colspan="1" rowspan="1">1.790</td><td class="right" colspan="1" rowspan="1">+3</td><td class="right" colspan="1" rowspan="1">32</td><td class="right" colspan="1" rowspan="1">4,7</td><td class="right" colspan="1" rowspan="1">56</td></tr><tr><td colspan="1" rowspan="1">Hamburg</td><td class="right" colspan="1" rowspan="1">5.461</td><td class="right" colspan="1" rowspan="1">+17</td><td class="right" colspan="1" rowspan="1">105</td><td class="right" colspan="1" rowspan="1">5,7</td><td class="right" colspan="1" rowspan="1">261</td></tr><tr class="even"><td colspan="1" rowspan="1">Hessen</td><td class="right" colspan="1" rowspan="1">12.254</td><td class="right" colspan="1" rowspan="1">+55</td><td class="right" colspan="1" rowspan="1">425</td><td class="right" colspan="1" rowspan="1">6,8</td><td class="right" colspan="1" rowspan="1">523</td></tr><tr><td colspan="1" rowspan="1">Meck­lenburg-<br />
-Vor­pommern</td><td class="right" colspan="1" rowspan="1">889</td><td class="right" colspan="1" rowspan="1">+9</td><td class="right" colspan="1" rowspan="1">37</td><td class="right" colspan="1" rowspan="1">2,3</td><td class="right" colspan="1" rowspan="1">20</td></tr><tr class="even"><td colspan="1" rowspan="1">Nieder­sachsen</td><td class="right" colspan="1" rowspan="1">14.671</td><td class="right" colspan="1" rowspan="1">+37</td><td class="right" colspan="1" rowspan="1">296</td><td class="right" colspan="1" rowspan="1">3,7</td><td class="right" colspan="1" rowspan="1">654</td></tr><tr><td colspan="1" rowspan="1">Nord­rhein-West­falen</td><td class="right" colspan="1" rowspan="1">50.068</td><td class="right" colspan="1" rowspan="1">+341</td><td class="right" colspan="1" rowspan="1">1.990</td><td class="right" colspan="1" rowspan="1">11,1</td><td class="right" colspan="1" rowspan="1">1.751</td></tr><tr class="even"><td colspan="1" rowspan="1">Rhein­land-Pfalz</td><td class="right" colspan="1" rowspan="1">7.618</td><td class="right" colspan="1" rowspan="1">+35</td><td class="right" colspan="1" rowspan="1">141</td><td class="right" colspan="1" rowspan="1">3,5</td><td class="right" colspan="1" rowspan="1">239</td></tr><tr><td colspan="1" rowspan="1">Saarland</td><td class="right" colspan="1" rowspan="1">2.891</td><td class="right" colspan="1" rowspan="1">+5</td><td class="right" colspan="1" rowspan="1">29</td><td class="right" colspan="1" rowspan="1">2,9</td><td class="right" colspan="1" rowspan="1">174</td></tr><tr class="even"><td colspan="1" rowspan="1">Sachsen</td><td class="right" colspan="1" rowspan="1">5.560</td><td class="right" colspan="1" rowspan="1">+12</td><td class="right" colspan="1" rowspan="1">30</td><td class="right" colspan="1" rowspan="1">0,7</td><td class="right" colspan="1" rowspan="1">225</td></tr><tr><td colspan="1" rowspan="1">Sachsen-Anhalt</td><td class="right" colspan="1" rowspan="1">2.036</td><td class="right" colspan="1" rowspan="1">+2</td><td class="right" colspan="1" rowspan="1">33</td><td class="right" colspan="1" rowspan="1">1,5</td><td class="right" colspan="1" rowspan="1">64</td></tr><tr class="even"><td colspan="1" rowspan="1">Schles­wig-Holstein</td><td class="right" colspan="1" rowspan="1">3.516</td><td class="right" colspan="1" rowspan="1">+22</td><td class="right" colspan="1" rowspan="1">139</td><td class="right" colspan="1" rowspan="1">4,8</td><td class="right" colspan="1" rowspan="1">157</td></tr><tr><td colspan="1" rowspan="1">Thüringen</td><td class="right" colspan="1" rowspan="1">3.390</td><td class="right" colspan="1" rowspan="1">+5</td><td class="right" colspan="1" rowspan="1">32</td><td class="right" colspan="1" rowspan="1">1,5</td><td class="right" colspan="1" rowspan="1">182</td></tr><tr class="even"><td colspan="1" rowspan="1"><strong>Gesamt</strong></td><td class="right" colspan="1" rowspan="1"><strong>212.022</strong></td><td class="right" colspan="1" rowspan="1"><strong>+741</strong></td><td class="right" colspan="1" rowspan="1"><strong>4.639</strong></td><td class="right" colspan="1" rowspan="1"><strong>5,6</strong></td><td class="right" colspan="1" rowspan="1"><strong>9.168</strong></td></tr></tbody></table><div class="teaser gbe target">
+Inzi­denz</th><th class="center" colspan="1" rowspan="1">Todes­fälle</th></tr></thead><tbody><tr class="even"><td colspan="1" rowspan="1">Baden-Württem­berg</td><td class="right" colspan="1" rowspan="1">60.053</td><td class="right" colspan="1" rowspan="1">+700</td><td class="right" colspan="1" rowspan="1">5.138</td><td class="right" colspan="1" rowspan="1">46,3</td><td class="right" colspan="1" rowspan="1">1.932</td></tr><tr><td colspan="1" rowspan="1">Bayern</td><td class="right" colspan="1" rowspan="1">79.735</td><td class="right" colspan="1" rowspan="1">+795</td><td class="right" colspan="1" rowspan="1">6.220</td><td class="right" colspan="1" rowspan="1">47,4</td><td class="right" colspan="1" rowspan="1">2.714</td></tr><tr class="even"><td colspan="1" rowspan="1">Berlin</td><td class="right" colspan="1" rowspan="1">21.429</td><td class="right" colspan="1" rowspan="1">+302</td><td class="right" colspan="1" rowspan="1">3.226</td><td class="right" colspan="1" rowspan="1">87,9</td><td class="right" colspan="1" rowspan="1">241</td></tr><tr><td colspan="1" rowspan="1">Branden­burg</td><td class="right" colspan="1" rowspan="1">5.451</td><td class="right" colspan="1" rowspan="1">+37</td><td class="right" colspan="1" rowspan="1">579</td><td class="right" colspan="1" rowspan="1">23,0</td><td class="right" colspan="1" rowspan="1">172</td></tr><tr class="even"><td colspan="1" rowspan="1">Bremen</td><td class="right" colspan="1" rowspan="1">3.590</td><td class="right" colspan="1" rowspan="1">+26</td><td class="right" colspan="1" rowspan="1">513</td><td class="right" colspan="1" rowspan="1">75,3</td><td class="right" colspan="1" rowspan="1">63</td></tr><tr><td colspan="1" rowspan="1">Hamburg</td><td class="right" colspan="1" rowspan="1">9.910</td><td class="right" colspan="1" rowspan="1">+160</td><td class="right" colspan="1" rowspan="1">792</td><td class="right" colspan="1" rowspan="1">42,9</td><td class="right" colspan="1" rowspan="1">280</td></tr><tr class="even"><td colspan="1" rowspan="1">Hessen</td><td class="right" colspan="1" rowspan="1">25.776</td><td class="right" colspan="1" rowspan="1">+336</td><td class="right" colspan="1" rowspan="1">3.671</td><td class="right" colspan="1" rowspan="1">58,4</td><td class="right" colspan="1" rowspan="1">576</td></tr><tr><td colspan="1" rowspan="1">Meck­lenburg-<br />
+Vor­pommern</td><td class="right" colspan="1" rowspan="1">1.705</td><td class="right" colspan="1" rowspan="1">+25</td><td class="right" colspan="1" rowspan="1">268</td><td class="right" colspan="1" rowspan="1">16,7</td><td class="right" colspan="1" rowspan="1">21</td></tr><tr class="even"><td colspan="1" rowspan="1">Nieder­sachsen</td><td class="right" colspan="1" rowspan="1">25.852</td><td class="right" colspan="1" rowspan="1">+271</td><td class="right" colspan="1" rowspan="1">2.531</td><td class="right" colspan="1" rowspan="1">31,7</td><td class="right" colspan="1" rowspan="1">713</td></tr><tr><td colspan="1" rowspan="1">Nord­rhein-West­falen</td><td class="right" colspan="1" rowspan="1">90.544</td><td class="right" colspan="1" rowspan="1">+863</td><td class="right" colspan="1" rowspan="1">9.942</td><td class="right" colspan="1" rowspan="1">55,4</td><td class="right" colspan="1" rowspan="1">1.946</td></tr><tr class="even"><td colspan="1" rowspan="1">Rhein­land-Pfalz</td><td class="right" colspan="1" rowspan="1">13.652</td><td class="right" colspan="1" rowspan="1">+248</td><td class="right" colspan="1" rowspan="1">1.449</td><td class="right" colspan="1" rowspan="1">35,4</td><td class="right" colspan="1" rowspan="1">263</td></tr><tr><td colspan="1" rowspan="1">Saarland</td><td class="right" colspan="1" rowspan="1">4.415</td><td class="right" colspan="1" rowspan="1">+59</td><td class="right" colspan="1" rowspan="1">667</td><td class="right" colspan="1" rowspan="1">67,6</td><td class="right" colspan="1" rowspan="1">177</td></tr><tr class="even"><td colspan="1" rowspan="1">Sachsen</td><td class="right" colspan="1" rowspan="1">10.275</td><td class="right" colspan="1" rowspan="1">+340</td><td class="right" colspan="1" rowspan="1">1.544</td><td class="right" colspan="1" rowspan="1">37,9</td><td class="right" colspan="1" rowspan="1">258</td></tr><tr><td colspan="1" rowspan="1">Sachsen-Anhalt</td><td class="right" colspan="1" rowspan="1">3.285</td><td class="right" colspan="1" rowspan="1">+43</td><td class="right" colspan="1" rowspan="1">318</td><td class="right" colspan="1" rowspan="1">14,5</td><td class="right" colspan="1" rowspan="1">71</td></tr><tr class="even"><td colspan="1" rowspan="1">Schles­wig-Holstein</td><td class="right" colspan="1" rowspan="1">5.714</td><td class="right" colspan="1" rowspan="1">+88</td><td class="right" colspan="1" rowspan="1">450</td><td class="right" colspan="1" rowspan="1">15,5</td><td class="right" colspan="1" rowspan="1">163</td></tr><tr><td colspan="1" rowspan="1">Thüringen</td><td class="right" colspan="1" rowspan="1">4.913</td><td class="right" colspan="1" rowspan="1">+32</td><td class="right" colspan="1" rowspan="1">456</td><td class="right" colspan="1" rowspan="1">21,4</td><td class="right" colspan="1" rowspan="1">199</td></tr><tr class="even"><td colspan="1" rowspan="1"><strong>Gesamt</strong></td><td class="right" colspan="1" rowspan="1"><strong>366.299</strong></td><td class="right" colspan="1" rowspan="1"><strong>+4.325</strong></td><td class="right" colspan="1" rowspan="1"><strong>37.764</strong></td><td class="right" colspan="1" rowspan="1"><strong>45,4</strong></td><td class="right" colspan="1" rowspan="1"><strong>9.789</strong></td></tr></tbody></table>
+<p>Eine Gesamtübersicht der pro Tag ans RKI übermittelten Fälle, Todesfälle und 7-Tages-Inzidenzen ist <a class="RichTextIntLink Publication FTvndopenxmlformats-officedocumentspreadsheetmlsheet" href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Fallzahlen_Kum_Tab.html" title="Gesamtübersicht der pro Tag ans RKI übermittelten Fälle, Todesfälle und 7-Tages-Inzidenzen nach Bundesland (Tabelle wird arbeitstäglich aktualisiert)">hier</a> abrufbar (Tabelle wird arbeitstäglich aktualisiert).</p>
+<div class="teaser gbe target">
 <div class="text"></div> <div class="text" data-textclip="219">
 <h2>Detaillierte Fallzahlen in Deutschland: Dashboard </h2>
 <p>Eine detaillierte Darstellung der übermittelten COVID-19-Fälle in Deutschland nach Landkreis und Bundesland stellt das <a class="RichTextExtLink ExternalLink" href="https://corona.rki.de" target="_blank" rel="noopener noreferrer" title="Externer Link COVID-19-Dashboard (Öffnet neues Fenster)">COVID-19-Dashboard (https://corona.rki.de)</a> bereit.</p>
@@ -579,14 +581,15 @@ Vor­pommern</td><td class="right" colspan="1" rowspan="1">889</td><td class="ri
 </div>
 <div class="text" data-textclip="359">
 <h2>Hinweise zur Erfassung und Veröffentlichung von COVID-19-Fallzahlen</h2>
+<p>In Einklang mit den internationalen Standards der <abbr title="Weltgesundheitsorganisation">WHO</abbr> wertet das RKI alle labordiagnostischen Nachweise von SARS-CoV-2 unabhängig vom Vorhandensein oder der Ausprägung der klinischen Symptomatik als COVID-19-Fälle. In den folgenden Darstellungen sind unter „COVID-19-Fälle“ somit sowohl akute SARS-CoV-2-Infektionen als auch COVID-19-Erkrankungen zusammengefasst.</p>
 <p>Es werden die bundesweit einheitlich erfassten und an das Robert Koch-Institut (RKI) übermittelten Daten zu bestätigten COVID-19-Fällen dargestellt. COVID-19-Verdachtsfälle und - Erkrankungen sowie Nachweise von SARS-CoV-2 werden gemäß Infektionsschutzgesetz an das zuständige Gesundheitsamt gemeldet. Die Gesundheitsämter ermitteln ggf. zusätzliche Informationen, bewerten den Fall und leiten die notwendigen Infektionsschutzmaßnahmen ein.</p>
 <p>Die Daten werden gemäß Infektionsschutzgesetz spätestens am nächsten Arbeitstag vom Gesundheitsamt elektronisch an die zuständige Landesbehörde und von dort an das RKI übermittelt. In der aktuellen Lage übermitteln die meisten Ämter sogar täglich. Am RKI werden sie mittels weitgehend automatisierter Algorithmen validiert.</p>
-<p>Es werden nur Fälle veröffentlicht, bei denen eine labordiagnostische Bestätigung (unabhängig vom klinischen Bild) vorliegt. Die Daten werden am RKI einmal täglich jeweils um 0:00 Uhr aktualisiert. <strong>Durch die Dateneingabe und Datenübermittlung entsteht von dem Zeitpunkt des Bekanntwerdens des Falls bis zur Veröffentlichung durch das RKI ein Zeitverzug, sodass es Abweichungen hinsichtlich der Fallzahlen zu anderen Quellen geben kann.<br />
+<p>Es werden nur Fälle veröffentlicht, bei denen eine labordiagnostische Bestätigung (unabhängig vom klinischen Bild) vorliegt. Die Daten werden am RKI einmal täglich jeweils um 0:00 Uhr aktualisiert. <strong>Durch die Dateneingabe und Datenübermittlung entsteht von dem Zeitpunkt des Bekanntwerdens des Falls bis zur Veröffentlichung durch das RKI ein Zeitverzug, sodass es Abweichungen hinsichtlich der Fallzahlen zu anderen Quellen geben kann.</strong><br />
 <br />
-</strong>In der aktuellen Krise werden die Daten des infektionsepidemiologischen Meldewesens zu COVID-19 mit einem möglichst geringen Zeitverzug publiziert. Dies trägt der sehr hohen Dynamik der Lage Rechnung. Allerdings werden hierdurch zuweilen auch Daten vor Qualitätskontrollen und Validierungen veröffentlicht. Durch weitere Ermittlungen der Gesundheitsämter und Plausibilitätsprüfungen kann es zu Nachträgen oder Korrekturen kommen, was vereinzelt zu Abweichungen gegenüber den zuvor berichteten Daten führt. Auch Abweichungen nach unten sind möglich, etwa, wenn ein Fall nach der Ermittlung des Wohnortes einem anderen Gesundheitsamt zugewiesen wird.  Dies ist Ausdruck der kontinuierlichen Qualitätssicherung durch die zuständigen Behörden.<br />
+In der aktuellen Krise werden die Daten des infektionsepidemiologischen Meldewesens zu COVID-19 mit einem möglichst geringen Zeitverzug publiziert. Dies trägt der sehr hohen Dynamik der Lage Rechnung. Allerdings werden hierdurch zuweilen auch Daten vor Qualitätskontrollen und Validierungen veröffentlicht. Durch weitere Ermittlungen der Gesundheitsämter und Plausibilitätsprüfungen kann es zu Nachträgen oder Korrekturen kommen, was vereinzelt zu Abweichungen gegenüber den zuvor berichteten Daten führt. Auch Abweichungen nach unten sind möglich, etwa, wenn ein Fall nach der Ermittlung des Wohnortes einem anderen Gesundheitsamt zugewiesen wird.  Dies ist Ausdruck der kontinuierlichen Qualitätssicherung durch die zuständigen Behörden.<br />
 <br />
 Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglichen <a class="RichTextIntLink Basepage" href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html" title="Aktueller Lage-/Situationsbericht des RKI zu COVID-19">Lagebericht des RKI</a>, für detaillierte Zahlen nach Landkreis bitte das <a class="RichTextExtLink ExternalLink" href="https://corona.rki.de" target="_blank" rel="noopener noreferrer" title="Externer Link COVID-19-Dashboard (Öffnet neues Fenster)">Dashboard (https://corona.rki.de)</a>.</p>
-<div class="dateOfIssue"><p>Stand: 12.05.2020</p>
+<div class="dateOfIssue"><p>Stand: 04.09.2020</p>
 </div>
 <p class="navToTop"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html#Start" title="Zum Seitenanfang">nach oben</a></p>
 <ul class="publikation" />
@@ -599,7 +602,7 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 <li class="first"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html" title="Tägliche Situationsberichte (deutsch und englisch)" class="themenLink " target="_self">Tägliche Situationsberichte (deutsch und englisch)</a></li>
 <li class="last"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html" title="Internetseite des Robert Koch-Instituts zum Coronavirus SARS-CoV-2, unter anderem mit Hinweisen zu Diagnostik, Hygiene und Infektionskontrolle" class="themenLink " target="_self">RKI-Seite zu COVID-19, <abbr title="unter anderem">u.a.</abbr> mit Hinweisen zu Diagnostik, Hygiene und Infektionskontrolle</a></li>
 </ul>
-</div><div class="dateOfIssue"><p>Stand: 05.08.2020</p></div><p class="navToTop"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html#Start" title="Zum Seitenanfang">nach oben</a></p>
+</div><div class="dateOfIssue"><p>Stand: 19.10.2020</p></div><p class="navToTop"><a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html#Start" title="Zum Seitenanfang">nach oben</a></p>
 </div>
 <div id="navFunctions">
 
@@ -664,7 +667,7 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614444" rel="letter_F">F</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614448" rel="letter_G">G</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614456" rel="letter_H">H</a></li>
-<li class="empty"><strong>I</strong></li>
+<li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614460" rel="letter_I">I</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614464" rel="letter_J">J</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614468" rel="letter_K">K</a></li>
 <li><a href="DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GesundAZ/NEU/GesundAZ_node.html?cms_lv2=13614472" rel="letter_L">L</a></li>
@@ -696,14 +699,26 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 <h2>Neu</h2>
 <ul>
 <li><h3>
-<a href="https://www.nature.com/articles/s41586-020-2598-9" target="_blank" title="Externer Link SARS-CoV-2-reactive T cells in healthy donors and patients with COVID-19 (Nature, 2020 July 29) (Öffnet neues Fenster)" class="ExternalLink">
-<span>SARS-CoV-2-reactive T cells in healthy donors and patients with COVID-19 (Nature, 2020 July 29)</span>
+<a href="/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/KiTAStudie_September.pdf?__blob=publicationFile" target="_blank" title="Corona-KiTa-Studie: Monatsbericht September 2020 (16.10.2020) (Öffnet neues Fenster)" class="">
+<span>Corona-KiTa-Studie: Monatsbericht September 2020 (16.10.2020)</span>
 </a>
 </h3>
 </li>
 <li><h3>
-<a href="https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(20)30316-7/fulltext" target="_blank" title="Externer Link Case characteristics, resource use, and outcomes of 10 021 patients with COVID-19 admitted to 920 German hospitals: an observational study (Lancet Respir Med 2020 July 28) (Öffnet neues Fenster)" class="ExternalLink">
-<span>Case characteristics, resource use, and outcomes of 10 021 patients with COVID-19 admitted to 920 German hospitals: an observational study (Lancet Respir Med 2020 July 28)</span>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Strategie_Ergaenzung_Covid.html" target="_self" title="Die Pandemie in Deutschland in den nächsten Monaten - Ziele, Schwerpunktthemen und Instrumente für den Infektionsschutz (13.10.2020)" class="">
+<span>Die Pandemie in Deutschland in den nächsten Monaten - Ziele, Schwerpunktthemen und Instrumente für den Infektionsschutz (13.10.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Praevention-Schulen.pdf?__blob=publicationFile" target="_blank" title="Präventionsmaßnahmen in Schulen (Öffnet neues Fenster)" class="">
+<span>Präventionsmaßnahmen in Schulen (12.10.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Teststrategie/Testkriterien-Schulen.pdf?__blob=publicationFile" target="_blank" title="SARS-CoV-2-Testkriterien für Schulen während der COVID-19-Pandemie (12.10.2020) (Öffnet neues Fenster)" class="">
+<span>SARS-CoV-2-Testkriterien für Schulen (12.10.2020)</span>
 </a>
 </h3>
 </li>
@@ -715,47 +730,89 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 <h2>Aktualisiert</h2>
 <ul>
 <li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risikogebiete_neu.html" target="_self" title="Informationen zur Ausweisung internationaler Risikogebiete " class="">
-<span>Informationen zur Aus­weisung inter­natio­naler Risiko­gebiete (5.8.2020)</span>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/WarnApp/Warn_App.html" target="_self" title="Corona-Warn-App: Infektionsketten digital unterbrechen www.rki.de/covid-19-warnapp" class="">
+<span>Corona-Warn-App: FAQ aktualisiert (19.10.2020)</span>
 </a>
 </h3>
 </li>
 <li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Vorl_Testung_nCoV.html" target="_self" title="Hinweise zur Testung von Patienten auf Infektion mit dem Coronavirus SARS-CoV-2" class="">
-<span>Hin­weise zur Testung von Patien­ten auf SARS-CoV-2 (3.8.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risikobewertung.html" target="_self" title="Risikobewertung zu COVID-19" class="">
-<span>Risikobewertung zu COVID-19 (29.7.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="SharedDocs/FAQ/NCOV2019/gesamt.html" target="_self" title="Antworten auf häufig gestellte Fragen zum Coronavirus SARS-CoV-2" class="">
-<span>Antworten auf häufig gestellte Fragen zu COVID-19 (27.7.2020)</span>
-</a>
-</h3>
-</li>
-<li><h3>
-<a href="/DE/Content/InfAZ/N/Neuartiges_Coronavirus/COVRIIN_Dok/Zeitpunkt-antivirale-Therapie.pdf?__blob=publicationFile" target="_blank" title="Fachgruppe COVRIIN: Zeit­punkt einer anti­viralen Therapie bei COVID-19 (27.7.2020) (Öffnet neues Fenster)" class="">
-<span>Fachgruppe COVRIIN: Zeit­punkt einer anti­viralen Therapie bei COVID-19 (27.7.2020)</span>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Quarantaene/Inhalt.html" target="_self" title="Häusliche Quarantäne: Flyer für Kontaktpersonen" class="">
+<span>Häusliche Quarantäne: Flyer für Kontakt­personen (16.10.2020)</span>
 </a>
 </h3>
 </li>
 <li><h3>
 <a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Steckbrief.html" target="_self" title="Steckbrief zu COVID-19" class="">
-<span>Steckbrief zu COVID-19 (24.7.2020) </span>
+<span>Steckbrief zu COVID-19 (16.10.2020) </span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risikogebiete_neu.html" target="_self" title="Informationen zur Ausweisung internationaler Risikogebiete " class="">
+<span>Informationen zur Aus­weisung inter­natio­naler Risiko­gebiete durch das Auswärtige Amt, <abbr title="Bundesministerium für Gesundheit">BMG</abbr> und <abbr title="Body-Mass-Index">BMI</abbr> (15.10.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Vorl_Testung_nCoV.html" target="_self" title="Hinweise zur Testung von Patienten auf Infektion mit dem Coronavirus SARS-CoV-2" class="">
+<span>Hin­weise zur Testung von Patien­ten auf SARS-CoV-2 (15.10.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Publikationen.html" target="_self" title="Publikationen mit RKI-Beteiligung " class="">
+<span>Publikationen mit RKI-Beteiligung (15.10.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Teststrategie/Nat-Teststrat.html" target="_self" title="Nationale Teststrategie – wer wird in Deutschland auf das Vorliegen einer SARS-CoV-2 Infektion getestet?" class="">
+<span>Nationale Teststrategie – wer wird in Deutschland auf das Vorliegen einer SARS-CoV-2 Infektion getestet? (14.10.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Transport/Info_Reisende_Tab.html" target="_self" title="Information für Reisende in verschiedenen Sprachen" class="">
+<span>Information für Reisende in verschiedenen Sprachen (14.10.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/Infekt/IfSG/DEMIS/DEMIS_node.html" target="_self" title="Rollout von DEMIS-SARS-CoV-2 - Wöchentlich aktualisierte Karte online verfügbar" class="">
+<span>Rollout von DEMIS-SARS-CoV-2 - Wöchentlich aktualisierte Karte online verfügbar (14.10.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/Service/Stellen/Containement_Scout.html" target="_self" title="Containment Scout: Aktuelle Stellenausschreibung und Informationen zur Tätigkeit. Helfen Sie uns, Infektionsketten zu durchbrechen!" class="">
+<span>Containment Scout: Aktuelle Stellen­aus­schreibung (Bewerbungs­frist bis zum 14.10.2020) und Informa­tionen zur Tätigkeit. Helfen Sie uns, Infektions­ketten zu durch­brechen!</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="/DE/Content/Kommissionen/Stakob/Stellungnahmen/Stellungnahme-Covid-19_Therapie_Diagnose.pdf?__blob=publicationFile" target="_blank" title="STAKOB: Hinweise zu Erkennung, Diagnostik und Therapie (Öffnet neues Fenster)" class="">
+<span>STAKOB: Hinweise zu Erkennung, Diagnostik und Therapie (9.10.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="DE/Content/InfAZ/N/Neuartiges_Coronavirus/Personal_Pflege.html" target="_self" title="Optionen zum Management von Kontaktpersonen unter Personal von Alten- und Pflegeeinrichtungen bei Personalmangel" class="">
+<span>Optionen zum Management von Kontakt­personen unter Personal von Alten- und Pflege­ein­rich­tungen bei Personal­mangel (12.10.2020)</span>
+</a>
+</h3>
+</li>
+<li><h3>
+<a href="SharedDocs/FAQ/NCOV2019/gesamt.html" target="_self" title="Antworten auf häufig gestellte Fragen zum Coronavirus SARS-CoV-2" class="">
+<span>Antworten auf häufig gestellte Fragen zu COVID-19 (9.10.2020)</span>
 </a>
 </h3>
 </li>
 <li class="image">
-<a href="https://www.rki.de/SharedDocs/Newsletter/Infektionsschutz/2020/200804-NewsletterInfektionsschutz.html?view=renderNewsletterHtml" target="_blank" title="Newsletter des Robert Koch-Instituts zu Infektionsschutzthemen">
-<img src="/SharedDocs/Bilder/Service/Newsletter_Pikto_Startseite.jpg?__blob=thumbnail&amp;v=2" alt="RKI-News­letter In­fek­tions­schutz: Aus­gabe vom 4.8.2020" title="Newsletter" style="width: 90px;" />
+<a href="https://www.rki.de/SharedDocs/Newsletter/Infektionsschutz/2020/201014-NewsletterInfektionsschutz.html?view=renderNewsletterHtml" target="_blank" title="Newsletter des Robert Koch-Instituts zu Infektionsschutzthemen">
+<img src="/SharedDocs/Bilder/Service/Newsletter_Pikto_Startseite.jpg?__blob=thumbnail&amp;v=2" alt="RKI-News­letter In­fek­tions­schutz: Aus­gabe vom 14.10.2020" title="Newsletter" style="width: 90px;" />
 </a><h3>
-<a href="https://www.rki.de/SharedDocs/Newsletter/Infektionsschutz/2020/200804-NewsletterInfektionsschutz.html?view=renderNewsletterHtml" target="_blank" title="Newsletter des Robert Koch-Instituts zu Infektionsschutzthemen" class="ExternalLink">
-<span>RKI-News­letter In­fek­tions­schutz: Aus­gabe vom 4.8.2020</span>
+<a href="https://www.rki.de/SharedDocs/Newsletter/Infektionsschutz/2020/201014-NewsletterInfektionsschutz.html?view=renderNewsletterHtml" target="_blank" title="Newsletter des Robert Koch-Instituts zu Infektionsschutzthemen" class="ExternalLink">
+<span>RKI-News­letter In­fek­tions­schutz: Aus­gabe vom 14.10.2020</span>
 </a>
 </h3>
 </li>
@@ -851,7 +908,7 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 </li>
 <li><a href="DE/Content/Infekt/EpidBull/epid_bull_node.html">Epidemiologisches Bulletin</a>
 </li>
- <li><a href="DE/Content/Infekt/Impfen/impfen_node.html">Impfen</a>
+<li><a href="DE/Content/Infekt/Impfen/impfen_node.html">Impfen</a>
 </li>
 <li><a href="DE/Content/Infekt/Jahrbuch/jahrbuch_node.html">Infektions­epi­de­mio­logisches Jahrbuch</a>
 </li>
@@ -916,7 +973,7 @@ Für eine detailliertere Analyse der der COVID-19-Fälle siehe bitte den täglic
 <li><a href="DE/Content/Kommissionen/Beirat_ZfKD/beirat_zfkd_node.html">Beirat des Zentrums für Krebsregisterdaten </a>
 </li>
 <li><a href="DE/Content/Kommissionen/EBI/EBI_node.html">Expertenbeirat Influenza</a>
- </li>
+</li>
 <li><a href="DE/Content/Kommissionen/GendiagnostikKommission/GEKO_node.html">Gendiagnostik-Kommission</a>
 </li>
 <li><a href="DE/Content/Kommissionen/Bundesgesundheitsblatt/bgbl_node.html">Herausgeberbeirat Bundesgesundheitsblatt</a>
