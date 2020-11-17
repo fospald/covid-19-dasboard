@@ -80,7 +80,7 @@ for tm in ["060000", "180000"]:
                 data = page.read().decode("utf-8")
                 with open(save_filename, "wt") as f:
                     f.write(data)
-             except:
+            except:
                 break
 
         pos = data.find("/_static/images/toolbar/wm_tb_nxt_on.png")
