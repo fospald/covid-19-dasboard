@@ -81,7 +81,7 @@ for tm in ["060000", "180000"]:
                 with open(save_filename, "wt") as f:
                     f.write(data)
              except:
-                 break
+                break
 
         pos = data.find("/_static/images/toolbar/wm_tb_nxt_on.png")
 
